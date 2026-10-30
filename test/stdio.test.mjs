@@ -28,9 +28,9 @@ function start() {
     stderr += chunk;
   });
   createInterface({ input: child.stdout }).on('line', (line) => {
-    lines.push(line);
     const waiter = waiting.shift();
     if (waiter) waiter(line);
+    else lines.push(line);
   });
   const nextLine = () =>
     lines.length ? Promise.resolve(lines.shift()) : new Promise((resolve) => waiting.push(resolve));
