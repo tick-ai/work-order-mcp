@@ -79,7 +79,7 @@ test('modern: discover, then list, then call', async () => {
 
   // A well-formed call to a tool not built yet is a tool execution error,
   // never a made-up verdict.
-  const called = (await server.ask('tools/call', call('read_order', { order: '{}' }))).result;
+  const called = (await server.ask('tools/call', call('check_delivery', { order: '{}', repository: '.', commit: 'HEAD' }))).result;
   assert.equal(called.resultType, 'complete');
   assert.deepEqual(called._meta[INFO_KEY], info);
   assert.equal(called.isError, true);
@@ -108,7 +108,7 @@ test('legacy: initialize, then list, then call, then ping', async () => {
   assert.deepEqual(listed.tools.map((tool) => tool.name), TOOLS.map((tool) => tool.name));
   assert.equal(listed.resultType, undefined);
 
-  const called = (await server.ask('tools/call', { name: 'explain_receipt', arguments: { receipt: '{}' } })).result;
+  const called = (await server.ask('tools/call', { name: 'check_delivery', arguments: { order: '{}', repository: '.', commit: 'HEAD' } })).result;
   assert.equal(called.isError, true);
   assert.match(called.content[0].text, /not built yet/);
 
