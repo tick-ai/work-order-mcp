@@ -57,6 +57,42 @@ missing order, a file that cannot be read, or a commit the clone does not hold,
 is a tool execution error (`isError: true`) whose words say what to fix; an
 unknown tool is the protocol error -32602.
 
+How the two eras are told apart, and what is answered where:
+
+- `server/discover` answers `resultType: "complete"`, `supportedVersions`
+  (2026-07-28 and 2025-11-25), `capabilities` (`{ tools: {} }`), `instructions`,
+  and `_meta["io.modelcontextprotocol/serverInfo"]` (`{ name, version }`, the
+  package's own). It, like `initialize`, is answered whatever revision the
+  request names, since it is how a client learns what is supported.
+- Any other request that names a revision other than the two supported gets
+  -32022 with `data: { supported, requested }`. A request that names 2026-07-28
+  gets `resultType: "complete"` and the same `serverInfo` in its result's
+  `_meta`. A request that names no revision is a legacy request, and its result
+  is the plain legacy shape.
+- `initialize` answers protocol version 2025-11-25 whatever the client offered,
+  with `capabilities`, `serverInfo` and `instructions`; the client decides
+  whether it can speak that. Notifications, such as `notifications/initialized`,
+  get no answer. Legacy requests are not refused for coming before `initialize`.
+- A line that is not JSON is -32700, a JSON line that is not a JSON-RPC 2.0
+  request is -32600, an unknown method is -32601.
+- `tools/list` gives the tools of `src/tools.mjs` as they are. `tools/call`
+  checks `arguments` against the tool's `inputSchema` with `src/validate.mjs`,
+  which knows only the JSON Schema keywords those schemas use and throws on any
+  other, so a schema that grows cannot go quietly unchecked. A failure is a tool
+  execution error whose words name the field (`arguments.commit is required`).
+  An answer is also held to the `outputSchema` before it is sent.
+- Each tool's working part is an entry in `src/handlers.mjs`. A tool with no
+  entry answers a tool execution error saying it is not built yet; it never
+  answers a verdict it did not reach.
+
+What the revision's pages do not settle here: this was written without access
+to the documentation, so the exact shape of `server/discover` beyond the fields
+above, whether `ping` carries `resultType` in the current revision, and whether
+`initialize` may be refused when the client offers a revision this server does
+not speak are taken from the task's description and left as stated above, not
+confirmed against the pages. Re-check these when the documentation can be
+reached.
+
 Over stdio, one message per line with no newline inside it, nothing on standard
 output that is not a message, logs on standard error, and the server exits when
 its input ends.
