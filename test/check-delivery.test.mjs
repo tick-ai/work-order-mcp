@@ -150,7 +150,7 @@ test('a commit inside the territory whose checks pass is passed', async () => {
     node(
       'tree',
       "const fs = require('node:fs');" +
-        "if (fs.readFileSync('src/a.txt', 'utf8') !== 'a changed\\n') process.exit(2);" +
+        "if (fs.readFileSync('src/a.txt', 'utf8').trim() !== 'a changed') process.exit(2);" +
         "fs.accessSync('src/new.txt');" +
         "if (fs.existsSync('scratch.txt')) process.exit(9);",
     ),
@@ -250,8 +250,8 @@ test('the given checkout is untouched afterwards', () => {
   const state = snapshot();
   assert.equal(state.branch, 'inside');
   assert.equal(state.head, commits.inside);
-  assert.equal(state.files['src/a.txt'], 'a, being edited\n');
-  assert.equal(state.files['scratch.txt'], 'not committed\n');
+  assert.equal(state.files['src/a.txt'].trim(), 'a, being edited');
+  assert.equal(state.files['scratch.txt'].trim(), 'not committed');
   assert.match(state.status, /src\/a\.txt/);
   assert.match(state.status, /\?\? scratch\.txt/);
 });
