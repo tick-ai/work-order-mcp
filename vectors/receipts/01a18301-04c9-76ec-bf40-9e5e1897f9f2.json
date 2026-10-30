@@ -1,0 +1,154 @@
+{
+  "alg": "ed25519",
+  "content_hash": "3f004876b27ec61c1a0a1d15e3bf7fb285c5788f54ac66e47f7645614a5432ee",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:22.305Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:07:53.701Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "ff31514592877f189252671c24fc76c067018707a3ed58422f7eb60a78999e14",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:22.305Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "04f6730612f07800cefea857754164365032847d",
+        "contained": "none",
+        "order_hash": "b5d3030c54b4a661fd22a3168478702f1d0cc50ff42844e7839769ab684d1719",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "efcfb89be55fb0e3584f8014ec835bb39ed88d02",
+        "verdict": "passed"
+      },
+      "record_id": "01a18301-04c9-76ec-bf40-9e5e1897f9f2",
+      "schema": "tick.check-record.v1",
+      "signature": "wUn98MfZlyEfTloRUpq27KVpqC5r6f19v1X7kx/S2phWEr/a01NG4QszO2+ZvZpKuVLLQuFzG72hPuRG+DgOCA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "737d933d40132a2d7d21e7dac2264bccace9202b2d77e2246af19415fbc8f11c",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "commit": "04f6730612f07800cefea857754164365032847d",
+        "order_hash": "b5d3030c54b4a661fd22a3168478702f1d0cc50ff42844e7839769ab684d1719",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "efcfb89be55fb0e3584f8014ec835bb39ed88d02",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 37,
+            "cost": "reported",
+            "minutes": 12.882483333333333,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18301-04c9-76ec-bf40-9e5e1897f9f2",
+      "issued_at": "2026-10-28T19:41:22.305Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "viWagND20Ocit1/UnAWzJAO8rWSfRyFam7yCqLzuPk1NrqitugZ3sD+0SLw1L/JZpDZ5HqsQeEBqFKQu6yVoDA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "b5d3030c54b4a661fd22a3168478702f1d0cc50ff42844e7839769ab684d1719",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:54:25.032Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-8e18-708c-bc73-d976435ebb75",
+          "task_id": "01a18301-04c9-76ec-bf40-9e5e1897f9f2"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/user-terms-text.ts",
+          "packages/cli/src/user-terms-text.test.ts",
+          "packages/cli/src/first-run.e2e.test.ts",
+          "./LICENSE",
+          "./README.md"
+        ],
+        "what": "PARSA signed the user terms of Tick's own client on 28 October 2026 (TN0.23; decisions GD-87 and GD-88; the signed copy's sha256 is d9288bd3490b35b289e288c109b34b290bc64b38d3cb25222d36f66097ad6a8d). TN0.41 built the question (packages/cli/src/user-terms.ts asks once and keeps the yes in ~/.tick/terms.json) and left the text null (packages/cli/src/user-terms-text.ts). This task ships the text. Change no word of it.\n\n1. packages/cli/src/user-terms-text.ts: USER_TERMS becomes { title: \"Tick: user terms for Tick's own client\", text: <THE TEXT> }. Replace the comment \"Stays null until PARSA's signed text lands\" with one that says it is version 1, signed by Parsa Esmaeili on 28 October 2026, and that a changed text is asked again (user-terms.ts compares the hash). THE TEXT is the 64 lines between the two marker lines below, joined with \"\\n\", with no newline at the end. Its sha256, taken over the UTF-8 bytes, must be 873cf6c09c5bab250033340783a427727a88a49de1c957015f1f87961b717535. Keep each line whole: do not reflow, wrap or retype it, and keep its straight quotes. A template literal or an array of lines joined with \"\\n\" are both fine.\n\n2. ./LICENSE: append after the last line, keeping everything above it as it is:\n(a blank line)\n----------------------------------------------------------------------------\n(a blank line)\nUser terms of Tick's own client, version 1\n(a blank line)\nThese terms are the separate written agreement signed by the copyright holder that the notice above refers to, for Tick's own client: every file that points 1 and 2 do not place under another license. Parsa Esmaeili signed them on 28 October 2026; the sha256 of the signed copy is d9288bd3490b35b289e288c109b34b290bc64b38d3cb25222d36f66097ad6a8d. Plain tick shows them once and asks each person to accept them.\n(a blank line)\n<THE TEXT, line for line>\n(the file ends with one newline)\nYou may wrap that one paragraph at 78 columns like the rest of the LICENSE. THE TEXT stays line for line, as in USER_TERMS.\n\n3. ./README.md, section \"## License and contact\" (near line 281; it comes after the command list, which journey.test.ts reads up to): add one sentence: \"Tick's own client is used under its user terms, version 1, signed by Parsa Esmaeili on 28 October 2026: their text ends the LICENSE file, and plain `tick` shows them once and asks the person to accept them.\" Nothing else in the README changes. scripts/check-readme-numbers.mjs checks only the package count and the release line, and this sentence touches neither.\n\n4. NEW TEST packages/cli/src/user-terms-text.test.ts: (a) USER_TERMS is not null, and its title is the one above; (b) the sha256 of USER_TERMS.text is the hash above, so the shipped text cannot drift from the signed one; (c) the root LICENSE (read by path from this file, as packages/verify/src/independence.test.ts reads a LICENSE) ends with USER_TERMS.text plus one newline, so the LICENSE and the first run show the same words.\n\n5. packages/cli/src/first-run.e2e.test.ts runs the real plain tick, which will now ask the terms question, TERMS_QUESTION exported by user-terms.ts. Its questions are answered with their default (`Promise.resolve(fallback)`), and this question has none, so the run would decline and set nothing up. Make the person in that test answer \"yes\" to TERMS_QUESTION, and add the question to the list of questions it allows (near line 1198). The file is 1218 lines, exactly its entry in file-size-baseline.json, so it may NOT grow: change lines in place, and pay for any line you add by removing a blank line or a comment that only restates the code, never an assertion. Do not edit file-size-baseline.json. Tick's check does not run this e2e (vitest.e2e.config.ts), so change it by reading it, and say in your report that it was not run. The thesis verification runs it at the next install. journey.test.ts and the talk-command tests build plain tick's deps without `terms`, so they are not asked and need no change (checked by a lead at origin/main bc627cdf); talk-terms.test.ts passes its terms in explicitly. If another test meets the question, ask for it with tick_widen, and never weaken or delete a test.\n\nTHE TEXT starts after the next line:\n=====BEGIN=====\nVersion 1. Granted by Parsa Esmaeili, of Tehran, Iran (github.com/parsa83esmaeili), the \"Holder\", to you.\n\n1. What these terms cover\n\"Tick's own client\" means the files of the package @tick-group/tick that the root LICENSE of tick-executor places under its proprietary notice: every file outside the source-available core and the offline verifier.\nThe core (core, protocol, store, dag, views, runtime, scheduler, executor and api) stays under the Functional Source License, Version 1.1, ALv2 Future License, and the offline verifier (verify) under the Apache License, Version 2.0. These terms do not narrow either licence.\n\n2. Accepting\nYou accept these terms by saying yes when Tick first shows them, or by using Tick's own client after they have been shown to you. If you do not accept them, do not use it.\n\n3. Who may use it, and for what\nTick's own client is for use in your work, as a professional or as a company, and not as a consumer.\n- One person. You may install Tick's own client and use it for your own work, at no charge.\n- A company. A company may use it for its people. Its team features are free of charge until the Holder gives notice of a price, and that notice comes at least 30 days before the price applies. After that they are paid per seat. The team features are: roles from the company's directory, sign-in through the company's own directory and provisioning over SCIM, approval by touch, the company's policy (repositories, agents, rates, run limits, containment and auto tick), a company-wide spending limit and spend by person, the company's audit trail and its log feed, and the board.\n- A company that does not accept a price stops using the team features. Its work and its record stay its own.\n\n4. What you may not do\n- Resell, rent or sublicense Tick's own client.\n- Offer it, or a product built from its proprietary files, as a product that competes with Tick.\n- Copy or publish its proprietary files, except the copies needed to run it and to keep it backed up.\n- Remove or change its notices.\n- Present a receipt as proving more than it says it proves.\n\n5. Your work and your data\n- Tick runs on your machines. Your code, your prompts, your files and Tick's record of your work stay where you keep them.\n- Nothing about you or your work reaches the Holder from your Tick unless you send it yourself: a report Tick writes for you, which holds only counts, dates and your one answer and names nothing of your work, or an export you choose to send.\n- The one thing Tick does by itself is ask tick.company, at most once a day, for the list of releases (section 8). That request carries nothing about you, your machine or your work. The host's own log sees your address and the time. You can turn it off with the setting channelCheckHours.\n\n6. Agents and accounts\n- Tick starts the AI agents you choose, and each agent is under its maker's terms.\n- A personal sign-in to an agent does only its owner's work. Work for a company runs on keys or a gateway the company provides.\n- You are responsible for your agents' accounts and for what they cost.\n\n7. Sanctions and export\n- You confirm that you are not a person or entity named on a sanctions list of the United Nations, the European Union, the United Kingdom or the United States, and that none of them owns or controls you. The Holder confirms the same of the Holder.\n- Until the Holder announces otherwise on tick.company, these terms are not offered to anyone in the United States or to a US person, and neither may use Tick's own client.\n- You are responsible for using Tick in line with the sanctions and export laws that apply to you. The Holder does not say whether you may lawfully use or receive Tick where you are.\n- The Holder may end these terms for you at once if anything in this section is not true of you.\n\n8. Updates\nTick may offer you a newer release, found by asking tick.company for its list of releases. It installs one only with your yes, and only a release whose signature checks under Tick's release key.\n\n9. No warranty\nTick's own client is provided \"as is\", without warranty of any kind, express or implied, including the warranties of merchantability, fitness for a particular purpose and non-infringement.\n\n10. Limits of liability\nTo the extent the law allows, in no event is the Holder liable for any claim, damages or other liability, whether in contract, tort or otherwise, arising from, out of or in connection with Tick's own client or its use. Nothing here excludes a liability that the law does not let be excluded.\n\n11. Ending\nYou may stop using Tick at any time, and your record stays yours. These terms end for anyone who breaks section 4 or section 7.\n\n12. Changes to these terms\nA change is announced on tick.company at least 30 days before it applies. Using Tick's own client after it applies accepts it.\n\n13. Transfer\nThe Holder may transfer these terms, and the rights the Holder holds under them, to a company formed to carry on Tick, and will tell you when that happens. You may not transfer them.\n\n14. Governing rules and disputes\n- These terms are governed by the UNIDROIT Principles of International Commercial Contracts, in the edition current on the date the Holder signs them. A matter they do not settle is decided by the arbitral tribunal under the rules of law it finds applicable.\n- Either party may give the other written notice of a dispute. For 30 days after it, the parties seek to settle it by talking. If it is not settled, it is decided by arbitration under the UNCITRAL Arbitration Rules, by one arbitrator, in English, seated in Geneva, Switzerland. The award binds the parties.\n\n15. General, and contact\nIf a part of these terms is held invalid, the rest stands. Notices to the Holder go to hello@tick.company. The Holder is Parsa Esmaeili (github.com/parsa83esmaeili).\n\nSigned by the Holder, Parsa Esmaeili, on 28 October 2026.\n=====END=====\nTHE TEXT ends before the line above. Its 64 lines include the empty lines between sections.\n\nRULES: no npm, npx, build or test run in your copy; commit and call tick_check. In your report give the sha256 of USER_TERMS.text as your test computes it, and the files you changed."
+      },
+      "order_id": "01a18301-04c9-76ec-bf40-9e5e1897f9f2",
+      "schema": "tick.work-order.v1",
+      "signature": "9Vi3PGRaO76hwYQ58VvMzV+nxWMArIoS6/4/C1n4icvPlOII6ScGvR6oIcyFo+XT8MWpHZ1FcO7kBgIJ73IzDg=="
+    }
+  },
+  "receipt_id": "01a18301-04c9-76ec-bf40-9e5e1897f9f2",
+  "schema": "tick.receipt.v2",
+  "signature": "9iGg7B+ovo+Yu6dOKy2RhNZmTgergmPQO3CWlkkJGalr8X1oBI/a5SmVzPOa4udEvJ6rnJ7/mBPk6xq+GhlvCQ=="
+}

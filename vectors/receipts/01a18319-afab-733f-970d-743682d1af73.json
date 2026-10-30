@@ -1,0 +1,150 @@
+{
+  "alg": "ed25519",
+  "content_hash": "f844da6248b73ce0d5b208bddf3df85842b24a8adca31b38dae49dbbbe2621d8",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:21.305Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:29:21.597Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "c8e495aa79fda9bb1728de076198e744d55bbaec6baab32b1931a8b0dae9bfc8",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:21.305Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "9f8d508834d2f6d1af5f865782d08822eb90c8dd",
+        "contained": "none",
+        "order_hash": "06ee80a1b5c533c2fffad076aaaa6707562138d5b547620bd066feac6605cccf",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "d2349f77a1c2e5d96790fc2ee60c66f6fb66aad9",
+        "verdict": "passed"
+      },
+      "record_id": "01a18319-afab-733f-970d-743682d1af73",
+      "schema": "tick.check-record.v1",
+      "signature": "EmeuBSDst7FbG8Pud5K/kocYny8Bqam+kaEaKvPCM8BGGzZiz7o3pjXfln3W21bjjT30DK0YJ89VmGxklEqLDw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "7eff636da380195ba71eb88038101bce9b81c67e2b560722f31c56aedf32ebdb",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "commit": "9f8d508834d2f6d1af5f865782d08822eb90c8dd",
+        "order_hash": "06ee80a1b5c533c2fffad076aaaa6707562138d5b547620bd066feac6605cccf",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "d2349f77a1c2e5d96790fc2ee60c66f6fb66aad9",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 47,
+            "cost": "reported",
+            "minutes": 7.429566666666667,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18319-afab-733f-970d-743682d1af73",
+      "issued_at": "2026-10-28T19:41:21.305Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "M2pipL3ql4CNXtUe8LmTB8jK/jkCJWtuhuHMDSeMG8A5HsB5NFZqEsl/3UaGY/6CopO8kU5BdUpn/Sasu9h6Dg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "06ee80a1b5c533c2fffad076aaaa6707562138d5b547620bd066feac6605cccf",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T15:21:16.640Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-8e18-708c-bc73-d976435ebb75",
+          "task_id": "01a18319-afab-733f-970d-743682d1af73"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/talk-command.test.ts"
+        ],
+        "what": "make packages/cli/src/talk-command.test.ts hold on a busy machine\n\npackages/cli/src/talk-command.test.ts was recorded flaky 2 times, under 2 different keys (its content or what it reaches had changed between them): each time it failed in a check's bulk run and passed when run alone.\n- 2026-10-24T09:27:36.542Z: 4679.625 ms alone, 571019.6779785156 ms in the run that failed\n- 2026-10-28T15:06:46.044Z: 9062.04150390625 ms alone, 8781.1396484375 ms in the run that failed\n\nFind what makes this file depend on the machine being idle: a timer or a timeout, a port, a shared folder, an ordering with another file, or a real race. Fix it in packages/cli/src/talk-command.test.ts. Where the cause lies elsewhere, or the file is not at fault, report no_change_required with the evidence. Do not weaken or delete a test to quiet it."
+      },
+      "order_id": "01a18319-afab-733f-970d-743682d1af73",
+      "schema": "tick.work-order.v1",
+      "signature": "RT80xFWidA2NBrVu0gE387fiQTzCe25M4T3QIzJXIwToznGIFusq0/4qhAQLh/8dj6dM8xzYjsYsCDoDUPhLAw=="
+    }
+  },
+  "receipt_id": "01a18319-afab-733f-970d-743682d1af73",
+  "schema": "tick.receipt.v2",
+  "signature": "S4QGsRVOdumBZzIsmQ/8TmaiMYKqZ0poH/ymF7/KJZwXtcHlCjQH3PP6nPCF4CkA46fM7phP69wppqDvatvTBA=="
+}

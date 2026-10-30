@@ -1,0 +1,150 @@
+{
+  "alg": "ed25519",
+  "content_hash": "6638d69709a970962184fca25f46311311aa8513a880b6d7e1b43ef7b54688e6",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:18.787Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T17:18:37.198Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "46397519dcdf39ccb2cfcdc73f70594bf8a9f123a5d7db41c8bf08f11930d8a3",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:18.787Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "f91f2b101d77c2eea1664ad83c7c57c3838ac935",
+        "contained": "none",
+        "order_hash": "226553a4b93dcd77cb34b8476d04fd985d99d220e53d079e4fcec8e4b8a9a37e",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "c05abb8bd1a9d4b4550ce5632a0f49fb318e8988",
+        "verdict": "passed"
+      },
+      "record_id": "01a1837a-af1d-7389-907f-90d879557375",
+      "schema": "tick.check-record.v1",
+      "signature": "iRdEC9AEC89V2cngwDVzfr9lvxdXgEDqzYszlJbMXCcMsaJV2vl/AVVwmfGGdlj2mL4IQpTGmpmoCijh/YmbDQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "409010b2487e8793cc32f027dea652493aab96ce5d0c9d25b0b2ec6f1a014411",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "commit": "f91f2b101d77c2eea1664ad83c7c57c3838ac935",
+        "order_hash": "226553a4b93dcd77cb34b8476d04fd985d99d220e53d079e4fcec8e4b8a9a37e",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "c05abb8bd1a9d4b4550ce5632a0f49fb318e8988",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 9,
+            "cost": "reported",
+            "minutes": 4.301533333333333,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1837a-af1d-7389-907f-90d879557375",
+      "issued_at": "2026-10-28T19:41:18.787Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "99V/QOR8JhU+7XD2aH/rcu0FtxkjbXj7Re+3wtNhQFIS6kIobL2/NW0rDM4Cu29KtM/0QizMK2ZC4yZ4R0s2Bg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "226553a4b93dcd77cb34b8476d04fd985d99d220e53d079e4fcec8e4b8a9a37e",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T17:07:05.895Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a1837a-af1d-7389-907f-90d879557375"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/talk-http-questions.test.ts"
+        ],
+        "what": "WHY (GD-89, PARSA 2026-10-28: \"Fix ALL defects happened this session.\"). Release 0.5.264's gate (2026-10-28, 16:50-17:00Z) failed all of packages/cli with no failing test. 95 files passed, and vitest caught one unhandled rejection: \"TypeError: fetch failed ... Caused by: Error: bad port\". It came from src/talk-http-questions.test.ts, during \"takes a cancel for a call still waiting its turn, and never runs it\": the `post` helper at line 139, called at line 415. This machine hands out system ports from 1024 up (netsh: start 1024, 13977 ports), and some of them are ports the fetch standard blocks. This file's serve() listens with `server.listen(0, '127.0.0.1', resolve)` (line 136). It does not use @tick-executor/core's listenOn (packages/core/src/listen.ts), which gives a blocked port back and asks for another. So the first try got a blocked port and failed, and the retry passed. Then the first try's un-awaited fetch rejected, and that failed the package.\n\nWHAT TO DO. Wherever this file starts a server on port 0, listen through listenOn(server, 0, '127.0.0.1'). The file is at its size cap (675 lines in file-size-baseline.json) and must not grow, so fold the import into an existing one in the form the repository's eslint rules accept. Change nothing else about what the tests assert.\n\nDONE WHEN. No `.listen(0` is left in the file, every test in it passes as before, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1837a-af1d-7389-907f-90d879557375",
+      "schema": "tick.work-order.v1",
+      "signature": "28eyHzqroUYIsyD2Ix9j99TxfbTLPeSWMoFwA7hr40gog3D+cVygkGyodQdGLrS+pRHTCKQbcWKLwg5vi/HWAw=="
+    }
+  },
+  "receipt_id": "01a1837a-af1d-7389-907f-90d879557375",
+  "schema": "tick.receipt.v2",
+  "signature": "+NY5ZVuzJUfRBdBd/PZL4i8deImw/MvmCntsfHcK2bvWNHQ5kdwNY29uvSLKSY+OMj04XkGNa+33OGuAFqePBg=="
+}

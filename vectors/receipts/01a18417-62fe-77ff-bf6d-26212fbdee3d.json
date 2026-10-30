@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "c18468e8589a7f891308fa0e1a82d32d791e7a8afaa39bfbbf671c7647ddd8eb",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T20:44:51.298Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T20:07:14.620Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "6360c3b7bb125513abcc8900d19e3972efde25bd01df14942dad04d4a1fc2961",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T20:44:51.298Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "33b1866139ca1a27ce735eb6d93712894e239a8d",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "631149a50147fe3fc7542d69845e38635d66c914",
+        "contained": "none",
+        "order_hash": "caf272f17fab710e34c13610958eae0cd22848db5cfb173750256ab2ed912447",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "eadf0713a486635dc1ec93925475cbd7495cc169",
+        "verdict": "passed"
+      },
+      "record_id": "01a18417-62fe-77ff-bf6d-26212fbdee3d",
+      "schema": "tick.check-record.v1",
+      "signature": "UCPbh/ZChN022yhAMRPYLCWIksNAjlvzMFYGnOf38yeZFWou14aN3zsv/8ZdGRir9h29bpZbZVBRRtYsoJm6Ag=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "9640d62adb1295def561cbe94dc051ddc692f833e4830bd58ce1ce1a39835f23",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "33b1866139ca1a27ce735eb6d93712894e239a8d",
+        "commit": "631149a50147fe3fc7542d69845e38635d66c914",
+        "order_hash": "caf272f17fab710e34c13610958eae0cd22848db5cfb173750256ab2ed912447",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "eadf0713a486635dc1ec93925475cbd7495cc169",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 25,
+            "cost": "reported",
+            "minutes": 8.356366666666666,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18417-62fe-77ff-bf6d-26212fbdee3d",
+      "issued_at": "2026-10-28T20:44:51.298Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "3Kl3sjmC9JjdUBdeeqA17ExDIEB+KFxBTQ5+48IgDWR8LcfSPSVAaBlGZSBEltdKMxOTnx7AhQ2Eas6CkbLTAw=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "caf272f17fab710e34c13610958eae0cd22848db5cfb173750256ab2ed912447",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:58:24.256Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "33b1866139ca1a27ce735eb6d93712894e239a8d",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18417-6217-7304-b579-bbff801e473c",
+          "task_id": "01a18417-62fe-77ff-bf6d-26212fbdee3d"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/talk-takers.ts",
+          "packages/cli/src/project-line.ts",
+          "packages/cli/src/taker-end-told-once.test.ts"
+        ],
+        "what": "WHY (GD-89, PARSA 2026-10-28: \"Fix ALL defects happened this session.\"). On 2026-10-28 at about 19:50Z, window 0d455c stopped taker t4, which had two places, with tick_work stop. The window was woken with: \"Taker t4 was stopped, so it takes nothing more (1 task taken). Taker t4 was stopped, so it takes nothing more (0 tasks taken). Taker t4 was stopped, so it takes nothing more (0 tasks taken). Tell the person.\" A minute earlier it had been woken once more for the same taker, \"took what its mode allowed ... (1 task taken)\". The cause, at origin/main: packages/cli/src/talk-takers.ts keeps one Held per place, and `#letGo` calls tellTakerEnded (packages/cli/src/project-line.ts) for each, so a taker of N places is told N times, each with only that place's count. tellTakerEnded always passes stopped = true, so even a stop the window itself just asked for wakes it, and 'Tell the person' asks the conversation to repeat what it did. Each wake is a turn the person reads.\n\nWHAT TO DO. A taker's end is told once per project it worked, when its last place ends, with the tasks all its places took. A stop the window made (`how` 'stopped') rides the next answer and does not wake. An end the window did not ask for still wakes, as now: 'finished' (it took what its mode allowed) and 'closed'. talk-takers.ts is at its 685-line cap in file-size-baseline.json, so keep it from growing; the telling can live in project-line.ts.\n\nDONE WHEN. A test in the new file packages/cli/src/taker-end-told-once.test.ts shows three things. A taker of two places stopped together gives one item for its project, with the sum of tasks, and does not wake. A taker whose places finish one after another is told once, after the last, waking. Two takers are told apart. Every existing talk-takers and project-line test passes, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18417-62fe-77ff-bf6d-26212fbdee3d",
+      "schema": "tick.work-order.v1",
+      "signature": "KsdJ/gHXIuTJ52LW5zmkMLuVqopSs9NQXBeam9FYn1qSUm5nH47dD01mn8HhUcGGi0TrtVAM4Z2+eStV9ug7Cw=="
+    }
+  },
+  "receipt_id": "01a18417-62fe-77ff-bf6d-26212fbdee3d",
+  "schema": "tick.receipt.v2",
+  "signature": "jI1jhAwceyP+ourKOoxCMkzw9KovInphcaytSBSfM7+Xz7uvJJroYYtIRydbuAcir1oE380SeW4eevtL+8oXAw=="
+}

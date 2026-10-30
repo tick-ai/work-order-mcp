@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "97b1671bd9a3be0986dfea18a9a3d3496acae3b343789d5b7f526c7c518b5b69",
+  "coordinator": "https://0.0.0.0:4200",
+  "issued_at": "2026-10-28T14:35:46.690Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T13:17:07.393Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "b454174137f84070402993ad27088ae7c0c54420d773dc0c01735b52ba55b73c",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:35:46.690Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "da5f1c5ad26d2ec81fa2b438b71cd9546c76dd0e",
+        "contained": "none",
+        "order_hash": "9172b4e7fdbe9a3553a379fcc2b55462d7313903533d727688871c80472973db",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "6ddaf03fb051d71e5dd73ec643793d1edbf439c6",
+        "verdict": "passed"
+      },
+      "record_id": "01a1828e-61de-7381-9b60-0b4c62a0e85e",
+      "schema": "tick.check-record.v1",
+      "signature": "N+Ktje3v54AxLMEQQ4yWCcNd65HscAelcCz4wgwuA23CRCzAmqyqHS3PstHDyUg8K3f+IC7xNsF5dcCBJKnxDQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "3d7f17c63d184d6908dfab7a76eb1b921eda464d599cf47fe4beb1540695d123",
+      "coordinator": "https://0.0.0.0:4200",
+      "delivery": {
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "commit": "da5f1c5ad26d2ec81fa2b438b71cd9546c76dd0e",
+        "order_hash": "9172b4e7fdbe9a3553a379fcc2b55462d7313903533d727688871c80472973db",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "6ddaf03fb051d71e5dd73ec643793d1edbf439c6",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 68,
+            "cost": "reported",
+            "minutes": 24.162933333333335,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1828e-61de-7381-9b60-0b4c62a0e85e",
+      "issued_at": "2026-10-28T14:35:46.690Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "ZKLbLbXsW433gFf1OKMhr06vT8m1p9IRVY37RTe4ump4AowXyLORMubi8gAsPxs6RIzpXcb6/z6eqzFv9ZfgDw=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "9172b4e7fdbe9a3553a379fcc2b55462d7313903533d727688871c80472973db",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T12:52:18.923Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a1828d-2b1d-76c8-8d2a-5f4869cadcfd",
+          "task_id": "01a1828e-61de-7381-9b60-0b4c62a0e85e"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/export-command.ts",
+          "packages/cli/src/export-checker-page.ts",
+          "packages/cli/src/export-checker-page.test.ts"
+        ],
+        "what": "WHY. TN0.32 is PARSA putting the receipt checker page online with one receipt of Tick's own work. The page is three static files, `verifierFiles()` in packages/cli/src/receipt-verifier.ts (index.html, verify.js, verify.css), but nothing calls `verifierFiles()` except its own test: no command writes the page anywhere a static host could serve it from. Decision GD-86 in the company's memory (TN0.38).\n\nWHAT TO BUILD. `tick export --checker <folder>`:\n1. Alone, it writes the three files of `verifierFiles()` into <folder>, byte for byte, and prints each path written and one line saying the folder is the whole page and makes no network request, so it can be put on any static host as it is.\n2. With `--task <task-id>` (and `--form receipt` or `--form receipt-v2`, as `tick export` already takes them; a task export with no --form is a receipt, as today), it also writes the receipt that export makes, exactly as `--out` would write it, as receipt.json in the same folder, prints its path, and prints the address fragment that opens the page on that receipt: `#r=` followed by the receipt file's text in base64url (the page reads it in `fragmentText` in packages/cli/src/receipt-verifier.ts: `-` for `+`, `_` for `/`, padding optional). Say in that line that a fragment never leaves the visitor's browser. The forms work-order and release-receipt are refused with --checker (the page is for receipts), with the reason.\n3. The folder: the path is built at run time, so it is checked non-empty before anything takes it (GD-49); it is created when it does not exist; one that exists and is not empty is refused, naming it, and nothing is written or overwritten. --checker with --out, or with --verify, is a usage error. Write the files through the command's injected writeFile dependency (or one beside it) so the tests need no real folder beyond a temporary one.\n4. Put the new code in a new file, packages/cli/src/export-checker-page.ts (module doc comment of 25 lines or fewer), and keep export-command.ts (409 lines) under 500: it gains only the flag, the call and the usage text, which becomes `tick export [<run-id>] [--task <task-id> [--form receipt|work-order|receipt-v2|release-receipt]] [--out <file.json> | --checker <folder>] | tick export --verify <file.json>`.\n5. Tests in a new file, packages/cli/src/export-checker-page.test.ts: the three files written equal `verifierFiles()`; with a task, receipt.json equals what --out writes for the same task and form, and the printed fragment decodes, the way the page's fragmentText decodes it, to that file's exact text; a non-empty folder is refused with nothing written; an empty path is refused; --checker with --out or --verify is a usage error; --form work-order with --checker is refused. Read packages/cli/src/export-command.test.ts, export-receipt-v2.test.ts and export-verify-forms.test.ts first and keep every one of their assertions passing; grep the whole tree's *.test.ts for the old usage string before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy), and `tick export --checker <empty folder> --task <id> --form receipt-v2` leaves a folder a static host can serve with the receipt and a fragment that opens it."
+      },
+      "order_id": "01a1828e-61de-7381-9b60-0b4c62a0e85e",
+      "schema": "tick.work-order.v1",
+      "signature": "KDuh4vmeWXeci5mhsZE5c82b8c59YukbZNYr6OGUN5JIKSkLUWZZYlxpNoItKnMo4tvp4OEFuX3iJz6EntF7AA=="
+    }
+  },
+  "receipt_id": "01a1828e-61de-7381-9b60-0b4c62a0e85e",
+  "schema": "tick.receipt.v2",
+  "signature": "NBxLFz1wjfRZHCU/zexXBpTq3jeWShhqWWhJdr/GIetB9ZXz+t1xsCUugaZ3zQyfA4lZfHZe25FskHIHfDi5Bw=="
+}

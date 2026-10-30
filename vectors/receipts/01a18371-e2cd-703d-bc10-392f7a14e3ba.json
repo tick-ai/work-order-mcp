@@ -1,0 +1,154 @@
+{
+  "alg": "ed25519",
+  "content_hash": "d0fcc8febf8403975c3f8a66c135dae17944ca9dcbdf7b8703fd555c2f9ecbc3",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:18.349Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T17:31:50.818Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "a18001b69e3eb85f0b8b4f58701aaedca1a8ee119f9f4dce45ea2e0a2934bcaf",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:18.349Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "d727833c0b0c2cd74fb9c8a8fdc268dad008e7bc",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "31f84b48d99d171e833e638f1a947d4f78a24a75",
+        "contained": "none",
+        "order_hash": "5ba53ebb8c1e7d2d092a9c7d0600bc3fd9308aa510c528b017113f13908592c0",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "7b040acb376625f2be730c39ab7507bb9becde7f",
+        "verdict": "passed"
+      },
+      "record_id": "01a18371-e2cd-703d-bc10-392f7a14e3ba",
+      "schema": "tick.check-record.v1",
+      "signature": "u2417FolFN+yY6EXXHJzRB4ueoLDOQqpKbRCVq0x7JR7Fovel/YCDdYSrcfoeONeT5ldjEXykEun+zLcWrJeDQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "647d99d2c8971ee92029fa4a076fd407efeac30e15027ccf87b1dd0a06d0c44d",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "d727833c0b0c2cd74fb9c8a8fdc268dad008e7bc",
+        "commit": "31f84b48d99d171e833e638f1a947d4f78a24a75",
+        "order_hash": "5ba53ebb8c1e7d2d092a9c7d0600bc3fd9308aa510c528b017113f13908592c0",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "7b040acb376625f2be730c39ab7507bb9becde7f",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 118,
+            "cost": "reported",
+            "minutes": 26.46405,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18371-e2cd-703d-bc10-392f7a14e3ba",
+      "issued_at": "2026-10-28T19:41:18.349Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "Pv7npbc3p2N+N8EI7TrJ2nIDkBVqdVRauppVksR6JK+lyZR9pTjfjKM9AouSovUMz77JcuAyBEnkb9EmaWjxCQ=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "5ba53ebb8c1e7d2d092a9c7d0600bc3fd9308aa510c528b017113f13908592c0",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T16:57:28.171Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "d727833c0b0c2cd74fb9c8a8fdc268dad008e7bc",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a18371-e2cd-703d-bc10-392f7a14e3ba"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/runner/src/widen-calls.ts",
+          "packages/runner/src/attached-door.ts",
+          "packages/runner/src/task-door-widen-granted.test.ts",
+          "packages/api/src/amendment-widening.ts",
+          "packages/api/src/amendment-widening.test.ts"
+        ],
+        "what": "WHY (GD-89, PARSA 2026-10-28: \"Fix ALL defects happened this session.\"). Task 01a1834e-a39a-73ef-aae9-d4156fa8ce1a of run 01a18300-e331-7688-bb92-986fc27d45ba (deleting tick-dashboard) failed with its work complete: its copy changed README.md, and every way to be given README.md was refused or did nothing. It asked tick_widen for `README.md` (refused as unresolved: a bare name is a module name, exactFile in packages/api/src/run-territory.ts), then `./README.md` (refused, API_AMENDMENT_WIDENING_NOT_NEEDED, \"may change ./README.md already\", because the coordinator's lease already held README.md), then the module `root` (approved, proposal 01a18369-9118-708c-9808-6db632bafff5). The door, tick_check and tick_report still said README.md was outside its files, and the agent ended without a result.\n\nTHE CAUSE, as read at origin/main d727833c (confirm it before you change anything). On approval the coordinator resolves the names: packages/api/src/amendment-widening.ts widenOnApproval calls resolved(paths, map), where exactFile turns \"./README.md\" into \"README.md\" and a module name becomes its globs, and gives the lease that write set (the runtime.territory.widened event carries it as write_set). The runner never uses it: packages/runner/src/attached-door.ts territoryWidened calls widenedTerritory(held, paths) in packages/runner/src/widen-calls.ts, which adds the names as they were asked, \"./README.md\" and \"./README.md/**\", or \"root\" and \"root/**\". Those match no file, because normalizePathGlob keeps a \".\" segment (packages/scheduler/src/writeset.ts splitIntoSegments drops only empty ones). So a widening by a full path with a slash works, and a widening by a `./` root file or by a module name never reaches the door, while the coordinator calls it granted.\n\nWHAT TO DO. After an approved widening, the door's territory must be the one the coordinator granted. Make it come from one resolution, never from a second reading of the names. Pick the route the code allows. (a) The runner takes the granted write set from the coordinator, for instance from what it already reads about the approved proposal. (b) The runner resolves the names exactly as the coordinator does, with the same exported function (the runner already imports @tick-executor/api) and the same ownership map. Either way, once a widening is approved, the coordinator's lease and the runner's territory for that task are the same set. Mind the file-size caps in file-size-baseline.json. packages/views/src/index.ts is at 638 and packages/runner/src/task-door.ts at 865, so neither may grow. packages/runner/src/http-coordinator-client.ts has one line to spare. packages/runner/src/task-door-widen.test.ts is at 468, which is why the new test goes in task-door-widen-granted.test.ts. If you need another file, ask tick_widen for it BY ITS FULL PATH WITH A SLASH. A ./ name or a module name is this very defect and will not reach your door.\n\nDONE WHEN. A test drives the real door's widen flow, as task-door-widen.test.ts does. It shows that after an approved widening by `./README.md`, and after one by a module name, a copy changing README.md (or a file of that module) passes the door's territory check, the check tick_check runs and tick_report's. It also shows the runner's territory equals the write set the coordinator granted. Every existing widen test still passes, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18371-e2cd-703d-bc10-392f7a14e3ba",
+      "schema": "tick.work-order.v1",
+      "signature": "pRDYEkUhDJF7CAL9iudbLg7o3UCcJttr/ahI/ZurhpTrEFETylpf7FvTqzWLIrSd/ud3T0w+K24j9/uWEShECw=="
+    }
+  },
+  "receipt_id": "01a18371-e2cd-703d-bc10-392f7a14e3ba",
+  "schema": "tick.receipt.v2",
+  "signature": "SEqmC/zBRjVDVkvcLHcynp6kH4yaZnAg9ENIrdpnDwy8tl2PY9EWGD1A54mvmoQJtEfBpvEuOucUQvbl6ywJAA=="
+}

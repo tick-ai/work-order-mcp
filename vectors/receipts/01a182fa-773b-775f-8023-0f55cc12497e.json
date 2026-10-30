@@ -1,0 +1,151 @@
+{
+  "alg": "ed25519",
+  "content_hash": "3dff3994a359bee55d3d79fb98a04caea15d37bb22ce709e7b04d10fa51e4052",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:21.554Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:21:25.338Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "edcebf643f323921c82f6476aea6e1bfa105a4e3e424b3bbf2cf48b7264e79cd",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:21.554Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "5617a49969079735f5c88e205a5cba3beaefc306",
+        "contained": "none",
+        "order_hash": "6989bc1db73646fdee37042ee11ba587685b6ae7f560b0df05bddab8a33bc2ff",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "a91016c488053f2104a49f90c91557564565597d",
+        "verdict": "passed"
+      },
+      "record_id": "01a182fa-773b-775f-8023-0f55cc12497e",
+      "schema": "tick.check-record.v1",
+      "signature": "kF1A1YMgSwUIF7rj2MoM6m+USyACDqTt2wfNhPkdZzvzUWvivwoA/oYsjtCyE0gUGxC9hD5eYd5PDRk9yQP5AQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "86902a53a888c75a370971bcf701f2e34d7abb3f3c6251513f4f06d930024f3b",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "commit": "5617a49969079735f5c88e205a5cba3beaefc306",
+        "order_hash": "6989bc1db73646fdee37042ee11ba587685b6ae7f560b0df05bddab8a33bc2ff",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "a91016c488053f2104a49f90c91557564565597d",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 25,
+            "cost": "reported",
+            "minutes": 21.916416666666667,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a182fa-773b-775f-8023-0f55cc12497e",
+      "issued_at": "2026-10-28T19:41:21.554Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "7Q5Cxx1arSeF9k4Oj1r94omV0KNsTfoZHEOoiiHXwqS6CCCcQsTvf8e9pJnrkX8fj9XWk30KOOLeExKQAZheAw=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "6989bc1db73646fdee37042ee11ba587685b6ae7f560b0df05bddab8a33bc2ff",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:54:18.669Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a182fa-773b-775f-8023-0f55cc12497e"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/error-words.ts",
+          "packages/cli/src/error-words-plain.test.ts"
+        ],
+        "what": "WHAT HAPPENED (2026-10-28 13:41Z, while Parsa-TUF's coordinator was moving to a newly installed release). A tick tool answered only: \"tick: AggregateError ETIMEDOUT (ETIMEDOUT 192.168.1.104:4200, EACCES [fe80::129e:73b5:69da:a727]:4200, ETIMEDOUT 172.19.0.1:4200, EACCES [fe80::244f:6a4d:bdf:4862]:4200, ETIMEDOUT 169.254.83.107:4200, EACCES [fe80::eba:34a1:7037:2047]:4200, ETIMEDOUT 172.21.160.1:4200, ECONNREFUSED 172.24.192.1:4200)\". It is true, and it tells a person nothing they can act on; three seconds later the coordinator answered again. The design system's rule is plain words on everything a person reads. packages/cli/src/error-words.ts describeError makes that line: an error with no message is told by its name, its code and each inner error's code and address.\n\nWHAT TO BUILD.\n1. When every error under an error with no message is a failure to connect (codes ECONNREFUSED, ETIMEDOUT, EACCES, EHOSTUNREACH, ENETUNREACH, ECONNRESET, or a connect syscall), describeError leads with one plain sentence and keeps today's text after it: \"Nothing answered at port 4200 on any of this host's addresses: it may be starting again, as it does after an install; ask again in a minute.\" The port is the one the inner errors share; where they do not share one, leave the port out. Then the line as it is today, so the codes and addresses are still there for whoever needs them.\n2. Every other error is described exactly as today.\n3. Tests in a new file, packages/cli/src/error-words-plain.test.ts: an AggregateError of ECONNREFUSED and ETIMEDOUT on one port leads with the sentence and still contains every \"CODE address:port\"; a mix of ports leaves the port out; a fetch failure whose cause holds them reads the same; one non-connection error under it (EPIPE) keeps today's text alone; an error with a message is untouched. packages/cli/src/error-words.test.ts's assertions (toContain of each code and address, a message kept, never empty) keep passing unchanged. Grep the whole tree's *.test.ts for describeError, \"AggregateError\" and \"ECONNREFUSED\" in expected strings before you finish (update-command and update-install print through it). If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a182fa-773b-775f-8023-0f55cc12497e",
+      "schema": "tick.work-order.v1",
+      "signature": "4iCN0h0qTNEhI0bmz6r9rQ2hx/ftq86moA/uHlXudE3RuLeH68qht7wPlC1NB1NjkA4m6OUor1ZhWzFlY2UYDQ=="
+    }
+  },
+  "receipt_id": "01a182fa-773b-775f-8023-0f55cc12497e",
+  "schema": "tick.receipt.v2",
+  "signature": "bruhA1h8Ppws4Gccz0CFS4TsmAnLe8NBZUiJOFET2rrNRMp/A0g9Z228OAHKp2BKZwUG68qtBQJL7O+D5mX/BA=="
+}

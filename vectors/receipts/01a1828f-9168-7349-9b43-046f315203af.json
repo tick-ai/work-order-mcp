@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "8990e0d841e1549e33b4393c061a9bc78a65874bd66890480aa4981748a7a6bd",
+  "coordinator": "https://0.0.0.0:4200",
+  "issued_at": "2026-10-28T14:35:47.006Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T13:12:01.992Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "7631aa6333a109c8532afe7c454b1b324c51374258326c3d519f3d7272737c17",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:35:47.006Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "1312a6c26d41fbd04f270a7e09c1669f23505df8",
+        "contained": "none",
+        "order_hash": "6206831fa5c9b0aec5027aa171262c236aa94dce4f20b36ac04fdd72d0e9df61",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "855e0cf1fbfc5b9efef38269d765e483f42c2e77",
+        "verdict": "passed"
+      },
+      "record_id": "01a1828f-9168-7349-9b43-046f315203af",
+      "schema": "tick.check-record.v1",
+      "signature": "l34IQg55UhZnbEorswt0lnIp1i8HF+EktDX/HHQ4vX4gHKhm0eQzKZr3bPTSmH+3NE833q9QJkv7AilTbEKHBA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "0a6a22e3454f28977e39ff09c59b542277b040018e27096ff11626536127697d",
+      "coordinator": "https://0.0.0.0:4200",
+      "delivery": {
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "commit": "1312a6c26d41fbd04f270a7e09c1669f23505df8",
+        "order_hash": "6206831fa5c9b0aec5027aa171262c236aa94dce4f20b36ac04fdd72d0e9df61",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "855e0cf1fbfc5b9efef38269d765e483f42c2e77",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 97,
+            "cost": "reported",
+            "minutes": 18.946566666666666,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1828f-9168-7349-9b43-046f315203af",
+      "issued_at": "2026-10-28T14:35:47.006Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "hC/KtO5CKUDyRlI3VpDXaFVjQAHSwYRTRqLt3EwJmGht4MdQRJvo9hHj9wuncBMraUJJ+e1RQI9lK81eEE6UCQ=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "6206831fa5c9b0aec5027aa171262c236aa94dce4f20b36ac04fdd72d0e9df61",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T12:52:21.256Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a1828d-2b1d-76c8-8d2a-5f4869cadcfd",
+          "task_id": "01a1828f-9168-7349-9b43-046f315203af"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "scripts/mutation-probe.mjs",
+          "scripts/mutation-probe-changed.mjs",
+          "packages/runner/src/mutation-probe-changed-script.test.ts"
+        ],
+        "what": "WHY. The road's checker for outside work (TN4.4, packages/cli/src/outside-check.ts) runs a work order's pinned commands on the delivered commit, but nothing in a check says whether the tests could have failed at all, which the road's design names in its third step (\"runs the pinned checks on the exact commit in a clean copy, with probes for tests that cannot fail\") and which is the road's worst risk, one wrong receipt. scripts/mutation-probe.mjs asks exactly that of one file and one line range, and always exits 0 once it has run. Decision GD-86 in the company's memory (TN0.39): the probe becomes a check a work order can pin among its commands, so the check record, signed by the checker, says whether it passed. The verdict stays the order's: nothing in the check record, the receipt or outside-check.ts changes.\n\nWHAT TO BUILD. `node scripts/mutation-probe.mjs --changed <base> [--allow N] [--root <repo>] [--built] [--workers N] [--json]`:\n1. It takes no <file> operand (a file with --changed is a usage error). It lists the files changed between <base> and HEAD of the repository (git diff, base being any commit-ish the repository holds; one it does not hold is exit 2 naming it) and keeps the TypeScript sources under packages/<pkg>/src that are not tests (`*.test.ts`), test support (`*.test-support.ts`) or declarations (`*.d.ts`). For each it takes the line ranges the change added or modified in the file as it is at HEAD (git diff -U0 hunks); a file whose change only deleted lines has nothing to probe and is listed as such.\n2. It probes each kept file over exactly those ranges, with the probe's own machinery (probe in scripts/mutation-probe.mjs, one host per package as today), so a site off the changed lines is never counted. Where a file needs several ranges, probe them in one run of that file, not one run per range.\n3. It prints, per file, each site on a changed line with its line, column, kind and verdict (killed, survived, rejected, not reached) and, for a killed one, the test that killed it; then one summary line: how many sites, how many killed, survived, rejected and not reached. `--json` prints one object instead, with the files, their ranges, the sites and the counts, and `outcome` passed or failed.\n4. Exit 0 when no site on a changed line survived or went unreached; exit 1 when any did, after naming every one; `--allow N` lets up to N of them through (still named, and the summary says they were allowed); exit 2, as today, when the probe cannot run. A change with no source lines to probe is exit 0 and says so in one line. The file mode (`<file> [--lines A-B]`) and its exit codes are unchanged.\n5. The new code goes in a new file, scripts/mutation-probe-changed.mjs (the diff to ranges, the run over several files and ranges, the report and the exit), with a module doc comment of 25 lines or fewer; scripts/mutation-probe.mjs (445 lines) gains only the options, the usage text and the dispatch, and stays under 500. It runs below normal priority, as the probe does.\n6. Tests in a new file, packages/runner/src/mutation-probe-changed-script.test.ts, which links the scripts by a relative literal (new URL('../../../scripts/mutation-probe-changed.mjs', import.meta.url)) so Tick's test selection picks it, and spawns the script against a temporary git repository built outside the checkout from the fixture package packages/runner/src/mutation-probe-script.test.ts already uses with --root (read its fixtures in mutation-probe-fixtures.test-support.ts; do not add to mutation-probe-script.test.ts, which is 499 lines). Cases: a changed line whose mutants the tests kill (exit 0); a changed line no test reaches (exit 1, named); a survivor (exit 1, named); the same with --allow 1 (exit 0, named, allowed); a change to a test file only (exit 0, nothing to probe); a deletion only (exit 0, listed); --changed with a <file> operand (exit 2); a base the repository does not hold (exit 2). Bound every spawn with a timeout, as the existing test does.\n\nRead scripts/mutation-probe.mjs, mutation-probe-runs.mjs and mutation-probe-sites.mjs whole before you change anything, and grep the whole tree's *.test.ts and *.mjs for 'mutation-probe' and for the usage string; every existing assertion keeps passing. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy), and `node scripts/mutation-probe.mjs --changed <your own base> --built` run on your own change answers with its exit code as above."
+      },
+      "order_id": "01a1828f-9168-7349-9b43-046f315203af",
+      "schema": "tick.work-order.v1",
+      "signature": "lr1m+BUOQu09fh2/ao0Nb0YkIcjGb9wFKs6W3xo26/zzpp1e5IOnSFwOGJzQalxQcLBX5tgQLRbOBPC6WjcBCQ=="
+    }
+  },
+  "receipt_id": "01a1828f-9168-7349-9b43-046f315203af",
+  "schema": "tick.receipt.v2",
+  "signature": "Nb/XKr50SCxZlWIgJNG0eiiHkYYplqTLRh80djsNEonPRsCMK3yAmXln6cEjqvAC8tT5bUfOOBbQTPYAIVWjBQ=="
+}

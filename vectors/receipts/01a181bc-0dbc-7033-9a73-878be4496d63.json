@@ -1,0 +1,150 @@
+{
+  "alg": "ed25519",
+  "content_hash": "bb75917d4f90a66e508c9df8362c8b596a52544e018f7537ee27d72f7ad19513",
+  "coordinator": "https://0.0.0.0:4200",
+  "issued_at": "2026-10-28T09:05:57.401Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T09:04:51.034Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "41e69274321db58cbaa1a07b487fddd5f6e97757dda131e6dae543cbcf996fd5",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T09:05:57.401Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "9ec3ba5b8d609e0e0e2e73389dd2568398066385",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "fe19809ab2a7686fc13baec09a6d950dc04db1e5",
+        "contained": "none",
+        "order_hash": "10ed9a5b175843b1dc66e56ee963ab0046c32032987fd0e8aa2fa93149350b4a",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "d4b4440736796506b1bdb12bf6135d625f32fa99",
+        "verdict": "passed"
+      },
+      "record_id": "01a181bc-0dbc-7033-9a73-878be4496d63",
+      "schema": "tick.check-record.v1",
+      "signature": "c3jlqCr0/RvnRkeHhjL9yNSGwgiWXnKMPsscB318/DT/RdtC0KKLkVOATuDIYRfRKSlerxqEH7ZRJ5mESALKCg=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "4483fdddaddba75307f15f7bbb2ef074027480bfe6c09981190c59df068cc5f0",
+      "coordinator": "https://0.0.0.0:4200",
+      "delivery": {
+        "base": "9ec3ba5b8d609e0e0e2e73389dd2568398066385",
+        "commit": "fe19809ab2a7686fc13baec09a6d950dc04db1e5",
+        "order_hash": "10ed9a5b175843b1dc66e56ee963ab0046c32032987fd0e8aa2fa93149350b4a",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "d4b4440736796506b1bdb12bf6135d625f32fa99",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 5,
+            "cost": "reported",
+            "minutes": 4.935016666666667,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a181bc-0dbc-7033-9a73-878be4496d63",
+      "issued_at": "2026-10-28T09:05:57.401Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "0VFcwTQBJVvvmTMCisPhAJ+IDzSTCp13hWlz6FnS4NF/VEnN+rP/ZpzCHho4bBe0F6+exLeYDxLmuMO+3CmmAw=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "10ed9a5b175843b1dc66e56ee963ab0046c32032987fd0e8aa2fa93149350b4a",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T08:59:25.281Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "9ec3ba5b8d609e0e0e2e73389dd2568398066385",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a181bb-db79-75df-b820-7a2070da112b",
+          "task_id": "01a181bc-0dbc-7033-9a73-878be4496d63"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "./ticked-line.json"
+        ],
+        "what": "Decision GD-85 (PARSA, 2026-10-28, utt:409c445ff7e579567a745793e3f0eef3: \"Move the line past them.\"). The two commits that took ticked-line.json off main by hand on his word (here 435e3340146d47666bff48581c91f7f60296361d) are not Tick landings, so `tick landings` counts them as a gap with the line where it is. The line moves to that commit. `at` stays as it is on purpose: it decides which earlier work may still land once without a receipt, and moving it would widen that.\n\nTHE CHANGE. Replace the content of ticked-line.json at the repository root with EXACTLY these 242 bytes: LF line endings, no carriage return, two-space indent, one final newline after the closing brace:\n\n{\n  \"schema\": \"tick-ticked-line/1\",\n  \"commit\": \"435e3340146d47666bff48581c91f7f60296361d\",\n  \"at\": \"2026-10-27T21:14:51Z\",\n  \"words\": \"Move the line past them.\",\n  \"utterance\": \"utt:409c445ff7e579567a745793e3f0eef3\",\n  \"decision\": \"GD-85\"\n}\n\nCheck before you commit: the file's sha256 must be f275569049b925c73434884e324a4f6b51a98451d81133144dd91c0dc344a8d8, and the old file (`git show HEAD:ticked-line.json`) must be the 315-byte one that names commit f14e34fe7f08a0510a6ef9dc6a96575f449409cb; if it is not, stop and say so in your result. Do not change one character, do not edit any other file, and do not run whole suites: the file is parsed by packages/core/src/ticked-line.ts (`parseTickedLine`), which accepts exactly these keys.\n\nNOTE FOR WHOEVER REVIEWS. This landing is under the line as it stands (the land gate asks whether the work is ready for a receipt). If it is refused, the refusal is the news: report it in your result and do not work around it."
+      },
+      "order_id": "01a181bc-0dbc-7033-9a73-878be4496d63",
+      "schema": "tick.work-order.v1",
+      "signature": "/qR4fH/LhLLfwqnymMTWJwAYLIImyRJJnM47ichnSH+IrAWbj7ZaUdO7FCu4lokWrzHkZo8vZPXMieOJB1HFDg=="
+    }
+  },
+  "receipt_id": "01a181bc-0dbc-7033-9a73-878be4496d63",
+  "schema": "tick.receipt.v2",
+  "signature": "kYeCVMtJIOde5zlK7NhgvKpg+woKXr1V6/1WUHYgNT1+0XT6ObMEyCKbyga2GGxFc/PGN/1Qio7z2G/9zGEPBQ=="
+}

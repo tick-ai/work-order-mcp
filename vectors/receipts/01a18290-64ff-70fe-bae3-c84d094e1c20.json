@@ -1,0 +1,154 @@
+{
+  "alg": "ed25519",
+  "content_hash": "466f87d780e775131f3e6150076ca9a2d07b0e83c1e3f3b8632a0b96a0a0b88b",
+  "coordinator": "https://0.0.0.0:4200",
+  "issued_at": "2026-10-28T14:35:45.789Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T13:41:55.185Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "fe550e2cce6330ce31f650d6b8ba7b3740cedd546b39766080e2dabda69a3310",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:35:45.789Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "8c953c576c6779a66d4c4dbdc69d1486bfe007ca",
+        "contained": "none",
+        "order_hash": "a73d17f46a082c2bbb791ffcc4a5f8ca0dca5501290038b421a3260779d0d535",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "9d1729d883e57190e6b6f29b04256b268c4e69a1",
+        "verdict": "passed"
+      },
+      "record_id": "01a18290-64ff-70fe-bae3-c84d094e1c20",
+      "schema": "tick.check-record.v1",
+      "signature": "XB/FPDMxZa7tfjLWLn4PmVWV/Ji5Jrp7cFCogI621lbaS3dxCqzIbe6fTCrAAT2oRoObif9Hv9Qk51qtfYIyCA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "25c10d4099958a52dc449cf83840f3434f71224dbbe085203a514b1a42a707ba",
+      "coordinator": "https://0.0.0.0:4200",
+      "delivery": {
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "commit": "8c953c576c6779a66d4c4dbdc69d1486bfe007ca",
+        "order_hash": "a73d17f46a082c2bbb791ffcc4a5f8ca0dca5501290038b421a3260779d0d535",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "9d1729d883e57190e6b6f29b04256b268c4e69a1",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 56,
+            "cost": "reported",
+            "minutes": 22.9614,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18290-64ff-70fe-bae3-c84d094e1c20",
+      "issued_at": "2026-10-28T14:35:45.789Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "jGfufLK/YoS0KzIwiKfpf4iFfBMjOIvreH0YuRcoFjNlvpHh8ChQ2Jm/3neq6SdPilUBB9aOLjQ58I7DhJSaBA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "a73d17f46a082c2bbb791ffcc4a5f8ca0dca5501290038b421a3260779d0d535",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T13:01:35.543Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a1828d-2b1d-76c8-8d2a-5f4869cadcfd",
+          "task_id": "01a18290-64ff-70fe-bae3-c84d094e1c20"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/user-terms.ts",
+          "packages/cli/src/user-terms-text.ts",
+          "packages/cli/src/terminal-ask.ts",
+          "packages/cli/src/talk-command.ts",
+          "packages/cli/src/talk-terms.test.ts"
+        ],
+        "what": "WHY. TN0.23 (the user terms of Tick's own client) says the terms are \"shown once at the first run, which records the person's yes\". PARSA signs the text with counsel; it is not signed yet, and no code shows terms or records a yes today. Building the question now means that, once he signs, landing the text is the only step left. Decision GD-86 in the company's memory (TN0.41). The draft he is reviewing says, among other things, that nothing reaches the copyright holder from a member's Tick unless they send it, so the yes stays on the person's machine.\n\nWHAT TO BUILD.\n1. packages/cli/src/user-terms-text.ts holds the terms Tick ships: `export const USER_TERMS: { readonly title: string; readonly text: string } | null = null;` with a one-line comment that it stays null until PARSA's signed text lands. It ships inside the package's dist, which is the only part of packages/cli the package build copies (scripts/build-npm-package.mjs copies each package's dist/, package.json and LICENSE), so the text must be a source constant and not a file beside it.\n2. packages/cli/src/user-terms.ts: the question and what is kept. With no terms shipped it does nothing: no file is read or written and nothing is asked. With terms shipped, it reads what this person accepted from ~/.tick/terms.json (`{ \"sha256\": <hex of the UTF-8 text>, \"accepted_at\": <ISO time> }`, written readable by this user only, as packages/cli/src/kept.ts writes its files; a file that cannot be read counts as nothing accepted, so the person is asked, never refused). If the sha256 of the shipped text matches, it returns at once. Otherwise it prints the title and the whole text, then asks \"Do you accept these terms? Type yes to accept:\" through the injected ask; only yes or y, in any case and trimmed, accepts. On yes it keeps the sha256 and the time and the start goes on. On anything else it keeps nothing, prints \"Nothing was set up: Tick's own client is used under these terms. Run tick again to accept them.\", and plain tick exits 0. Nothing is sent anywhere; auto tick never answers it, since it is the terminal's question, put before any agent starts.\n3. packages/cli/src/talk-command.ts: in `run`, after an agent is found and before `offerRestore` (talk-command.ts:534, before setup can write anything), it calls the terms step through a new optional dependency of TalkCommandDeps (for example `terms?: (ask, say) => Promise<boolean>`), which realTalkDeps fills with the real one. While USER_TERMS is null the real one asks nothing, so every existing test of plain tick, and packages/cli/src/first-run.e2e.test.ts, behaves exactly as today. talk-command.ts is 1105 lines, exactly its entry in file-size-baseline.json, so it may not grow by a line: pay for what you add in the same change by moving the terminal reader of realTalkDeps' `ask` (the createInterface question, about talk-command.ts:1028-1045, with its comment about pausing stdin) into a new file, packages/cli/src/terminal-ask.ts, unchanged in behaviour, and importing it. Do not edit file-size-baseline.json. New files: module doc comments of 25 lines or fewer.\n4. Tests in a new file, packages/cli/src/talk-terms.test.ts (talk-command.test.ts is 1919 lines, at its baseline: do not add to it), with an injected terms text, ask and a temporary home: no terms shipped, nothing asked and no file touched; terms shipped and none kept, the text shown and asked, yes keeps the text's sha256 and goes on; no and an empty answer keep nothing, set nothing up (offerRestore and the coordinator's setup are never reached) and exit 0 with the line above; kept for this text, not asked; kept for another text (a changed text), asked again; an unreadable kept file, asked again. Read talk-command.test.ts and grep the whole tree's *.test.ts for TalkCommandDeps, createTalkCommand and realTalkDeps before you finish; every existing assertion keeps passing. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nNOT IN THIS TASK. The signed text itself, LICENSE and README (TN0.23's own landing, after his signature), and how TN0.25's measured first run answers the question once terms ship.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy), and plain tick with USER_TERMS null starts exactly as it does today."
+      },
+      "order_id": "01a18290-64ff-70fe-bae3-c84d094e1c20",
+      "schema": "tick.work-order.v1",
+      "signature": "oPuC+XttozNAOh8x/hClG0PNgTGabq8AMfQP6jjiHzcCLuDI0EgQFzmRPHPaK4fXNeK22E0rLalGfFXhLhp6Dg=="
+    }
+  },
+  "receipt_id": "01a18290-64ff-70fe-bae3-c84d094e1c20",
+  "schema": "tick.receipt.v2",
+  "signature": "QbML/+vCut6BpmDTb+u4yslD+907VshXiByIJ5EitGaud1WEELI7ldD9sGgA2RpWmfwYhbgMxXdbfGjoXmBvDg=="
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "tick.release-receipt.v1",
+  "alg": "ed25519",
+  "issued_at": "2026-10-28T21:55:25.305Z",
+  "coordinator": "https://Parsa-TUF:4200",
+  "run_id": "01a1842c-8948-72ff-bf8d-7e201d006413",
+  "task_id": "01a1842c-a86a-757c-bfc2-2ae0a542025c",
+  "release": {
+    "version": "0.5.265",
+    "gated": "be306d39e38ee5ba8ab88991ea9dcabf1bcdeb20",
+    "base": "9050e1317d600ee1593b079d6c26f69322239de5",
+    "commit": "1b7c25a1edd075d2bfa5cb9b621a70244dffb2a0",
+    "tarball": "dist-npm/tick-group-tick-0.5.265.tgz",
+    "tarball_sha256": "533bb3d1a4fc799f7128474b20a773e4757614b39b013c907516527359a048d0",
+    "shasum": "60dc68e3d52260c1b5079b86ba93c4f81197abf4",
+    "pushed": [
+      "origin",
+      "backup"
+    ],
+    "record_sha256": "cb78649c541afc7cd6bed58c386c5d229ae346cca491bb8ba91c55ca7c68a538",
+    "gate_check_sha256": "663666d3d38e8419d8b5271b60e61581012a8572f52c14f6f0bf3c94d4ab2547",
+    "gate_summary_sha256": "4f5f7283b9b73d9aaabff0bc611c8d91424dcde0620c8ec3ddb7746064bff46f",
+    "task_receipt_hash": "21abfe4cf5ac13e7607cae30ba60e487762eda5ab7257c91788cd105b84da945"
+  },
+  "content_hash": "be0a14269889ccfce9009b6685c4d938b9582801c0b7468daca64d3c6d7ed837",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "signature": "HP/Rh3ATxvaSLgXk0k+ioAl3eQQswp6YwCXh4XK/9FyxnMyTyx/DMSwz44wRMUhKKApcGJXN+3n2XhkPKsfLDw==",
+  "limits": [
+    "The signature proves the holder of the carried key issued this receipt, and content_hash that the release was not edited since. It does not prove the coordinator reported the truth, or that the release is good.",
+    "The carried key is the company’s only if the verifier already holds that key_id from somewhere else. A receipt cannot vouch for its own key.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies.",
+    "The hashes cannot be shown to be of the tarball, the release record, the gate’s files or the task receipt they name without those files: this document holds hashes and cannot see what they are hashes of."
+  ]
+}

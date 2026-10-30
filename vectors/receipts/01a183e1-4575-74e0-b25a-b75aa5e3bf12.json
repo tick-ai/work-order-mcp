@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "c189c60a39419a640900776969098b93655276398d9a845bf30e748ade4287a5",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:16.619Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T19:26:05.947Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "1527723904c7e6b6b9d98c2ad6fa51ca4cf98ec33d8202322a587509fdedb1bb",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:16.619Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "40308ff5e26e5ea8e13d21a66b59c4ac45b78ae4",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "fce475a68348e00c5d868c4af5b9d9a0b0c14565",
+        "contained": "none",
+        "order_hash": "3d308596ecb137544d6d8297f3b827894da52437f6d88b13069fd3bc18e3608c",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "ba2fe1032975d23084424bbf149d5e1e8bcb18c5",
+        "verdict": "passed"
+      },
+      "record_id": "01a183e1-4575-74e0-b25a-b75aa5e3bf12",
+      "schema": "tick.check-record.v1",
+      "signature": "DxGmzVveuXAsn5Tjw6/bNc25PE1KkpzXSBQ2oK5kjug5X+uGZNhQ3kPaM6cotOd90ayaQn+QJjm8LOFerE+fBg=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "ab2a1c109e2891a90f7127d5a3065a571991dd2b32591084a545f6a291ad0ef6",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "40308ff5e26e5ea8e13d21a66b59c4ac45b78ae4",
+        "commit": "fce475a68348e00c5d868c4af5b9d9a0b0c14565",
+        "order_hash": "3d308596ecb137544d6d8297f3b827894da52437f6d88b13069fd3bc18e3608c",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "ba2fe1032975d23084424bbf149d5e1e8bcb18c5",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 66,
+            "cost": "reported",
+            "minutes": 17.769716666666667,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a183e1-4575-74e0-b25a-b75aa5e3bf12",
+      "issued_at": "2026-10-28T19:41:16.619Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "CiaUvMkabhPi/6PQWtPIWN2OOy16O+jtyL0rTYuSPana4WcVoQvk2E3D0vZA9ETjkD/XHJif+/W+KqkqW2l6BQ=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "3d308596ecb137544d6d8297f3b827894da52437f6d88b13069fd3bc18e3608c",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:07:48.307Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "40308ff5e26e5ea8e13d21a66b59c4ac45b78ae4",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a183e1-4575-74e0-b25a-b75aa5e3bf12"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/project-tools.ts",
+          "packages/cli/src/send-exact-areas.ts",
+          "packages/cli/src/send-exact-areas.test.ts"
+        ],
+        "what": "WHY (GD-89, PARSA 2026-10-28: \"Fix ALL defects happened this session.\"). On 2026-10-28 at 18:54Z, task 01a1834e-a39a-73ef-aae9-d4156fa8ce1a (deleting tick-dashboard, run 01a18300) had passed Tick's check, and its landing was refused three times in ten seconds: \"LAND_UNTICKED: ticked-gate: nothing unticked lands (ticked-line.json, GD-82), and the work this landing carries is not ready for its receipt ... did not record the work_order\". machine.log gave the cause: \"no work order for task ...: run ... did not record the territory of task ..., so no work order is signed for it: it would be recorded in semantic_owns of the task's plan node, every entry one exact file\". The task's areas named the module `dashboard`, as tick_send's own description of `areas` offers (\"A module name of the repository's map locks that whole module instead\"). packages/api/src/task-work-order.ts takes a territory only when every semantic_owns entry is one exact file. So in a repository with a ticked line, a task sent with a module or a pattern can never land, and nothing says so until its landing, after the agent and Tick's check have been spent. machine.log shows the same refusal for at least eight other tasks since 2026-10-26, among them 01a182d1-6e3a (run 01a1828d) and 01a1790c-780f (run 01a17835).\n\nWHAT TO DO. Where a repository has ticked-line.json at its root, tick_send refuses, before the task is added, any `areas` entry that is not one exact file: a module name, or a pattern. Its answer names the entry and says why in one sentence: the work could get no work order, so it could never land (GD-82). For a module of the repository's ownership map, it lists that module's files at the repository's main, so the caller can send them instead. A repository without ticked-line.json goes on accepting modules as today. Change the description of `areas` in tick_send's schema to say this. Put the check in the new file packages/cli/src/send-exact-areas.ts. packages/cli/src/project-tools.ts is at its 942-line cap in file-size-baseline.json, so its call site and description must not grow it. A widening by a module name is out of scope; say in your result if you find it has the same effect.\n\nDONE WHEN. A test in the new file packages/cli/src/send-exact-areas.test.ts goes through the real tick_send path. In a fixture repository with ticked-line.json, areas [\"dashboard\"] is refused with the module's files listed, and nothing is sent. [\"packages/x/a.ts\", \"./README.md\"] is sent. In a fixture without ticked-line.json, a module is sent as today. Every existing project-tools test passes, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a183e1-4575-74e0-b25a-b75aa5e3bf12",
+      "schema": "tick.work-order.v1",
+      "signature": "arzOiwFfZC/DNcuj2wH+2j6NRfk/oeqRnO7E9mWfpOgGfwdIV8QusgSLrMpccRhdZqUP+M3M+WQbwhI5VTRwAg=="
+    }
+  },
+  "receipt_id": "01a183e1-4575-74e0-b25a-b75aa5e3bf12",
+  "schema": "tick.receipt.v2",
+  "signature": "4hYWdc4Oebjb2COeVKWk1BDEbwOuYDaSDD/UO/X0EC7WaFcg2hN2xAjUJMXBGsXHFMkfS4IG8oEu4Z2gfzslAA=="
+}

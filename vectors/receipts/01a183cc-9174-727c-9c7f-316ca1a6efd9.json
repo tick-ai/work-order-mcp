@@ -1,0 +1,154 @@
+{
+  "alg": "ed25519",
+  "content_hash": "134744fac821af0d291c0eee92a288efea9fdadf2c253029fd8c11693e30be00",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:16.828Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T19:25:35.960Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "91cebb2b693c20b20000e8f5e1b1363022efce1f03cb74ac40a9fe0f25ad34bc",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:16.828Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "40308ff5e26e5ea8e13d21a66b59c4ac45b78ae4",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "1c1090732fcb9b4bb386d442b61c60d5eac7b051",
+        "contained": "none",
+        "order_hash": "2e096872ee0cfff68d889278eb76fbf01bc4abeb354ece21977cf6db83e35fc4",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "d3bff26b2f80056d15ce86295a54e97cac2d1b98",
+        "verdict": "passed"
+      },
+      "record_id": "01a183cc-9174-727c-9c7f-316ca1a6efd9",
+      "schema": "tick.check-record.v1",
+      "signature": "6i/Tv68EweBh/d8bd6qsg2ibSgFGcY1NcTyD2kinKsPRifhXV66kT7tcL9Ma9VQMpkdijV6EQv55qbPgHIc+BA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "5d58f3245a36f5396ba7d0a488dce4a4719524c40fe1d5eddac1f6c64c3ac5bc",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "40308ff5e26e5ea8e13d21a66b59c4ac45b78ae4",
+        "commit": "1c1090732fcb9b4bb386d442b61c60d5eac7b051",
+        "order_hash": "2e096872ee0cfff68d889278eb76fbf01bc4abeb354ece21977cf6db83e35fc4",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "d3bff26b2f80056d15ce86295a54e97cac2d1b98",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 90,
+            "cost": "reported",
+            "minutes": 17.7471,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a183cc-9174-727c-9c7f-316ca1a6efd9",
+      "issued_at": "2026-10-28T19:41:16.828Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "qJyQ16RmxdvNLpV1hzF5D9fuqRURZlZs2L/vndt1gWyLliOpZ+KVaCACKCXyI9oBVDFI4WS/Eu/n/QRtXWNjCg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "2e096872ee0cfff68d889278eb76fbf01bc4abeb354ece21977cf6db83e35fc4",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:07:11.240Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "40308ff5e26e5ea8e13d21a66b59c4ac45b78ae4",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a183cc-9174-727c-9c7f-316ca1a6efd9"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/project-line.ts",
+          "packages/cli/src/project-line-landed.test.ts",
+          "packages/cli/src/machine-notices.ts",
+          "packages/cli/src/machine-notices-moved.test.ts",
+          "packages/cli/src/coordinator-keeper.ts"
+        ],
+        "what": "WHY. PARSA, 2026-10-28 at about 18:33Z, in lead window 0d455c: \"Check on it. The fact that I've said it this many times is the biggest UX defect itself.\" He had typed \"Check on it\" three times in 45 minutes while a release, an install and about ten landings went on in that window's own projects, and nothing told him any of it. He works with one command, tick, and a person should never have to ask what their own work did (thesis 4: the person answers only what only they can answer). The cause, as read at origin/main: packages/cli/src/project-line.ts (OS8) tells a project's failed attempts (endedAttempts keeps only attempt.status === 'failed'), its gates and its stranded tasks. It never tells a landing or the project's end. It wakes the window ('now') only when a decision waits or Tick stopped something, and everything else \"rides the next answer\", so an idle conversation hears nothing. The coordinator's move to a new release is said only in ~/.tick/machine.log (packages/cli/src/coordinator-keeper.ts: \"started the coordinator ... records again on x.y.z\"), which no window reads.\n\nWHAT TO DO.\n(1) The project line also tells each task of the project whose work landed since the line was last told: its title, and the commit main got where the task list gives it. It also tells the project's end, once every task has settled, with how many landed and how many failed. Both wake the window ('now') with the line's \"Tell the person.\" so the conversation says it in a line. News found in one glance stays one item: the line already collapses by run id and changes its id with its content. A landing once told is not told again, as ended attempts are not today. Failures keep waking as they do now. An integrate step, or an implement hand-back that has not landed yet, does not wake.\n(2) When the coordinator this machine keeps starts again on a newer release, every window open here is told once, waking: \"Tick's coordinator now runs x.y.z.\" This goes through machine-notices.ts, as the keeper's other messages do (tellEvery). The keeper is where the start is known.\n\nDONE WHEN. In the new file packages/cli/src/project-line-landed.test.ts (project-line.test.ts is at 495 lines): a task whose land step succeeded gives one item waking 'now' that names the task, and the commit where given. The next glance with nothing new gives no new item. A project whose tasks have all settled gives one end line. A failed attempt still wakes as today. In the new file packages/cli/src/machine-notices-moved.test.ts: the keeper's start on a newer release is told to every open window once, waking, and not again on the next pass. Every existing project-line and machine-notices test passes, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy). If the change needs another file, ask tick_widen for it BY ITS FULL PATH WITH A SLASH. machine-main.ts and machine-host.ts are at 495 and 499 lines, under the 500 cap."
+      },
+      "order_id": "01a183cc-9174-727c-9c7f-316ca1a6efd9",
+      "schema": "tick.work-order.v1",
+      "signature": "LZH1jYj6LKntPNS6tTk9NJQSk/lHrWD1LqvZHE41gS7Y6vOSTxXpSuzgM0GMb4UrNv7qLfoLIyQ0Wps2P9ImAw=="
+    }
+  },
+  "receipt_id": "01a183cc-9174-727c-9c7f-316ca1a6efd9",
+  "schema": "tick.receipt.v2",
+  "signature": "pUAGHJyYSjY0r+OngeGqxi5AgIqA/Rp/o13sVejSrtMKs3L90ojrpDwdVWP3YqoXHgiA6/jb9ES+5Bzp337gDg=="
+}

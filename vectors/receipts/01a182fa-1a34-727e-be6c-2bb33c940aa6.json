@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "1d7f0091b25be1fa5605c1b7c638a8c90beefd19da6293fe7294818b463277a0",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:23.044Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T14:54:36.203Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "ca64a2038d34491d5dba9b4e53318e0d14e288dd510aeea50733bc4d5be3e8d6",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:23.044Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "aa5643c21ca795c2aea78c4593d2d90c71e1577b",
+        "contained": "none",
+        "order_hash": "db82db9294e8c0a86b1345429f20b3a38b2f374c67f5ad27b78cd0c0946477b5",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "73198d43e7694ab3d4b32cc1204454566ffd6bc2",
+        "verdict": "passed"
+      },
+      "record_id": "01a182fa-1a34-727e-be6c-2bb33c940aa6",
+      "schema": "tick.check-record.v1",
+      "signature": "bQNJUV/eC0K9bC2lIY64PMhFfhbI2BQV41JEoW2khvQ/Vv2wX2TJ2GpvawJX6Rxeo8qhsbJkNYCB0QPlYMB0Cw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "00aa4e8fa13f68239523ab82f2ebbd4a0e928b5241f617741130d195849583c0",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "commit": "aa5643c21ca795c2aea78c4593d2d90c71e1577b",
+        "order_hash": "db82db9294e8c0a86b1345429f20b3a38b2f374c67f5ad27b78cd0c0946477b5",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "73198d43e7694ab3d4b32cc1204454566ffd6bc2",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 17,
+            "cost": "reported",
+            "minutes": 5.5549333333333335,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a182fa-1a34-727e-be6c-2bb33c940aa6",
+      "issued_at": "2026-10-28T19:41:23.044Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "MwFmuuhGqXRGQzE7OU6SdDb8VEfjs0/Ly1Lb+sUVWm3GYGaig2BvI0VEKSHRaZVGuIRj+phl4Q+SX3EpZtxrCg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "db82db9294e8c0a86b1345429f20b3a38b2f374c67f5ad27b78cd0c0946477b5",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:48:26.269Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a182fa-1a34-727e-be6c-2bb33c940aa6"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/api/src/cli.ts",
+          "packages/api/src/coordinator-address.ts",
+          "packages/api/src/coordinator-address.test.ts"
+        ],
+        "what": "WHAT HAPPENED (2026-10-28). A receipt of version two exported from Parsa-TUF's coordinator (run 01a1828d-2b1d-76c8-8d2a-5f4869cadcfd, task 01a1828e-ed32-72f7-b810-78fd7c303db3) names its coordinator \"https://0.0.0.0:4200\", and so do its embedded work order, delivery and check record, and the task receipt of version one. 0.0.0.0 is the address the coordinator listens on (the cell starts it with --host 0.0.0.0), not one anybody reaches it at, so a checker reading a receipt learns nothing from it. The cause: packages/api/src/cli.ts, about lines 1059-1126: the receipt signer's `coordinator` is `listeningAt`, set to `${scheme}://${host}:${port}` from the bind host.\n\nWHAT TO BUILD.\n1. The address a coordinator signs as is the one it is reached at: for a bind host that names every interface (0.0.0.0, ::, [::] or empty), this machine's host name (os.hostname()) with the same scheme and port, which is the name Tick's own machines reach it by (Parsa-TUF's coordinator is https://Parsa-TUF:4200); any other bind host as it is. Put the rule in a new file, packages/api/src/coordinator-address.ts (module doc comment of 25 lines or fewer), a pure function of scheme, host, port and host name.\n2. packages/api/src/cli.ts is 1530 lines, exactly its entry in file-size-baseline.json: it may not grow. Change the line that sets listeningAt to use the function and pay for the import in the same change (merge it into an existing import list, or move a few lines of cli.ts into another file). The \"listening on\" line it prints stays as it is. Do not edit file-size-baseline.json.\n3. Nothing compares a document's coordinator to anything (read: receipt-verify-core.ts and receipt-verify-documents-core.ts only show it; tick order check trusts by key, not by name): confirm by grep before you finish, and say so in your result. Receipts already issued keep what they say.\n4. Tests in packages/api/src/coordinator-address.test.ts: 0.0.0.0, ::, [::] and an empty host give the host name; 127.0.0.1, a named host and an IPv6 address are kept; the scheme and port are kept. Grep the whole tree's *.test.ts for listeningAt, \"listening on\" and 0.0.0.0 before you finish; every existing assertion keeps passing. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a182fa-1a34-727e-be6c-2bb33c940aa6",
+      "schema": "tick.work-order.v1",
+      "signature": "//BeTimTJrg3uR0CE/wDrKe7YthieExkbsHDFTuGWqyuNi6EgdeALlSMD1Ot0p3m6Qeab0MH0HA8eRdOcOFLDw=="
+    }
+  },
+  "receipt_id": "01a182fa-1a34-727e-be6c-2bb33c940aa6",
+  "schema": "tick.receipt.v2",
+  "signature": "9Jq1So5x06SU80BMdpFRwCNX1DrmkDMD2214ceRi3nyFby9r7+eh+brV9A4WEXtj3PvCNWIJ4qsiTiilI6+2DQ=="
+}

@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "5c1572354535b8ab1b47f4db4512782d970a07679af7d710b36768f99e2fc6a8",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:22.566Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T14:58:52.278Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "7cd707de6c769c8dfd57d61c50cd45104193ca33129e71e75df83763141d6bd4",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:22.566Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "da83e75784549ca7c3f263e32c29255171bb4aa0",
+        "contained": "none",
+        "order_hash": "aefba3cbcf2f53f421e0519abe2fa229754332dbdeb030284ad330787525a37b",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "3c1827db0efaf2f81e12035a9a0d3c1a8902bbb6",
+        "verdict": "passed"
+      },
+      "record_id": "01a182f9-d4b0-731b-b453-22fd5467d5f2",
+      "schema": "tick.check-record.v1",
+      "signature": "3IriAzjb0BpdBy69vagMX8WgLX8XzA+UHBtLzJWghN2kJs37dDnh3aIvlcpovQ0QgA/xSWRhtw2Ul/KqplH5DA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "9eff4ac0f990a4106bccbad5ea976adcc912f7fa1addb3ecd685f21da089b147",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "commit": "da83e75784549ca7c3f263e32c29255171bb4aa0",
+        "order_hash": "aefba3cbcf2f53f421e0519abe2fa229754332dbdeb030284ad330787525a37b",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "3c1827db0efaf2f81e12035a9a0d3c1a8902bbb6",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 18,
+            "cost": "reported",
+            "minutes": 9.581466666666667,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a182f9-d4b0-731b-b453-22fd5467d5f2",
+      "issued_at": "2026-10-28T19:41:22.566Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "pEcTHAN731IOmzGpfrWmBN6gwvdbyMz4aCQM5C+g3dvvSQLZjh8XeFPRWQJyCnM01G8caEUfT00fIBwm5BnHDQ=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "aefba3cbcf2f53f421e0519abe2fa229754332dbdeb030284ad330787525a37b",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:48:25.539Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a182f9-d4b0-731b-b453-22fd5467d5f2"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/machine-release.ts",
+          "packages/cli/src/machine-release.test.ts",
+          "packages/cli/src/machine-release-results.test.ts"
+        ],
+        "what": "WHAT HAPPENED (2026-10-28, release 0.5.263 by tick_release). The thesis verification after the release (scripts/claims-verdicts.mjs over the gate's claims.json) said 12 of 35 claims met and 23 not met, almost all \"packages/runner/src/git-workspace.test.ts did not run on this tree\" and the like, and the briefing shows those theses as NOT MET. The tests had passed: scripts/land-check-theses.mjs judges a test file by \"the record kept for the file's current key\" in TICK_CHECK_RESULTS, and the release gate points TICK_CHECK_RESULTS at a store of its own, packages/cli/src/machine-release.ts:120 `results: join(beside, 'release-results')` (C:\\Users\\Asus\\.tick\\release-results, 1,548 records), while every check and landing records into the machine's one store, FILE_RESULTS_FOLDER in packages/runner/src/verified-trees.ts:32 (20,025 records on Parsa-TUF). The release gate runs only the test files the change since the last release reaches, so a file it did not reach has no record in its own store under its current key, though a check recorded its pass under that very key. The two earlier releases that day read 10 of 35 the same way.\n\nWHAT TO BUILD.\n1. A release task's gate reads and records test results in the machine's store: machine-release.ts gives `results` as FILE_RESULTS_FOLDER (import it from @tick-executor/runner, as packages/runner/src/land-check.ts and flaky-drafts.ts use it; if the cli cannot import it, say so and use the same folder by the same rule). A record is a file's result under its key, which names the file and everything it depends on, so a pass recorded under a file's current key by any check on this machine is that file's pass on this tree: the reuse every landing check already relies on (\"passed already on this same tree\"). The release's own reports folder (`release-reports`) stays as it is.\n2. Nothing is deleted: the old release-results folder is left where it is; say in your result that a person may remove it.\n3. Tests. packages/cli/src/machine-release.test.ts:127 expects `join('/data/tick', 'release-results')`: change that value in place to the shared folder. packages/runner/src/release-wiring.test.ts:68 passes its own results folder to the runner and is not this file's concern; leave it. A new test in packages/cli/src/machine-release-results.test.ts holds that a release source's results folder is the folder the landing checks use (compare with FILE_RESULTS_FOLDER itself, not a copied literal). Grep the whole tree's *.test.ts for \"release-results\" and for `results:` in release sources before you finish; every other assertion keeps passing. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a182f9-d4b0-731b-b453-22fd5467d5f2",
+      "schema": "tick.work-order.v1",
+      "signature": "+3mUmwnW4zvpeB3kI824ZDZkht/p7YykCIibeWNRcmB8444be3Ej0eOuGIc0TpWBSj1zQxlwX6EI3lG0WYlOBg=="
+    }
+  },
+  "receipt_id": "01a182f9-d4b0-731b-b453-22fd5467d5f2",
+  "schema": "tick.receipt.v2",
+  "signature": "P44wXq+8/SKhYAx1szkjP3l8oitnxCioaKbGT2ZTqxCseq/lkKtOZJfvWm4HBlQlCbAM9sfC9WqR7M3x7IADBA=="
+}

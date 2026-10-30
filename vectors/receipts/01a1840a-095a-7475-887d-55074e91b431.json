@@ -1,0 +1,151 @@
+{
+  "alg": "ed25519",
+  "content_hash": "32c1d4cfdb2bb2cf99f59128cb434056e3d7d3456f5cca7367c7a05dc29e2b5d",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T20:44:51.670Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T19:56:58.903Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "788692e329216fd71ffa39bb63280df51192c058dd26bb7aa58f8de591cb076a",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T20:44:51.670Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "f732ea4b1a1136607aa84f9cd9dfc65491303393",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "a0a5f594c1e382eb705f3c484a6ff031b0845b58",
+        "contained": "none",
+        "order_hash": "4411e0add682e3bc9152418df2711fdec218de19491a76238d3d1b0f46069c60",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "73198c730737482596d405f5147623e313e4dc5b",
+        "verdict": "passed"
+      },
+      "record_id": "01a1840a-095a-7475-887d-55074e91b431",
+      "schema": "tick.check-record.v1",
+      "signature": "tVrVR9+ER5BjS17welRnWq5ViqKKfEwbMA/iqh5HE0x0+5AqqqNJYKzgT16oPU6LlwXONdKMQoOhxiTzJlaTDg=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "75339df71aced40ed46d76c8ee23ec2cd481340977917b1b439046ef703de508",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "f732ea4b1a1136607aa84f9cd9dfc65491303393",
+        "commit": "a0a5f594c1e382eb705f3c484a6ff031b0845b58",
+        "order_hash": "4411e0add682e3bc9152418df2711fdec218de19491a76238d3d1b0f46069c60",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "73198c730737482596d405f5147623e313e4dc5b",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 20,
+            "cost": "reported",
+            "minutes": 8.582133333333333,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1840a-095a-7475-887d-55074e91b431",
+      "issued_at": "2026-10-28T20:44:51.670Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "gEw2Kzos3VuV0nBnOfnyWq4nWp6KkidQ+LePF2U25s1K5OURtUm1prHyo9ChCtsTjEYbM8Lmoq3nWN2Yd+lSCw=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "4411e0add682e3bc9152418df2711fdec218de19491a76238d3d1b0f46069c60",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:47:51.282Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "f732ea4b1a1136607aa84f9cd9dfc65491303393",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a1840a-095a-7475-887d-55074e91b431"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/export-log-page.ts",
+          "packages/cli/src/export-log-time.test.ts"
+        ],
+        "what": "WHY (CD2, unit CD-L; GD-89). The log page that `tick export --log` writes, for tick.company, was exported on 2026-10-28 at 19:41Z. It shows its newest landing, 120b5a14 at \"2026-10-28T23:00:32+03:30\" (19:30 UTC), as \"23:00 UTC\". packages/cli/src/export-log-page.ts, landingNode, prints `landing.time.slice(11, 16) + ' UTC'`. That is the hour as git wrote it in the committer's own offset, labelled UTC. On this machine every time is 3 h 30 min off, on a page meant for the public: a claim that is not true. The day grouping (export-log.ts logOf) and the day line's beats (tickLine) already read the time with Date.parse, so only this label is wrong.\n\nWHAT TO DO. The label says the landing's time in UTC: parse the time and print its UTC hours and minutes. Where the time cannot be parsed, keep saying what the record holds, without \"UTC\". Change nothing else on the page.\n\nDONE WHEN. A test in the new file packages/cli/src/export-log-time.test.ts runs the page's script on a log with landings at \"2026-10-28T23:00:32+03:30\" and \"2026-10-28T19:30:00Z\", and shows both labelled \"19:30 UTC\". Every existing export-log test passes, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1840a-095a-7475-887d-55074e91b431",
+      "schema": "tick.work-order.v1",
+      "signature": "0iugX4JybYpc/3npurQmKxqNV+Tl/xMYdHPqH1ACjp5SqpVEwhwe1JNC2uhMgybWCoCoin3VZfwyJK1ihAHODw=="
+    }
+  },
+  "receipt_id": "01a1840a-095a-7475-887d-55074e91b431",
+  "schema": "tick.receipt.v2",
+  "signature": "hz5l2k1lFBh+d5JWw+WRX7/YqzefVaSExIYXYSh1y206zDOEtUiLz1fw92XnKcOa8a7HG5d/xxVNLsIkQTfSCQ=="
+}

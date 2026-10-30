@@ -1,0 +1,153 @@
+{
+  "alg": "ed25519",
+  "content_hash": "efd077d515a6e69e951384b99e450a2575ee6ff90e74e83b5e3bc56f23855848",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:22.815Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T14:54:51.224Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "bf7ef1553ff2a3360a56f4774563d1de3ab5d810b764bcc936cd0f73693796ef",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:22.815Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "651e3bbddfa44b147d2858032489033c15ba1bf9",
+        "contained": "none",
+        "order_hash": "afb9a79839e4dc344dafc689e6361156250d3f5ddb9aa820f0f9e18f525d44e8",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "c9852177938dc576310c493b7ef5ff9238a7b04e",
+        "verdict": "passed"
+      },
+      "record_id": "01a182f7-43b9-7014-99d2-ec989e762885",
+      "schema": "tick.check-record.v1",
+      "signature": "NnXxekFet+sKFr6noTD8TkNag2A1ZKCg0aAuL1w3MhV0nAMVa8YBHs18JhyrYGzO0CMKoN0fYQYc1THAdjtyAA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "36e7f8535b7cd43357fe706b4643e15f157d6abc4dbcf72afa792b9b6b0bd25d",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "commit": "651e3bbddfa44b147d2858032489033c15ba1bf9",
+        "order_hash": "afb9a79839e4dc344dafc689e6361156250d3f5ddb9aa820f0f9e18f525d44e8",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "c9852177938dc576310c493b7ef5ff9238a7b04e",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 33,
+            "cost": "reported",
+            "minutes": 5.972166666666666,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a182f7-43b9-7014-99d2-ec989e762885",
+      "issued_at": "2026-10-28T19:41:22.815Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "WMTUZspBLKjXwhxWPZ3UMKoR7rDJlXwjkovc9211zunX4N02sF5j6vaoy37rY3NvMZBstBXPgoSrxsB7+omRBw=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "afb9a79839e4dc344dafc689e6361156250d3f5ddb9aa820f0f9e18f525d44e8",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:48:18.098Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a182f7-43b9-7014-99d2-ec989e762885"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/coordinator-keeper.ts",
+          "packages/cli/src/keeper-successor-retry.ts",
+          "packages/cli/src/coordinator-keeper.test.ts",
+          "packages/cli/src/keeper-successor-retry.test.ts"
+        ],
+        "what": "WHAT HAPPENED (2026-10-28, Parsa-TUF, the 0.5.263 install). machine.log 13:22:07Z: \"the machine's process was not started again on 0.5.263: 0.5.263 could not be copied into C:\\Users\\Asus\\.tick\\runtime\". The keeper's one try came while npm was still writing the install, and ensureRuntimeCopy (packages/cli/src/runtime-home.ts:199) refuses a copy taken mid-install, by design. A minute later the copy was complete (runtime\\0.5.263\\.complete), but the keeper never tried again: keepCoordinatorsCurrent (packages/cli/src/coordinator-keeper.ts, about line 243) adds the release to `moved` BEFORE calling deps.succeed, so a refusal from startSuccessor, which comes before any process is spawned (successorOf returns `refused` and nothing starts), blocks that release for the life of the process (\"Once a release: a successor that does not take over is not started again\"). The machine ran 0.5.262 for 58 more minutes, until a window happened to open on 0.5.263 (14:20:47Z \"handed over to a newer Tick process\").\n\nWHAT TO BUILD.\n1. \"Once a release\" stays for a successor that WAS started (succeed returned null) and did not take over. A refusal that started nothing (succeed returned a reason) leaves the release to be tried again on a later pass, after a wait that grows: 1 minute, then 2, 4, 8, up to 30 minutes between tries, reset when the installed release changes. The keeper's passes already run every minute (startCoordinatorKeeper); use the keeper's own clock dependency as the coordinators' backoff does (FailedStarts in the same file), so tests drive it without real time.\n2. The log says a refusal once per reason: the first refusal of a release logs as today (\"the machine's process was not started again on X: <why>\"), adding \"; it tries again in N minutes\"; a later refusal with the same reason logs nothing; a different reason logs again; a later success logs the started line as today.\n3. Put the wait and its bookkeeping in a new file, packages/cli/src/keeper-successor-retry.ts (module doc comment of 25 lines or fewer), so coordinator-keeper.ts (427 lines) stays under 500.\n4. Tests. packages/cli/src/coordinator-keeper.test.ts is 947 lines, exactly its entry in file-size-baseline.json: add no line to it. Its test at about line 629, \"says why one could not be started, and does not try that release again\", runs two passes with no time between them and expects one start and one line: that stays true with the wait, so change only its title in place, to say it is not tried again before its wait has passed. Every other assertion of that file keeps passing. New tests in packages/cli/src/keeper-successor-retry.test.ts: a refusal, then a pass after 1 minute tries again and starts it, logging the started line; three refusals with the same reason log one line, and the waits grow; a changed reason logs again; a started successor (null) is never started again for that release, whatever time passes; a newer installed release is tried at once. Grep the whole tree's *.test.ts for \"not started again\", \"keepCoordinatorsCurrent\" and \"succeed:\" (coordinator-keeper-hold.test.ts and machine-host-hold.test.ts give succeed) before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a182f7-43b9-7014-99d2-ec989e762885",
+      "schema": "tick.work-order.v1",
+      "signature": "VlvUAyDzeU5+9CZsV1wcTjohhylyYxkBJzq0JRZTF29zqv5Mm3cptYM0Y8geUB0lnfAMXrXf/e+7IZMdUInaBA=="
+    }
+  },
+  "receipt_id": "01a182f7-43b9-7014-99d2-ec989e762885",
+  "schema": "tick.receipt.v2",
+  "signature": "BWoL0YePxb1T8NNzJlhqVfdNq/wgdz/eJLszUZQBc9VaM8Df/4TYNxhJqlRUKpMik/Im0iMgFeKsRQYS9Q++DQ=="
+}

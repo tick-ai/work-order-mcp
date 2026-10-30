@@ -1,0 +1,154 @@
+{
+  "alg": "ed25519",
+  "content_hash": "e5519e1a5b60d76a23beefecb6291e69bb76966906ae6d2d1bec398c8ec33371",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:23.406Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T12:01:23.288Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "2f3710b76c9ed3f4bf7376c642a22b7e26cb4e3354c88d373e3322274f26e497",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:23.406Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "6061cf707e356dcd97e98e54113c4dcfb289104c",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "357422f750ce4d4f1e870d9c4928702de3a7f5c8",
+        "contained": "none",
+        "order_hash": "250efaebaf5070a184361105f8df37dcc130d0f5a56c2cf87c40c9c6680ce56b",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "6e5b1c772298790a8d87dbe9eab47c7753979c24",
+        "verdict": "passed"
+      },
+      "record_id": "01a18258-97fe-7018-99b8-18399f7b0c52",
+      "schema": "tick.check-record.v1",
+      "signature": "hZluyP7BEd+McQoET833pZQNNu7cJQnnD0PWwhbZn9UBe3gzZEJTlDrEe4ZSGICyMb0PplsNQ9jau4/BY6UYAQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "469632668cbec5e009cef2d5c3682117c4a9060ba10b68a3eccdd2aad49fa096",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "6061cf707e356dcd97e98e54113c4dcfb289104c",
+        "commit": "357422f750ce4d4f1e870d9c4928702de3a7f5c8",
+        "order_hash": "250efaebaf5070a184361105f8df37dcc130d0f5a56c2cf87c40c9c6680ce56b",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "6e5b1c772298790a8d87dbe9eab47c7753979c24",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 54,
+            "cost": "reported",
+            "minutes": 10.517366666666666,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18258-97fe-7018-99b8-18399f7b0c52",
+      "issued_at": "2026-10-28T19:41:23.406Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "1eakb99AczTGgWtgbPOxK4lq6B/JTvuAB522duwGs5Sh14fGsrZkhjJ5VV9bC1GyxUoHv/FsBtQqZU3UHoTIAw=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "250efaebaf5070a184361105f8df37dcc130d0f5a56c2cf87c40c9c6680ce56b",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T11:50:19.723Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "6061cf707e356dcd97e98e54113c4dcfb289104c",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18258-6847-750c-b8d7-7082652921d8",
+          "task_id": "01a18258-97fe-7018-99b8-18399f7b0c52"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/update-command.ts",
+          "packages/cli/src/update-command.test.ts",
+          "packages/cli/src/machine-settings.ts",
+          "packages/cli/src/main.ts",
+          "./README.md"
+        ],
+        "what": "Add `tick update [--channel <url>] [--json]`, a command that only reads. It (1) takes the channel's base URL from a new setting `channel`, (2) calls `fetchChannel(base, { fetch })` and then `offered(index, readPackageVersion())` from packages/cli/src/release-channel.ts (the library of TN0.24a; `readPackageVersion` is in builtins.ts), and (3) says what it found in plain words: the running version; the release offered (its version, the first 12 characters of its commit, and `describeGate(gate)` when the record carries a gate); each record skipped, with the reason `offered` gives; or \"You are on the newest release this channel offers.\" when none is newer. With `--json` it prints the same facts as one JSON object. It installs nothing, downloads no tarball and writes no file: the install is the next task, TN0.24b-2. Exit 0 whether or not a newer release is offered; exit 1 when the channel could not be read (one line naming the URL and the reason, no retry); exit 2 for usage.\n\nTHE SETTING. Add one field to MACHINE_FIELDS in packages/cli/src/machine-settings.ts: key `channel`, flag `channel`, env `TICK_CHANNEL`, type string, default `https://tick.company/channel/`, with the default in the field and nowhere else in code (PARSA's rule: a setting he can edit carries its default in the config, GD-66 call 13), and a description like its neighbours'. Do NOT add it to packages/cli/src/config.ts: that file is 541 lines, over the limit, and may not grow. The default is PARSA's call of 2026-10-28 (the channel lives on tick.company under /channel/); `--channel <url>` overrides it for one run.\n\nNEW CODE GOES IN NEW FILES: packages/cli/src/update-command.ts (`createUpdateCommand(deps)` with `fetch` and the running version injectable, so no test touches a network) and packages/cli/src/update-command.test.ts. For the test, build signed records and an index the way packages/cli/src/release-channel.test.ts builds them (read its helpers first), and cover: a newer verified release is offered; none newer; a record that does not verify is skipped and named; a withdrawn release (absent from the index) is not offered; the channel answering 404, answering something that is not an index, and not answering in time each exit 1; `--json`; `--channel` overriding the setting; usage errors exit 2.\n\nREGISTRATION. main.ts is 482 lines and must stay under 500: add one import and register the command in BOTH lists, beside `...createOrderCommands()`, in the array around line 223 (BUILTIN_COMMANDS' builder) and in DEFAULT_COMMANDS around line 276. Add ONE row for `tick update` to README.md's command table, in the table's own order and inside the table: README.md is read by scripts/check-readme-numbers.mjs and by journey.test.ts (which checks the words before the command list), so say nothing before the list and give no count.\n\nNOTHING CONTACTS THE CHANNEL unless the person or their agent runs `tick update`. Do not add a check at startup or in plain `tick`: that is a network call to a host PARSA runs, and it needs his word first. Every call has an explicit timeout (`fetchChannel` carries 15 s; do not widen it).\n\nTESTS THAT MAY PIN WHAT YOU CHANGE: I checked config.test.ts 'resolves every declared field' (it compares against CONFIG_FIELDS itself, so a new field passes), agent-pause-consent.test.ts 'the tools' descriptions' (looks up pause and stop by name) and the 231 tests the settings file reaches; none pins an exact list. If one you meet does, change it to include `channel` or `update` by value and say which in your report; never weaken or delete a test. Ask for an unlisted file with tick_widen.\n\nRULES: no npm, npx, build or test run in your copy; commit and call tick_check. Do not edit file-size-baseline.json. In your report name the files, the exit codes, and the default channel URL."
+      },
+      "order_id": "01a18258-97fe-7018-99b8-18399f7b0c52",
+      "schema": "tick.work-order.v1",
+      "signature": "2FqX8OmZUjdpG1ybdLFdzcidJBFobhdiZ3bhX6T3YYxqemluC7oTKcmPv+p88C6CX2Y4Ie3UDV4IZqcUJAfaCQ=="
+    }
+  },
+  "receipt_id": "01a18258-97fe-7018-99b8-18399f7b0c52",
+  "schema": "tick.receipt.v2",
+  "signature": "pZsQBR0BW5tNt5sj62HwtGbeuYHVjxYW7ufS/ddmpoeeOimRWVQR8cMXKU2shuk2KIn4NP6gyGHWLQwGYZLvDQ=="
+}

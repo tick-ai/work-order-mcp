@@ -1,0 +1,155 @@
+{
+  "alg": "ed25519",
+  "content_hash": "8521abbb0d0377a8f77b50f26747b281eef45413fabc5e3a0660fa6e3a8f02df",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:21.004Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:34:22.353Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "68b23fe408ed8a02d9f1e8f92d2d85479096b26b5c19246c415cc4a0868fc586",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:21.004Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "54fdd08dd3f8a26b2e7d11ade1c7e107053bc77d",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "e24c1f03f84de3b1f50daf2c4a4be6d539a71c7f",
+        "contained": "none",
+        "order_hash": "56bbf654dfd1ab33bc0d5d7813a5605340478f4d41d5f226fd35bd298e443dda",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "077f866b6621d6c3e18e98e08d32563c7e41b6fe",
+        "verdict": "passed"
+      },
+      "record_id": "01a18301-2254-7597-9a2c-b8b413a7c722",
+      "schema": "tick.check-record.v1",
+      "signature": "xOe4ulCjDnLs5ojN1CZhZekknUNH7hWoCjzcQYpPc9ZolUaZ12tRDSYTmzPeBHPbL8ZaLUKH+69wyL+WZyhJBw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "419f20467eb5f0ed7b79555d70b30aa1e1362f81e5973d1d9602e668a3a386d0",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "54fdd08dd3f8a26b2e7d11ade1c7e107053bc77d",
+        "commit": "e24c1f03f84de3b1f50daf2c4a4be6d539a71c7f",
+        "order_hash": "56bbf654dfd1ab33bc0d5d7813a5605340478f4d41d5f226fd35bd298e443dda",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "077f866b6621d6c3e18e98e08d32563c7e41b6fe",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 188,
+            "cost": "reported",
+            "minutes": 35.12018333333334,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18301-2254-7597-9a2c-b8b413a7c722",
+      "issued_at": "2026-10-28T19:41:21.004Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "JRdkm4Cjy4NWE51nVG+sImkwN2K9F5M+JprpiwwIAU3dPBE4OsbHAyb1601+DdoqV0Pl+m/UbCWw2MLSPLYvAQ=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "56bbf654dfd1ab33bc0d5d7813a5605340478f4d41d5f226fd35bd298e443dda",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:58:21.235Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "54fdd08dd3f8a26b2e7d11ade1c7e107053bc77d",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a18301-2254-7597-9a2c-b8b413a7c722"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/board-settings.ts",
+          "packages/cli/src/config.ts",
+          "packages/cli/src/board-relay.ts",
+          "packages/cli/src/board-work.ts",
+          "packages/cli/src/board-page.ts",
+          "packages/cli/src/board-checker-link.test.ts"
+        ],
+        "what": "WHY (CD2, unit CD-H; the design is NOTE-mvs8f5kn in the company's memory, GD-89). The public receipt checker now has a home: tick.company/check/, which PARSA puts online (TN0.32) from `tick export --checker`. The board's work card (packages/cli/src/board-work.ts) checks a ticked task's receipt in the browser, but offers no way to hand it to someone else. CD6b planned a QR code; a receipt of version two of Tick's own work is 10,442 bytes (3,546 deflated), more than one QR code holds (2,953 bytes at most), so the QR code is dropped and the file and a link take its place. tick.company is not reachable from inside Iran without a route out, so nothing on the card may depend on it: the card's own check stays as it is.\n\nWHAT TO BUILD.\n1. A setting `checkerPage`, declared as Tick's other settings are (a new packages/cli/src/board-settings.ts exporting its ConfigFieldSpec, spread into CONFIG_FIELDS in packages/cli/src/config.ts the way TAKER_FIELDS is), env TICK_CHECKER_PAGE, type string, its default in the field itself: \"\" (no link), with the description \"The public page that checks receipts, such as https://tick.company/check/: where it is set, a work card offers a link to it that opens the receipt there; empty, no link.\" No default in code beside the field. config.ts is 541 lines, exactly its baseline: pay for the two lines in the same change (fold the import into an existing one, or move a few lines out). Do not edit file-size-baseline.json.\n2. The machine's board relay (packages/cli/src/board-relay.ts) hands the page the setting's value as it reads the board's other facts, through its own origin (the page's CSP allows connect-src 'self' only): for instance a small read the relay answers itself, never the coordinator. The value is read when the relay serves it, so a change in tick.config.json is live without a restart.\n3. The card (board-work.ts, with its frame in board-page.ts) gains two actions beside the check, worded per the design system (plain words; green only for a verified receipt): \"Save the receipt\" downloads the exact text the card checked as receipt.json; and, only where checkerPage is set and the card's receipt verified, \"A link anyone can open\" puts `<checkerPage>#r=<the receipt's text in base64url>` on the clipboard and offers to open it, saying in one line that the part after # never leaves the visitor's browser. A receipt that failed its check offers neither (nothing to vouch for). Text from the receipt reaches the card as text, never markup, as today.\n4. Tests in a new file, packages/cli/src/board-checker-link.test.ts: the setting's default is \"\" and it is listed by `tick config`; the relay answers its value and a changed value without a restart; with no setting the card offers Save only; with a setting and a verified receipt the link is the page plus #r= and the fragment decodes, as receipt-verifier.ts's fragmentText decodes, to exactly the checked text; a failed receipt offers neither. Tests that list CONFIG_FIELDS (packages/cli/src/config.test.ts, restart-settings.test.ts) may name every field: read them and keep them passing; board-relay.test.ts is 654 lines, exactly its baseline: add no line to it. Grep the whole tree's *.test.ts for CONFIG_FIELDS, BOARD_WORK and the relay's routes before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18301-2254-7597-9a2c-b8b413a7c722",
+      "schema": "tick.work-order.v1",
+      "signature": "SaQ0spJUqviphlIAdFzILi71VMLCwOAag5fTaX5mAph+YEiKZeo3pralxvvr3SEfZu7xRIZOHE/qDC6IABAEBA=="
+    }
+  },
+  "receipt_id": "01a18301-2254-7597-9a2c-b8b413a7c722",
+  "schema": "tick.receipt.v2",
+  "signature": "qwQ2S89bhIrivu9xOScJJz1KNesbBhFmc9aSg6Yc30Weh5BwkBAVufIS54b/A0Yp4qEmnDmyw570PGxRi71qCg=="
+}

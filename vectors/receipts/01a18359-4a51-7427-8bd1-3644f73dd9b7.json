@@ -1,0 +1,151 @@
+{
+  "alg": "ed25519",
+  "content_hash": "24ae3200f7868b4943c2993f259aa09abd55dc766bed2c3a208eadd1197e21ea",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:19.070Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T17:04:24.833Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "9f96066aee6a023af496a53b0db028d3484701e9602b7fff9e948a5e293eeca2",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:19.070Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "132f0ecff9ca65a44b92dba451db230d6131f118",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "a6927a1f5db0b6676390c3e0710de819910d6cb4",
+        "contained": "none",
+        "order_hash": "a3c9ed32171c2010bf1990f28d1742cb61322174303c8d3935568146a1ba9d5c",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "28e0f11a3a2a68a8b0d692dc8cb5c0257e8b1683",
+        "verdict": "passed"
+      },
+      "record_id": "01a18359-4a51-7427-8bd1-3644f73dd9b7",
+      "schema": "tick.check-record.v1",
+      "signature": "/U8Xp98tXWNhYTva/tGFUYxCNaOk5eBWI82xy8nhh8mlqthl4AGntmiwNsn/W+nIMIA2QIhES8LM9hYJNX0MBA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "9d2748fa36f3244fbe64cf7f2260a9ca7cf60b7659427b89d35fca2fad136db3",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "132f0ecff9ca65a44b92dba451db230d6131f118",
+        "commit": "a6927a1f5db0b6676390c3e0710de819910d6cb4",
+        "order_hash": "a3c9ed32171c2010bf1990f28d1742cb61322174303c8d3935568146a1ba9d5c",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "28e0f11a3a2a68a8b0d692dc8cb5c0257e8b1683",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 67,
+            "cost": "reported",
+            "minutes": 15.2807,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18359-4a51-7427-8bd1-3644f73dd9b7",
+      "issued_at": "2026-10-28T19:41:19.070Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "J/LL5GEWFvUa3eq4xCgbathYbcXGmMroIMkOApsco8npz6TTedrrJu25LcgzCMz61IuIomGLw83/Isi5H7i0CA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "a3c9ed32171c2010bf1990f28d1742cb61322174303c8d3935568146a1ba9d5c",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T16:48:30.086Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "132f0ecff9ca65a44b92dba451db230d6131f118",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a18359-4a51-7427-8bd1-3644f73dd9b7"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/coordinator-process.ts",
+          "packages/cli/src/coordinator-touch-page.test.ts"
+        ],
+        "what": "WHY (CD2, unit CD7; GD-89). The task \"The coordinator can take a passkey touch made on a page browsers trust...\" (01a18309-e906-745e-8312-e71bf6eeae8e) declared the setting `touchPage` in the cli's CONFIG_FIELDS (packages/cli/src/touch-settings.ts), so `tick config` shows it and a person sets it in tick.config.json, while the coordinator reads the page only from its own --touch-page flag or TICK_TOUCH_PAGE (packages/api/src/cli.ts). Nothing passes the one to the other: packages/cli/src/coordinator-process.ts serveArgs (about line 232) builds every flag of the coordinator Tick starts from a CoordinatorLaunch, and the launch carries no touch page. So the value a person sets decides nothing, which is the two-places-deciding PARSA rejected for settings (a setting he can edit carries its default in the config and is the one that decides). This task starts after that one has landed: read touch-settings.ts and api/src/cli.ts on the main you are cut from; if they are not there, say so and stop.\n\nWHAT TO BUILD.\n1. CoordinatorLaunch gains `touchPage`, read from the folder's resolved config where the launch is built (find where CoordinatorLaunch is made from a ResolvedConfig, as other settings that reach the coordinator are), and serveArgs passes `--touch-page <value>` when it is set, nothing when it is empty. A coordinator started again by the keeper or by plain tick gets the same value; a changed value takes effect when the coordinator next starts, and the command line of a coordinator shows it as its other flags show.\n2. Tests in a new file, packages/cli/src/coordinator-touch-page.test.ts: serveArgs with touchPage set carries --touch-page and its value; empty or absent carries none; the launch built from a config whose touchPage is set carries it. Read the existing coordinator-process tests and grep the whole tree's *.test.ts for serveArgs and CoordinatorLaunch before you finish (tests that pin the whole argument list must keep passing: a value absent adds nothing). coordinator-process.ts is 392 lines; stay under 500. If the launch is built in another file, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18359-4a51-7427-8bd1-3644f73dd9b7",
+      "schema": "tick.work-order.v1",
+      "signature": "jubJJTVYSZyEpYJ8etc0LuVYhjT47k3Bdp+X72D5hy/D8VIoYKALgrcp6XLHXNdaAbr8knbsSCeBRXPe1L4NAQ=="
+    }
+  },
+  "receipt_id": "01a18359-4a51-7427-8bd1-3644f73dd9b7",
+  "schema": "tick.receipt.v2",
+  "signature": "OvytBuGwGjzz8g5cec5mKZvC6yh2LKPAIcNYRHWDVWc2JQh56ru6dKf+gPXMdrZgAJveGQza146LaAisbJjkBQ=="
+}

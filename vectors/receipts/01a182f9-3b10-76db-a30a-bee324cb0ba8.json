@@ -1,0 +1,155 @@
+{
+  "alg": "ed25519",
+  "content_hash": "d2558d5dd92c78c57565902b7b3d3e7c7af292cc4e15fe3db700217f1341f0c8",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:20.031Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T16:18:21.808Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "4df5507bb8956c8ece7333b46e51fa93217ad17fb57fa26a55ec03296d8bed4b",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:20.031Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "fc0ad93e873ed8e3f269b609dc9d3901c830e87d",
+        "contained": "none",
+        "order_hash": "d5f58454a85ce83fb93ce9fbad07b034f41201b7b29e742317d6c0724a1964c2",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "fdf0a286afcdae219ec1c75a4bd699e227a889f4",
+        "verdict": "passed"
+      },
+      "record_id": "01a182f9-3b10-76db-a30a-bee324cb0ba8",
+      "schema": "tick.check-record.v1",
+      "signature": "W7jWrXpLdtjDlRJfDsaebIXSWhk7kCfWhyFwQnn4jvdjBdGyH+v+q7WBk5qqu8riZV3AA1OX1gcekyzjyUtJDw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "efbf176193c84e20928a8fe4c903961b98ddfb8aa66003b6883ab1f58c484b6a",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "commit": "fc0ad93e873ed8e3f269b609dc9d3901c830e87d",
+        "order_hash": "d5f58454a85ce83fb93ce9fbad07b034f41201b7b29e742317d6c0724a1964c2",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "fdf0a286afcdae219ec1c75a4bd699e227a889f4",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 221,
+            "cost": "reported",
+            "minutes": 55.70301666666667,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a182f9-3b10-76db-a30a-bee324cb0ba8",
+      "issued_at": "2026-10-28T19:41:20.031Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "cb6pSrB9gg/c70ERLYy0WAYWdugw/DaEEU6txhe1+d7CIRLsOfcLzSWPKPT4oLBXG5Ndo8Eyd8UUv2e8koy+DQ=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "d5f58454a85ce83fb93ce9fbad07b034f41201b7b29e742317d6c0724a1964c2",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T15:22:03.942Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a182f9-3b10-76db-a30a-bee324cb0ba8"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/talk-waiting.ts",
+          "packages/cli/src/window-inbox.ts",
+          "packages/cli/src/window-inbox-parts.ts",
+          "packages/cli/src/talk-mcp.ts",
+          "packages/cli/src/inbox-withdraw.ts",
+          "packages/cli/src/inbox-withdraw.test.ts"
+        ],
+        "what": "WHAT HAPPENED (2026-10-28, run 01a1828d-2b1d-76c8-8d2a-5f4869cadcfd, auto tick on). Auto tick approved gates and access requests within seconds, yet the window kept being told they waited. tick_approve answered \"GATE_ALREADY_DECIDED ... was already approved\" and, in the same answer, \"Waiting for the person: run 01a1828d-..., which this window started, has a acceptance gate on task 01a18290-64ff-70fe-bae3-d080d28d54b0 waiting for their decision. Tell them: ...\"; tick_amendments_approve answered \"AMENDMENT_PROPOSAL_ALREADY_DECIDED\" followed by \"... asking that it may change ... The task waits for their answer.\" The agent was told to put to the person what was already decided. The cause: WaitingNotices (packages/cli/src/talk-waiting.ts) reads what waits at most every 30 s and adds each item to the window's inbox (packages/cli/src/window-inbox.ts), where it stays pending until told or expired; nothing takes back an item whose gate or request has since been decided, by auto tick (talk-mcp.ts approveWaiting) or by anyone. Also the line says \"has a acceptance gate\" (talk-waiting.ts, about line 293).\n\nThis task starts after \"A proposal that adds work waits on the person like any other\" has landed: read talk-waiting.ts on the main you are cut from, with its `adds` items.\n\nWHAT TO BUILD.\n1. The inbox can take back pending items by what they are about (InboxAbout: run and task), for the kinds gate and access: `withdraw(about)` drops a pending item and leaves one already told alone. window-inbox.ts is 517 lines, exactly its entry in file-size-baseline.json: it may not grow; put the new code in packages/cli/src/inbox-withdraw.ts (or window-inbox-parts.ts, \nalready its helper) and pay for any line added to window-inbox.ts in the same change. Do not edit file-size-baseline.json.\n2. Items are withdrawn when their subject is decided: (a) each waiting read in WaitingNotices.add withdraws the pending gate and access items of the runs it read that are no longer in what it returned; (b) talk-mcp.ts withdraws a gate's or proposal's item when this window decides it, by auto tick's approveWaiting or by the agent's tick_approve, tick_reject, tick_amendments_approve or tick_amendments_reject, and when such a call is answered that it was already decided (GATE_ALREADY_DECIDED, AMENDMENT_PROPOSAL_ALREADY_DECIDED), before that answer is given the window's news. talk-mcp.ts is 1850 lines, exactly its baseline: it may not grow; move code out to inbox-withdraw.ts to pay for what you add.\n3. The line names the gate with the right article: \"an acceptance gate\", \"a plan gate\", \"a manual gate\". Tests pin the words \"the acceptance gate on task\" and \"Waiting for a person: the manual gate\" (packages/cli/src/run-commands.test.ts:2920, 2955, 3023; agent-state-hook.test.ts:96, 148; first-run.e2e.test.ts:589 matches /gate on task (\\S+) waiting/): keep \"gate on task <id> waiting\" and those sentences as they are.\n4. Tests in a new file, packages/cli/src/inbox-withdraw.test.ts: a pending gate item withdrawn by a read that no longer lists it, and not told; an item already told is left; an approve answered already decided withdraws its item and the answer carries no line about it; auto tick's approval withdraws the item; the article. packages/cli/src/talk-waiting.test.ts (600 lines) and talk-mcp.test.ts (2476) are at their baselines: change values in place and add no line. Read talk-waiting-keeper.test.ts, talk-waiting-paused.test.ts and window-inbox.test.ts, and grep the whole tree's *.test.ts for \"has a \", takeForAnswer and Inbox before you finish; every existing assertion keeps passing. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a182f9-3b10-76db-a30a-bee324cb0ba8",
+      "schema": "tick.work-order.v1",
+      "signature": "sllUbOx5WVaGWocME8jbQHZhakVa+Hv4KxzQqs0Vm7TNtYLJJ7oBM0LxmktOHIj7lUWKZJexdTH1OFueVUQyDA=="
+    }
+  },
+  "receipt_id": "01a182f9-3b10-76db-a30a-bee324cb0ba8",
+  "schema": "tick.receipt.v2",
+  "signature": "YEJO6GRgfJTtrBt08ld5C9L7z5e6guVhfQsgKyVQJqvLbG4mAEcywW1121IgT80GjjVnR0MbTv3J7avw0B+KBA=="
+}

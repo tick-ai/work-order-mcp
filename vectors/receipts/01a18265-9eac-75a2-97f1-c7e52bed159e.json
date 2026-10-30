@@ -1,0 +1,156 @@
+{
+  "alg": "ed25519",
+  "content_hash": "16aeefd63b89b7f8f3d87e764d3e39bb2a751e4614bdf5a6b185ddbca418a785",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:23.374Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T12:24:40.709Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "bb893ded559571914f3d8eab84fe8bfba7de1d43c73cc133c432f6dcc2bf5a77",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:23.374Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "8932ccef5bbd26337bfda18513eeda26cca96580",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "299e3988b36eb8c69fd3ec0345ba04ff21177e40",
+        "contained": "none",
+        "order_hash": "4def55230fe99d0a8563c6b765659fbf4c00e6a492bf29464c75dbbb4a68ea7d",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "b61f17f55ca3526e568f10b3a6b42c1e0b498785",
+        "verdict": "passed"
+      },
+      "record_id": "01a18265-9eac-75a2-97f1-c7e52bed159e",
+      "schema": "tick.check-record.v1",
+      "signature": "oYXD6Od/XqHXrIQIn/F+kFgizDgojZDrrcHNapmNWWNrri+ni6n7h0sheyEOlMd5TrvZkkw1ZPFJSabL6d6mDA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "9904c35592113aa284eeddf6abe10cb2d7a60c80db902422848178839837bd16",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "8932ccef5bbd26337bfda18513eeda26cca96580",
+        "commit": "299e3988b36eb8c69fd3ec0345ba04ff21177e40",
+        "order_hash": "4def55230fe99d0a8563c6b765659fbf4c00e6a492bf29464c75dbbb4a68ea7d",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "b61f17f55ca3526e568f10b3a6b42c1e0b498785",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 170,
+            "cost": "reported",
+            "minutes": 19.533616666666667,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18265-9eac-75a2-97f1-c7e52bed159e",
+      "issued_at": "2026-10-28T19:41:23.374Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "XXtiUvZJe1ybHCnD0qr1y6EO59JP30D4x0sLk8Wi2lvq7tTe1opaZ5TRiqCkRUiXRQ6tVO3EhV3CpH22spE5Ag=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "4def55230fe99d0a8563c6b765659fbf4c00e6a492bf29464c75dbbb4a68ea7d",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T12:04:33.141Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "8932ccef5bbd26337bfda18513eeda26cca96580",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18265-9d30-76ff-a6fa-5130c3900c74",
+          "task_id": "01a18265-9eac-75a2-97f1-c7e52bed159e"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/update-install.ts",
+          "packages/cli/src/update-install.test.ts",
+          "packages/cli/src/talk-consent-update.ts",
+          "packages/cli/src/talk-consent-update.test.ts",
+          "packages/cli/src/talk-consent.ts",
+          "packages/cli/src/main.ts",
+          "./README.md"
+        ],
+        "what": "Add the command `tick update install <version> [--channel <url>] [--dry-run] [--yes]`, the install half of TN0.24. `tick update` (landed as 8932ccef, packages/cli/src/update-command.ts) only reads. This command installs a release the channel offers, and only on the person's yes.\n\nWHAT IT DOES, in order, each step refusing in words with exit 1 before the next:\n1. Reads the channel as `tick update` does (`fetchChannel`, then `offered`, both from packages/cli/src/release-channel.ts) and requires that <version> is the release offered. A version the channel does not offer (withdrawn, not newer, unsigned) is refused and nothing is downloaded.\n2. Works out the npm prefix the running Tick was installed in, from where the running package lives: its folder ends in node_modules/@tick-group/tick (on Windows the prefix holds node_modules; on Unix it is the folder above lib/node_modules). If the running Tick is not an npm install (a checkout, a copy), refuse with that sentence: this command is for a Tick npm installed. Nothing else is touched.\n3. With --dry-run: print what it would do and stop with exit 0, having downloaded nothing: the version and the first 12 characters of the commit, the gate line from `describeGate` when the record has one, the tarball's file name, the prefix it would install into, and that Tick's windows and its machine process move to the new release by themselves within about a minute, with work in flight finishing first.\n4. Download the tarball with `fetchTarball` into a new folder under ~/.tick whose name cannot collide, and remove that folder afterwards, on success and on failure. A tarball whose sha256 or integrity differs is refused by `fetchTarball`, nothing is kept, and npm is never run on it.\n5. Run `installArgv(tarballPath, prefix)` with an explicit timeout of 10 minutes, through the repository's existing way of starting a process (read machine-keeper-task.ts, backup-command.ts and folder-coordinator.ts to see it; if none fits, ask with tick_widen and do not add a raw child_process call). A non-zero exit is refused with the last lines of npm's output and exit 1; the old install is still the one running.\n6. Say it is installed and that Tick moves to it on its own; exit 0. The command never stops, starts or restarts anything itself: the machine's keeper moves the machine to the new release (TN0.17).\n\nTHE QUESTION (thesis 4: Tick puts it to the person; the agent does not answer it). Follow how `join` and `agent use` do it in packages/cli/src/talk-consent.ts: the tool is in ASKS_THE_PERSON, the conversation runs `update install <version> --dry-run` first, shows that preview to the person as the question, and runs the real command only on their yes. Typed in a shell, it asks on the terminal the way `tick reset` does (read reset-command.ts) or goes with --yes. Register it as `update install` (tool tick_update_install); `update` itself stays free to read. AUTO TICK MUST NOT ANSWER IT: do NOT add it to AUTO_TICK_ANSWERS in auto-tick.ts. Installing software on the person's machine is theirs to decide, as company policy and reset are. Test that, with auto tick on, the install is still asked of the person, and that a 'no' downloads and installs nothing.\n\nFILES, NEW CODE IN NEW FILES: packages/cli/src/update-install.ts (`createUpdateInstallCommand(deps)`, every effect injectable: fetch, the running package's location, the folder maker, the process runner, the clock; no test touches a network, npm or the real ~/.tick) with update-install.test.ts; packages/cli/src/talk-consent-update.ts (the ask and its preview wiring) with talk-consent-update.test.ts. main.ts is 485 lines and must stay under 500: one import and one registration in each of its two command lists, beside createUpdateCommand(). talk-consent.ts is 897 lines, over the limit, and may NOT grow: bring your entry in with one import and one spread from your new file, and pay for those lines in the same change by moving an equal number of lines out of talk-consent.ts into a new file or by removing comment lines that only restate the code. Do not edit file-size-baseline.json. Add ONE README.md row for `tick update install`, inside the command table.\n\nTESTS to write: every refusal above (not offered; not an npm install; a tarball with one changed byte refused with npm never run; npm failing; npm timing out); --dry-run changing nothing; a yes and a no through the consent path; auto tick on not answering it; the argv npm is given, with the prefix taken from the running package's folder; the downloaded folder removed on success and on failure.\n\nTESTS THAT MAY PIN WHAT YOU CHANGE: before you edit, `git grep -n ASKS_THE_PERSON` and `git grep -n AUTO_TICK_ANSWERS` over every *.test.ts and read each hit whole (not only the file you expect), plus talk-consent.test.ts, talk-consent-directory.test.ts, agent-pause-consent.test.ts and auto-tick.test.ts. A test that lists the asking tools by exact name gains 'update install' by value. Never weaken or delete a test. Ask for an unlisted file with tick_widen.\n\nRULES: no npm, npx, build or test run in your copy; commit and call tick_check. Add no contact with the channel at startup or in plain `tick`. In your report name the files, the exit codes, and how the question reaches the person."
+      },
+      "order_id": "01a18265-9eac-75a2-97f1-c7e52bed159e",
+      "schema": "tick.work-order.v1",
+      "signature": "fQxD/+cGGQDIsq2eE+/1NGtVyz5EA6QyOW6FJ9PltHqBPBIJHDDEyXtswJ7KGQ7cbvY6zJulQvD0S75UzuWSCA=="
+    }
+  },
+  "receipt_id": "01a18265-9eac-75a2-97f1-c7e52bed159e",
+  "schema": "tick.receipt.v2",
+  "signature": "1x4Ix4/qh5K/TC4QH7cR/y+W4uGtl0EVtkNksyOe0jMIuHQeBo6dtveYhrIYfzn81+dYcd7srcafM5ve9+f7AA=="
+}

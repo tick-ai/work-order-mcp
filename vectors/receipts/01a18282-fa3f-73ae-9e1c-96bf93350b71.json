@@ -1,0 +1,157 @@
+{
+  "alg": "ed25519",
+  "content_hash": "86ebc0e328e8bb07e06e0e052a5df9a779f5bedc49e6ad2db0696838a1dea8f7",
+  "coordinator": "https://0.0.0.0:4200",
+  "issued_at": "2026-10-28T14:35:46.018Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T13:25:23.396Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "2eabd250b36170b943f319d5d3de6911104b849687836a2188d67e7e9dac25f2",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:35:46.018Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "7b8dd29f62f6a79b4d9968e7e4e91db640c123df",
+        "contained": "none",
+        "order_hash": "5d8ce40c815469814c67c8415e83341e5811f673f606f6ff381766226b2e80d8",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "825ceb7cc86dfee0b2ffdc924209ca458873c0e8",
+        "verdict": "passed"
+      },
+      "record_id": "01a18282-fa3f-73ae-9e1c-96bf93350b71",
+      "schema": "tick.check-record.v1",
+      "signature": "ret3YwRNWsZMltAF9r20B99xOL4f3zzG9Iu6LW0R/q9uLwJaTwNLuw+S9SCUhplqQjXnGA4LrJE5ZxMXxt6CCQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "de0a7def9d8293c7d8c10b1a446050e15ff216645e3e666888d9a1ea1f15b68c",
+      "coordinator": "https://0.0.0.0:4200",
+      "delivery": {
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "commit": "7b8dd29f62f6a79b4d9968e7e4e91db640c123df",
+        "order_hash": "5d8ce40c815469814c67c8415e83341e5811f673f606f6ff381766226b2e80d8",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "825ceb7cc86dfee0b2ffdc924209ca458873c0e8",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 252,
+            "cost": "reported",
+            "minutes": 24.62785,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18282-fa3f-73ae-9e1c-96bf93350b71",
+      "issued_at": "2026-10-28T14:35:46.018Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "/faQb3R3/cDUV3ioGcc/k1Ga1hhYxo1DiRsS/kYfko8LxEi2ePxgWrv0PxtTjsQhJtsQLDBj276lMXp6AKomDA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "5d8ce40c815469814c67c8415e83341e5811f673f606f6ff381766226b2e80d8",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T12:36:42.787Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "27100b6549570474bd692dbf8896e858aecf521f",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18282-f901-7216-9f16-7c9278fbf8d2",
+          "task_id": "01a18282-fa3f-73ae-9e1c-96bf93350b71"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/talk-update.ts",
+          "packages/cli/src/talk-update.test.ts",
+          "packages/cli/src/update-install.ts",
+          "packages/cli/src/talk-command.ts",
+          "packages/cli/src/machine-settings.ts",
+          "packages/cli/src/journey.test.ts",
+          "./README.md",
+          "docs/SECURITY.md"
+        ],
+        "what": "PARSA, 2026-10-28: \"Do the startup check.\" Plain `tick` (the conversation's start, packages/cli/src/talk-command.ts) checks the release channel and, when it offers a release newer than the running one, asks the person ONE question. The channel library (release-channel.ts: fetchChannel, offered), `tick update` and `tick update install` are landed (8932ccef, 27100b65). This task adds only the check at start and the question, and REUSES the install: it must not copy it.\n\nWHEN IT CHECKS. Every condition below holds, else nothing happens and nothing is said:\n- the running Tick is an npm install (`npmPrefixOf` in update-install.ts says so); there is a terminal (as `terminal` in talk-restore.ts); the setting `channelCheckHours` is above 0;\n- at most once per `channelCheckHours` (default 24), counted from the last check whether it succeeded or not, so a person who cannot reach the host is delayed at most once a day, by the 3 second timeout below. Every call carries an explicit timeout: pass `timeoutMs: 3000` to fetchChannel.\n- the time of the last check and the last version the person declined are kept in ONE small file, ~/.tick/update-check.json, written by writing a temporary file and renaming it. A missing, unreadable or malformed file means \"never checked\" and is replaced. It is machine-wide, so a second window the same day does not check again: only the first asks.\n\nWHAT IT SENDS. One plain GET of `<channel>index.json` through fetchChannel: no query string, no custom header, no identifier, no version, nothing about the person, the machine or its work. A test asserts the request: the URL is exactly `<channel>index.json` and the init carries only the abort signal. The host's own log will show the person's address and the time, and the docs must say so (below).\n\nTHE QUESTION. If `offered(index, running)` offers a verified release the person has not declined, ask once, default No: \"Tick <version> is available (you have <running>). Install it now? Tick moves to it by itself within about a minute, with work in flight finishing first. [y/N]\". On yes: install through the SAME function `update install` uses, the person's yes already given: refactor the install steps in update-install.ts into an exported function that the command and this call both use; the command's behaviour and its tests stay exactly as they are. On anything else: record the version as declined (never asked about that release again; a newer release is asked once) and download nothing. An install that fails says why in one line and the conversation goes on: this never stops the conversation, as talk-restore.ts never does.\n\nTHE QUESTIONS A PERSON MAY BE ASKED ARE PINNED: journey.test.ts holds the list `THEIRS` and fails any question outside it. Add this one, matching the question above, with the reason 'whether to install a newer release of Tick on their own machine'. Change nothing else in that test.\n\nTHE SETTING. Add `channelCheckHours` to MACHINE_FIELDS in packages/cli/src/machine-settings.ts: key channelCheckHours, flag channel-check-hours, env TICK_CHANNEL_CHECK_HOURS, type number, default 24, where 0 means never check, with the default in the field and nowhere else in code.\n\nDOCS. README.md and docs/SECURITY.md name this one contact: what is asked, how often, what is not sent, that the host's log sees the person's address and the time, and how to turn it off. Find where each already lists what Tick contacts or sends and extend that. Do not write a general claim that nothing is sent: it is not true once this lands.\n\nFILES, NEW CODE IN NEW FILES: packages/cli/src/talk-update.ts (`offerUpdate(deps)`, every effect injectable: fetch, clock, the state file's read and write, terminal, ask, install) with talk-update.test.ts. update-install.ts only to export the install steps. packages/cli/src/talk-command.ts is 1105 lines, over the limit, and may NOT grow: add one import, one member of its deps and one call, wired the way offerRestore is (its type near line 393, its call near line 534, its real wiring near line 1074), and pay for those lines in the same change by moving an equal number out. Also machine-settings.ts, journey.test.ts, ./README.md, docs/SECURITY.md. main.ts, config.ts and file-size-baseline.json are not touched.\n\nTESTS: no check without a terminal, on a non-npm install, with the setting at 0, or inside the hours; the state file written and read back, and a corrupt one replaced; no release, none newer, or an unverified one: nothing asked; a newer one: asked once, a yes installs once through the shared function, a no records the decline and the next start asks nothing, a still newer release after a decline is asked once; channel down, 404, not an index, or no answer in 3 seconds: silent, the conversation goes on, the check recorded; the request has no query and no header.\n\nTESTS THAT MAY PIN WHAT YOU CHANGE: journey.test.ts (above); every talk-command*.test.ts that builds the deps object (a new required member must be given by value in each, or be optional); the machine-settings tests; update-install.test.ts. `git grep -n offerRestore` over every *.test.ts and read each hit whole. Never weaken or delete a test; ask for an unlisted file with tick_widen.\n\nRULES: no npm, npx, build or test run in your copy; commit and call tick_check. In your report name the files, what the request carries, and the setting."
+      },
+      "order_id": "01a18282-fa3f-73ae-9e1c-96bf93350b71",
+      "schema": "tick.work-order.v1",
+      "signature": "/UQFsFT/HiO19z4G6ReKSmQ2Klrtjx/RkumKrgMLN6l7Ba63CIlpMDtTm2l45zCT5UxxtN3ANjNyia+J1VbwDg=="
+    }
+  },
+  "receipt_id": "01a18282-fa3f-73ae-9e1c-96bf93350b71",
+  "schema": "tick.receipt.v2",
+  "signature": "AjuuJtybcU5X709C55GrR6429dMPUt0zP+R8bMhspm7at/WFgUm8uHgtdvx2vTqXE9PhTOrI6aLp7uHLNcd8Cw=="
+}

@@ -1,0 +1,153 @@
+{
+  "alg": "ed25519",
+  "content_hash": "c5b02e24735acfb460a7891f9514ab6321e813190d97abc46482018cd40f750a",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:20.854Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:37:12.876Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "fb7348cf7903a64bf8e943c6951eb3292fc4b06390dcdadb2527271065313884",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:20.854Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "ffe4d7d0c74853f666513df3b74f6a59473ea961",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "276011215239c2ebd7c88d7d190c5916d440a96e",
+        "contained": "none",
+        "order_hash": "d2a307886e4b6572d64d81046aa97aa6a5cd8adeb2907ebb41e2b2e03595af1f",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "cc99d79957690ed759396b21e536c80631cc5579",
+        "verdict": "passed"
+      },
+      "record_id": "01a18303-fc5c-73bb-8629-2c83f1b46d91",
+      "schema": "tick.check-record.v1",
+      "signature": "mcn8RK6T+Ws49l8VoBPVOZMZjdHJTSu53mQoDmAp8IfAOCHR21XVMRdGDWDlL7pGx9ZGtHVJ7moRQm+xze/YCw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "6c646dc369388065ae4db56b84729f351b223823366b86ae27f23558929c8c07",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "ffe4d7d0c74853f666513df3b74f6a59473ea961",
+        "commit": "276011215239c2ebd7c88d7d190c5916d440a96e",
+        "order_hash": "d2a307886e4b6572d64d81046aa97aa6a5cd8adeb2907ebb41e2b2e03595af1f",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "cc99d79957690ed759396b21e536c80631cc5579",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 206,
+            "cost": "reported",
+            "minutes": 28.76568333333333,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18303-fc5c-73bb-8629-2c83f1b46d91",
+      "issued_at": "2026-10-28T19:41:20.854Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "W2Ol+2grOQ52KUI/oquxC4DkeX8Owib3N5QbYxEfcoKAfxZnb3a82o3grqAftnd4uDx2zzV9/UDX0g2Kby6qDA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "d2a307886e4b6572d64d81046aa97aa6a5cd8adeb2907ebb41e2b2e03595af1f",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T15:07:35.231Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "ffe4d7d0c74853f666513df3b74f6a59473ea961",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a18303-fc5c-73bb-8629-2c83f1b46d91"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/export-command.ts",
+          "packages/cli/src/export-log.ts",
+          "packages/cli/src/export-log-page.ts",
+          "packages/cli/src/export-log.test.ts"
+        ],
+        "what": "WHY (CD2, unit CD-L; NOTE-mvs8f5kn, GD-89). tick.company, the site Ruqia published, says Tick landed 620 pieces of its own work in 15 days, \"each in its own copy, checked before it landed, and landed only on a yes\". The count is exact; the rest is not provable from it (the memory's NOTE-mvryyw4e). \"Tick's Straight Line\" (doc:branding/ticks-straight-line, GD-87's criterion) gives the second ten, the seller, as \"Your proof of expertise is the log. ... Say the number, then show the log\", and the first ten as \"Let them check it themselves\". Since 2026-10-27 every landing on tick-executor's main carries receipts of version two (tick landings checks it: packages/cli/src/landings-check.ts and landings-command.ts). So the log can be a page in which every landing opens its receipt and the visitor's own browser checks it, with the checker that already checks receipt v2 (packages/cli/src/receipt-verifier.ts, verifierFiles()). Putting it online is PARSA's: no session publishes anything.\n\nWHAT TO BUILD. `tick export --log <folder> [--since <commit>] [--repo <path>]`:\n1. It reads the landings on the repository's origin main since <commit> (default: the ticked line in ticked-line.json, packages/core's reader), the way tick landings reads them (reuse its functions; do not copy them), and for each Tick landing the receipts of version two of the tasks it carries, from the coordinator as tick landings gets them, each checked with the offline verifier before it is written. A landing whose receipt does not verify is listed with what is wrong and its receipt left out, never shown as checked. A release commit is listed as a release with its release receipt where it has one.\n2. It writes, into a new or empty folder (the path checked non-empty, GD-49; a folder that exists and is not empty refused, nothing written), a static page set: index.html, log.js and log.css, plus receipts/<task-id>.json and log.json (each day, each landing: time, subject, the task's title, the receipt's path). The page shows the days newest first, each with the count of work landed, the Tick Line of that day and the landings; opening one checks its receipt in the visitor's browser with VERIFY_CORE (and the documents cores), offline, and says VERIFIED, NOT FULLY CHECKED or FAILED as the checker page does. It says plainly what it does not prove: that the coordinator told the truth, that a person read the work, that the keys are Tick Group's (name the key ids the receipts carry, to compare). No request but the page's own files: a Content-Security-Policy like the checker page's. Words and colours per the design system: green only for a verified receipt.\n3. The person chooses what to show: --since and --repo; nothing else is read. The summary it prints names the folder, the number of days, landings and receipts written, and how many did not verify.\n4. New code in packages/cli/src/export-log.ts (reading and writing) and packages/cli/src/export-log-page.ts (the page's three texts), module doc comments of 25 lines or fewer; export-command.ts (445 lines) gains only the flag, its usage text and the call, and stays under 500. --log with --out, --checker or --verify is a usage error.\n5. Tests in a new file, packages/cli/src/export-log.test.ts, with injected git, coordinator and verifier as landings-command's tests do: two days of landings write the page, log.json and each receipt; a receipt that fails verification is listed with its reason and not written as checked; a non-empty folder is refused with nothing written; the page's script verifies a written receipt in a vm with webcrypto (as receipt-verify-core.test.ts runs the core). Grep the whole tree's *.test.ts for the export command's usage string and for landings' functions you reuse before you finish; every existing assertion keeps passing. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18303-fc5c-73bb-8629-2c83f1b46d91",
+      "schema": "tick.work-order.v1",
+      "signature": "trUlUWQgw9DQzf10m/reZD2BnE8pG4ZZ+5xdpBMiyFmIXUNaKwbPmSeafNqsmmnO8YqM94U5FEOEsY63MtvzBg=="
+    }
+  },
+  "receipt_id": "01a18303-fc5c-73bb-8629-2c83f1b46d91",
+  "schema": "tick.receipt.v2",
+  "signature": "MdMWjTd7hV/ZF66PWf44wmaDVLoZ7GX12avlnpKPDSjoiQe9yFthKz7p8kmxPacvr9JEmQ9PZ9AXjStIGYDRBA=="
+}

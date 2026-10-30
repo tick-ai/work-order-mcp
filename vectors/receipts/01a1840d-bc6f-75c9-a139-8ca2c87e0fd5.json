@@ -1,0 +1,151 @@
+{
+  "alg": "ed25519",
+  "content_hash": "761488e41257bd33203adb484403ac678ae8e6e819084c6647d2d52db35e074d",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T20:44:52.047Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T19:55:13.730Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "2e00d2e0f19936e8ae1e7a58d0235494d08e48f8701c3b2f02df0ed75cf475e6",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T20:44:52.047Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "f732ea4b1a1136607aa84f9cd9dfc65491303393",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "d1f5c8c0ef73beada953f0d9037e2076759bf1b9",
+        "contained": "none",
+        "order_hash": "ba1d462bda7f1947b4453c349230ff8e3b7ff5422bb4e1940d75003fd8b51276",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "d9478e030ff078df5c2d094106928c7ff5c67954",
+        "verdict": "passed"
+      },
+      "record_id": "01a1840d-bc6f-75c9-a139-8ca2c87e0fd5",
+      "schema": "tick.check-record.v1",
+      "signature": "axVopjATv7OnkwPq7UqgRJ7yNDg10xtlk7Pa12pT+Meo7vKB6gkuA0SrclP36HYmOS8OPnG/uQ+6VEDMipEhCQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "f2aedf0325005a22214987b03128e20b602e538954c2fdbae6a1d276066e26d3",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "f732ea4b1a1136607aa84f9cd9dfc65491303393",
+        "commit": "d1f5c8c0ef73beada953f0d9037e2076759bf1b9",
+        "order_hash": "ba1d462bda7f1947b4453c349230ff8e3b7ff5422bb4e1940d75003fd8b51276",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "d9478e030ff078df5c2d094106928c7ff5c67954",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 16,
+            "cost": "reported",
+            "minutes": 6.8299666666666665,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1840d-bc6f-75c9-a139-8ca2c87e0fd5",
+      "issued_at": "2026-10-28T20:44:52.047Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "yFLZ4FDM9TM3SFyXjPDaOVo9/PB1wTZJ9qxk5VwgIVa7DC1w2VUxgiBKijBO4qTtliVFfztH1uYiTDdEtqZ+CA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "ba1d462bda7f1947b4453c349230ff8e3b7ff5422bb4e1940d75003fd8b51276",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:47:54.144Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "f732ea4b1a1136607aa84f9cd9dfc65491303393",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a1840d-bc6f-75c9-a139-8ca2c87e0fd5"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/auto-tick.ts",
+          "packages/cli/src/auto-tick-reason.test.ts"
+        ],
+        "what": "WHY (CD2, unit CD-H: a receipt anyone can open; GD-89). The receipt exported for tick.company/check/ on 2026-10-28 (task 01a183e1-4575-74e0-b25a-bf02cb2b09bb) carries, in every amendment and gate decision auto tick made, the reason \"auto tick, as Claude Code's auto mode in C:\\Users\\Asus\\Desktop\\TickTeam (window 0d455c) since 2026-10-28T14:28:30.714Z\". packages/cli/src/auto-tick.ts autoTickReason writes `auto.window` as it is, and the window is named by its whole folder path. That puts the person's account name and folder layout into every receipt they hand to someone else, and into the public checker page. A receipt is meant to be shown to strangers (TN0.32, CD-H).\n\nWHAT TO DO. The reason names the window by the last segment of its folder and the window id, for example \"auto tick, as Claude Code's auto mode in TickTeam (window 0d455c) since ...\". It never carries the folder's full path. Where the window is not named in that form, keep what is given. Change nothing else of the reason, and nothing about how auto tick decides. Past receipts stay as signed.\n\nDONE WHEN. A test in the new file packages/cli/src/auto-tick-reason.test.ts shows: a Windows path \"C:\\Users\\x\\Desktop\\TickTeam (window 0d455c)\" and a POSIX path \"/home/x/work/repo (window ab12cd)\" give \"TickTeam (window 0d455c)\" and \"repo (window ab12cd)\", and a window given without a path is kept as it is. Existing tests that assert the old text, in auto-tick.test.ts and talk-mcp.test.ts (they name \"C:\\work\\repo\" and \"/work/repo\"), are updated to the new text and assert nothing less. Ask tick_widen for those files BY THEIR FULL PATHS if they must change. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1840d-bc6f-75c9-a139-8ca2c87e0fd5",
+      "schema": "tick.work-order.v1",
+      "signature": "8xueJ6MA6dSt/hyRPQepH5P1D+IZblPX84/laOWdnzHIMQtFiqe6M60wvSEUmxYp5daRb2xiF0vFVym6zXjzAw=="
+    }
+  },
+  "receipt_id": "01a1840d-bc6f-75c9-a139-8ca2c87e0fd5",
+  "schema": "tick.receipt.v2",
+  "signature": "jQw2x6Yr19mRrv7vzZqni1vV1mF4VnMkcx/1HqJzfXJUUPV8etVb/o69UYX5bcFHEYQC7APEwh57+tjTlp9sCQ=="
+}

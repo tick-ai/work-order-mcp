@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "9eb95ff35637229c4ce02885c2b0885335e434e3cf48d42bc85a81c61615a1c4",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:21.790Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:20:25.845Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "01feb790fb245e03cea23976ca8fe907d639db6ddb57db49678b33ed5b4e625a",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:21.790Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "01d3f94e1a41abbb399bf7933c596081354567f6",
+        "contained": "none",
+        "order_hash": "a32fc738251d11364e289e4f990f4acad87911fe5a10b286e64657b013ba9e19",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "fd2e38990b3ebcd6fe0df7f512857a05bd1c4d1a",
+        "verdict": "passed"
+      },
+      "record_id": "01a182f7-a5b5-7796-8fa9-fe3224165407",
+      "schema": "tick.check-record.v1",
+      "signature": "ErIquOCQLzfMJlDbayScXuTB8U03baQBXBIX06gBY71mcH29lgWX/2ABDh/ZL51GfC1UqcgMnXJjzRp+Qz5hBw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "260261dfcaf59af6d0f473c43c60151c0525d0e99d2dab8add3fd8ff4c6cb4f8",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "commit": "01d3f94e1a41abbb399bf7933c596081354567f6",
+        "order_hash": "a32fc738251d11364e289e4f990f4acad87911fe5a10b286e64657b013ba9e19",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "fd2e38990b3ebcd6fe0df7f512857a05bd1c4d1a",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 61,
+            "cost": "reported",
+            "minutes": 22.308516666666666,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a182f7-a5b5-7796-8fa9-fe3224165407",
+      "issued_at": "2026-10-28T19:41:21.790Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "RUkAq57hcnhwn8nHjKOwc/T5SJg8VkKE+5J57NcorwvCa0fi0HWm2Rk8Yo6foIHFImD2eTxDe/Vvl5UhpeCDAA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "a32fc738251d11364e289e4f990f4acad87911fe5a10b286e64657b013ba9e19",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:48:21.367Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a182f7-a5b5-7796-8fa9-fe3224165407"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/api/src/memory-settle.ts",
+          "packages/api/src/memory-settle-state.ts",
+          "packages/api/src/memory-settle-document.test.ts"
+        ],
+        "what": "WHAT HAPPENED (2026-10-28). A project started with toward TN (run 01a1828d-2b1d-76c8-8d2a-5f4869cadcfd), whose tasks each named a unit of TN (TN0.38, TN0.39, TN0.41, by tick_send's `unit`), landed all its work, and then its finish step failed: \"FINISH_TRACKER_FAILED: finish-provider: the goal tracker (memory settle) could not be told, so the project is not closed: memory__settle: TN is a document ladder, finished by its milestones' units; report toward one of its units.\" The refusal is planSettle's (packages/api/src/memory-settle.ts, about line 184: `goal.type === 'ladder' && goal.kind !== 'series'`). tick_project start accepts toward TN, and tick_send names units of TN, so a project carrying several units of a document ladder has no goal it can finish toward. The older project \"Receipts that prove something to someone else (TN0, the road redrawn, GD-68)\", run 01a16851, also toward TN, sits open the same way.\n\nWHAT TO BUILD.\n1. A report toward a document ladder settles the units the project carried that belong to that ladder: each such unit, not already done, is amended done with the finish's evidence (as a unit goal is today, the `done` loop near the end of settle), and the finish itself is recorded toward the ladder, linked about it, as a series finish is. The ladder itself is never retired or made done by a project: a document ladder is finished by its milestones. Which units belong to it: the carried unit's record names its milestone (props.milestone, e.g. \"TN0\"), and the milestone's record (ms:<id>) is part_of ladder:<goal>; read them through the state reader as the other records are.\n2. packages/api/src/memory-settle-state.ts readSettleState (about line 360) wants only `asLadder.units` or the goal id; for a document ladder goal it must also load the units the report carries (carriedBy in memory-settle.ts reads report.units), so the planner can amend them.\n3. Refused as today, with today's sentence: a report toward a document ladder that carries no unit of it (packages/api/src/memory-settle.test.ts, \"refuses a document ladder, and a goal the memory does not hold\", about line 185, uses a report that carries none: it must still pass unchanged), and any settle of a document ladder by --observed or --release (packages/api/src/memory-settle-release.test.ts:177 expects \"is a document ladder\"; keep it).\n4. The project is finished once every carried unit of the ladder is done and no other open project works toward it, as for a series; another open project toward the same ladder (run 01a16851 exists) leaves it waiting, and that wait is a wait, not a problem: the finish step closes the project (read how a series finish with `live > 0` is answered, and do the same).\n5. Tests in a new file, packages/api/src/memory-settle-document.test.ts, built with the helpers of packages/api/src/memory-settle.test-support.ts: a report toward TN carrying TN0.38 and TN0.39 (milestone TN0, ms:TN0 part_of ladder:TN) makes both done with the finish's evidence and records the finish about ladder:TN; a carried unit of another ladder is left alone; an already-done unit is not amended again; a report carrying none is refused with today's sentence; the ladder is never retired. Keep memory-settle.ts (367 lines) and memory-settle-state.ts (433) under 500. Grep the whole tree's *.test.ts for \"document ladder\", planSettle and readSettleState before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a182f7-a5b5-7796-8fa9-fe3224165407",
+      "schema": "tick.work-order.v1",
+      "signature": "Ya9T7K/PxleHSv1VcpEIUOagyFuKrBvwXN3B3iGdjP8fMm8iVX3KTZ7ghUvfEF8WVGPaR17rfW935aLPjX3pAA=="
+    }
+  },
+  "receipt_id": "01a182f7-a5b5-7796-8fa9-fe3224165407",
+  "schema": "tick.receipt.v2",
+  "signature": "k7ne6ZrgEA1EuDgDaz8Jn7fb9P8vEI4gDK/julhIrLrP+oCQqta0owDB/n3YhjSkF636VwegCaUIHtR9JGVnBg=="
+}

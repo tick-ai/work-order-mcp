@@ -1,0 +1,155 @@
+{
+  "alg": "ed25519",
+  "content_hash": "bb048c667d47c7a96fe52c26376f5a8f4252a7caa61c3ecf1b3c173610a1be99",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:19.762Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T16:29:08.170Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "10b1571f3948a0ce4ff2075019e294001321e34fd2999d5fb4728df61a34284c",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:19.762Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "d75d75777ada05062f6aef48bf1dc49458fd9822",
+        "contained": "none",
+        "order_hash": "7c4e8eda98b02f93cb4f087714a0555cf46f5242dc9fdf7eb9e62979850a5e84",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "9113f941ca3b8f49f5f3fdce98a2bc006f63bdfa",
+        "verdict": "passed"
+      },
+      "record_id": "01a18309-e906-745e-8312-e71bf6eeae8e",
+      "schema": "tick.check-record.v1",
+      "signature": "u8Fl7ASqcjN72g0M2/RMgEfkPZ+53qvkm6f5bkATvORrU7twBxq4EyGRGCDkL9rE55zAy1uXLXBe2EcrH/dgAg=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "8cb5a8cca542b19ff7add79477c026aec693f2be9f238d7afdb25b49b1792363",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "commit": "d75d75777ada05062f6aef48bf1dc49458fd9822",
+        "order_hash": "7c4e8eda98b02f93cb4f087714a0555cf46f5242dc9fdf7eb9e62979850a5e84",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "9113f941ca3b8f49f5f3fdce98a2bc006f63bdfa",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 221,
+            "cost": "reported",
+            "minutes": 38.7904,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18309-e906-745e-8312-e71bf6eeae8e",
+      "issued_at": "2026-10-28T19:41:19.762Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "64ROgKrya1XRxjBxWtING/OqDLWrG8BYBQR+5KV8uIM8UmWNqmFiz5jDWnZmBu118z4sPhXmeYbrtYw3d9ZJAg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "7c4e8eda98b02f93cb4f087714a0555cf46f5242dc9fdf7eb9e62979850a5e84",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T15:49:12.368Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a18309-e906-745e-8312-e71bf6eeae8e"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/api/src/presence.ts",
+          "packages/api/src/presence-relying-party.ts",
+          "packages/api/src/presence-relying-party.test.ts",
+          "packages/cli/src/export-command.ts",
+          "packages/cli/src/touch-page.ts",
+          "packages/cli/src/touch-page.test.ts"
+        ],
+        "what": "WHY (CD2, unit CD7, first half; NOTE-mvs8f5kn and NOTE-mvs8uxx6, GD-89). A person approves with a passkey touch (RC7.15: packages/api/src/presence.ts, webauthn.ts, presence-page.ts), but the relying party is the coordinator's own host and its page is served under the coordinator's own certificate (presence.ts:129, `{ id: url.hostname, origins: [url.origin] }`). A lead's check on 2026-10-28 (NOTE-mvs8uxx6) found that Chromium refuses the coordinator's pages outright (net::ERR_CERT_AUTHORITY_INVALID), so no browser that does not trust that certificate can ask for a passkey there, while a page on https://tick.company (a certificate browsers trust, PARSA's host) is a secure context where a passkey was created for relying party tick.company. So the touch for Tick Group's own coordinator is made on a page on tick.company, and handed back. The board's buttons are the second half of CD7, sent once this has landed and the page is online.\n\nWHAT TO BUILD.\n1. A setting `touchPage` (declared as Tick's settings are, its default in the field itself: \"\", meaning the coordinator's own presence page as today). Where it names a page, such as https://tick.company/touch/, the relying party for registering and checking passkeys is that page's host name, and the origins an assertion may come from are that page's origin and the coordinator's own. Put the rule in a new file, packages/api/src/presence-relying-party.ts, used where presence.ts builds `{ id, origins }` now; nothing else in how a touch is checked changes (challenge bound to one decision, flags, counter, the credential registered). With the setting empty, every presence test passes unchanged.\n2. `tick export --touch <folder>` writes the static touch page for a host (index.html, touch.js, touch.css; packages/cli/src/touch-page.ts, module doc comment of 25 lines or fewer): it reads from its own address's fragment the decision's words, the coordinator's challenge, the registered credential ids and where to hand the answer back; shows the decision as text, never markup, with the design system's fingerprint glyph, \"Approve with your touch\" and \"Not this one\"; asks the browser for the passkey with rpId its own host name (or registers one, for a register fragment); and then navigates back to the address it was given with the signed answer in that address's fragment. It hands back only to a loopback address (http://127.0.0.1 or http://localhost, any port, path /board/...), never to another site, and says so if given one. No request but its own files: a Content-Security-Policy like the checker page's. Its words and colours follow the design system (green only for done; Instrument Sans as the board ships it), unlike today's presence page.\n3. The folder is new or empty, its path checked non-empty (GD-49); --touch with --out, --checker, --log or --verify is a usage error; export-command.ts gains only the flag, its usage text and the call, and stays under 500 (it is shared with --log, which has landed before this starts: read it).\n4. Tests: packages/api/src/presence-relying-party.test.ts (empty setting: the coordinator's host and origin as today; a named page: its host as relying party and both origins; a page that is not https is refused at start), and packages/cli/src/touch-page.test.ts (the folder's files; the page shows a decision with markup as text; it hands back to 127.0.0.1 and localhost only; it refuses any other return address; register and approve fragments each ask the browser the right call, run in a vm with a fake navigator.credentials). Every existing presence and webauthn test keeps passing: grep the whole tree's *.test.ts for presenceSiteOf, RelyingParty and the presence routes before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nNOT IN THIS TASK. The board's buttons (Approve with your touch, Decline, Stop everything, Start again) and putting the page online, which is PARSA's.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18309-e906-745e-8312-e71bf6eeae8e",
+      "schema": "tick.work-order.v1",
+      "signature": "1xPDWWxWq/ccH0CF6tahSalGDmuw/GTrCUHXWLGkylwtUlPnn/rpTeiuzDXwob289iFjU7hxawk4fcyTdpnPDQ=="
+    }
+  },
+  "receipt_id": "01a18309-e906-745e-8312-e71bf6eeae8e",
+  "schema": "tick.receipt.v2",
+  "signature": "CtBOp9UYD8eGu2FI/UvDid2JisMth4CyZy3Uivi/tXHXu0SN9sQXcxs4g2GO1ra/ncZ76x6wGnOpiVF8H7P3DQ=="
+}

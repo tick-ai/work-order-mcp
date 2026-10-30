@@ -1,0 +1,151 @@
+{
+  "alg": "ed25519",
+  "content_hash": "cfce70fd30993789aae8c6b275bcf760498409ff4849c01182f0beb976469093",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:17.940Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T18:28:54.036Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "d7df70ff525ffaf64468c098c1c71d65d22702c466c2d3279eb850aa2be78c73",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:17.940Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "18577501825f4f561fdd0cf54785cb9e03fd0910",
+        "contained": "none",
+        "order_hash": "7d48df9bee86491f8a2142d688c29af4e6ea9dbd5e66e7b7b696adf8fda84dd9",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "78418ded2390ddd2ed9aca26e1bc2eb2182a339a",
+        "verdict": "passed"
+      },
+      "record_id": "01a1837a-f9f6-759b-a749-6a5c88e5267e",
+      "schema": "tick.check-record.v1",
+      "signature": "phIJBgBymfmlAmSEt+r2iJuFjHbToQTAfu0U7KcbrvIct2UK1RjzcVeQHzUT32AkfwQMFWQd4oKSyksXLHk+Dw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "37a98650691802049bb7b3e66a0873e001abc2297ec8fa85b9ce8296ab96f1ba",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "commit": "18577501825f4f561fdd0cf54785cb9e03fd0910",
+        "order_hash": "7d48df9bee86491f8a2142d688c29af4e6ea9dbd5e66e7b7b696adf8fda84dd9",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "78418ded2390ddd2ed9aca26e1bc2eb2182a339a",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 35,
+            "cost": "reported",
+            "minutes": 19.924433333333333,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1837a-f9f6-759b-a749-6a5c88e5267e",
+      "issued_at": "2026-10-28T19:41:17.940Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "XlnWkvaM5yw69HOzOARUtmmG/qnXAv3MKit1ya5bPoEyBRAlJ75hc49GHO1jD+s5wF9+yjU5Gvs0id0oreizCg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "7d48df9bee86491f8a2142d688c29af4e6ea9dbd5e66e7b7b696adf8fda84dd9",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T17:08:41.993Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a1837a-f9f6-759b-a749-6a5c88e5267e"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/runner/src/release-process-deps.ts",
+          "packages/runner/src/release-process-deps-echo.test.ts"
+        ],
+        "what": "WHY (GD-89, PARSA 2026-10-28: \"Fix ALL defects happened this session.\"). During release 0.5.264's gate (2026-10-28, 16:50-17:00Z), ~/.tick/machine.log took the gate's whole output: vitest's report with its colour codes, and what the tests themselves print. Among those prints were a fixture's \"release 1.3.0: publish ok ...\", \"tick-executor-run: Tick kept a recovery point of D:\\tick\\temp\\tick-tests-run-...\" and a \"Cannot find module ... release-claims-e2e.mjs\" stack, thousands of lines for one release. machine.log is the machine's own record. People read it, and tools/install-watch.mjs decides whether an install moved by a line in it (\"started the coordinator ... records again on x.y.z\"), which a test's print can now forge. The cause: runStep in packages/runner/src/release-process-deps.ts copies each step's output \"to this process and to its log\", via copy(chunk, process.stdout) and copy(chunk, process.stderr). Inside the machine process, stdout and stderr ARE machine.log (packages/cli/src/coordinator-keeper.ts and machine-client.ts open it as the child's stdio).\n\nWHAT TO DO. A gate step's output always goes to its log (gate.log), and to this process's streams only where a person watches them, for instance only when the stream is a terminal (isTTY). That way tools/release.mjs still shows it in a terminal, and the machine's log keeps only the step lines the flow says (\"release x: gate ...\", \"gate ok\" or \"gate failed\"). Choose the mechanism; add no setting.\n\nDONE WHEN. A test in the new file packages/runner/src/release-process-deps-echo.test.ts shows that a gate step run with non-terminal streams writes its output to gate.log and none of it to the process's stdout or stderr. If your route keeps a terminal copy, the test also shows that a terminal still gets it. The existing release-process-deps tests pass (release-process-deps.test.ts is at 497 lines, which is why new tests go in the new file), and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1837a-f9f6-759b-a749-6a5c88e5267e",
+      "schema": "tick.work-order.v1",
+      "signature": "nsQ8yQ/X+f3o9hKnsAouH1V9ME341sL7SuSFrZjLE+A2Df7kzXQ4EiFOZgtV4n5b/FgLLqKUHSKOTX5K4M2dAQ=="
+    }
+  },
+  "receipt_id": "01a1837a-f9f6-759b-a749-6a5c88e5267e",
+  "schema": "tick.receipt.v2",
+  "signature": "JM64h5aYUQqzhEezMA5npJhFCiawc2lfRD+Br+RCD0WHARRiEpkQ9UvSC3iKca5XBEWHy76MPincLtHDwv0RCA=="
+}

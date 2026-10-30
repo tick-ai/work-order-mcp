@@ -1,0 +1,591 @@
+{
+ "receipts/01a180f1-2d67-77dd-afe5-6f6cce309f3b.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1812d-05f9-7073-a035-1559e528687a.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1812d-e0df-73ef-84fa-c886bbe38175.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1812f-593e-7178-ba8d-abc8986ce295.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1812f-8c5d-757f-936a-54093776d23a.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1818b-f189-75ea-ae6e-53fb9475aceb.json": {
+  "kind": "release-receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a181a6-88d9-73b8-b60a-bb34e6b9113f.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a181a6-b917-71eb-9cd0-6d95eb430750.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a181bc-0dbc-7033-9a73-878be4496d63.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18258-97fe-7018-99b8-18399f7b0c52.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18265-9eac-75a2-97f1-c7e52bed159e.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18282-fa3f-73ae-9e1c-96bf93350b71.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1828d-c7fa-7309-97d0-a7a520cf0091.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1828e-61de-7381-9b60-0b4c62a0e85e.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1828e-ed32-72f7-b810-78fd7c303db3.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1828f-9168-7349-9b43-046f315203af.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18290-64ff-70fe-bae3-c84d094e1c20.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18296-269d-733d-aa74-0f449a11b457.json": {
+  "kind": "release-receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182b9-93a4-7170-bad5-cf1905ed7e10.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182cb-cdec-7258-9800-a2bd03250892.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182f7-43b9-7014-99d2-ec989e762885.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182f7-a5b5-7796-8fa9-fe3224165407.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182f8-a017-721a-8a7a-daf612773c4c.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182f9-3b10-76db-a30a-bee324cb0ba8.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182f9-d4b0-731b-b453-22fd5467d5f2.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182fa-1a34-727e-be6c-2bb33c940aa6.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a182fa-773b-775f-8023-0f55cc12497e.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18301-04c9-76ec-bf40-9e5e1897f9f2.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18301-2254-7597-9a2c-b8b413a7c722.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18301-aa8f-762f-a465-d96540b33f81.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18302-456b-7538-89ec-37937d3a5ca4.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18303-917f-7539-9bbe-61b4b0b47c3e.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18303-fc5c-73bb-8629-2c83f1b46d91.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18309-e906-745e-8312-e71bf6eeae8e.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1830e-bcf0-7353-bc38-9b0dd3ff3ba3.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1830f-24b8-737d-8db3-87c2217295c0.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18318-6fc6-7120-951a-5dfe1fdf9aea.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18319-afab-733f-970d-743682d1af73.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1831c-efb9-722f-b2f1-20fecf37a58b.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1834f-de55-7734-bbef-713e3053d1f2.json": {
+  "kind": "release-receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18359-4a51-7427-8bd1-3644f73dd9b7.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1836a-348a-71c9-a644-a57042d27b87.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1836c-50ef-71f8-a77a-1d60d1e4da63.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18371-e2cd-703d-bc10-392f7a14e3ba.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1837a-af1d-7389-907f-90d879557375.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1837a-cc81-72ed-b6c8-0837eade4159.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1837a-dee8-77a0-9a87-b2ed2a4a9c2d.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1837a-f9f6-759b-a749-6a5c88e5267e.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1837d-635e-717f-9a05-ac099c8dff82.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a183a9-f408-72dc-ba36-3503dbddac9d.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a183b0-fbdb-721f-8572-6f970dd235a8.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a183b0-fc25-710a-af43-7780b7440955.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a183cc-9174-727c-9c7f-316ca1a6efd9.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a183e1-4575-74e0-b25a-b75aa5e3bf12.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18402-297b-71a1-ad99-ed18b9226ec7.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1840a-095a-7475-887d-55074e91b431.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1840d-bc6f-75c9-a139-8ca2c87e0fd5.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18417-62fe-77ff-bf6d-26212fbdee3d.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a1842c-a86a-757c-bfc2-2ae0a542025c.json": {
+  "kind": "release-receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18445-2cb4-73f8-b7ed-d4dc60fe2e76.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18448-573a-7405-a552-d6e27b3c6cfd.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18453-e238-7139-96a8-80f3e7314bd7.json": {
+  "kind": "receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "receipts/01a18476-321a-752a-858f-3093ea7d5d8b.json": {
+  "kind": "release-receipt",
+  "valid": true,
+  "reasons": []
+ },
+ "mutants/01a180f1-2d67-77dd-afe5-6f6cce309f3b.delivery-agent.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "delivery: content_hash is not the hash of the delivery",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a180f1-2d67-77dd-afe5-6f6cce309f3b.order-what.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "order: content_hash is not the hash of the order",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a180f1-2d67-77dd-afe5-6f6cce309f3b.content-hash.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "content_hash is not the hash of the receipt",
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a180f1-2d67-77dd-afe5-6f6cce309f3b.signature.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a180f1-2d67-77dd-afe5-6f6cce309f3b.check-verdict.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "check: record.verdict is failed, but the territory was held and every result passed",
+   "check: content_hash is not the hash of the record",
+   "the receipt accepts a check whose verdict is failed",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812d-05f9-7073-a035-1559e528687a.delivery-agent.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "delivery: content_hash is not the hash of the delivery",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812d-05f9-7073-a035-1559e528687a.order-what.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "order: content_hash is not the hash of the order",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812d-05f9-7073-a035-1559e528687a.content-hash.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "content_hash is not the hash of the receipt",
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a1812d-05f9-7073-a035-1559e528687a.signature.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a1812d-05f9-7073-a035-1559e528687a.check-verdict.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "check: record.verdict is failed, but the territory was held and every result passed",
+   "check: content_hash is not the hash of the record",
+   "the receipt accepts a check whose verdict is failed",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812d-e0df-73ef-84fa-c886bbe38175.delivery-agent.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "delivery: content_hash is not the hash of the delivery",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812d-e0df-73ef-84fa-c886bbe38175.order-what.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "order: content_hash is not the hash of the order",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812d-e0df-73ef-84fa-c886bbe38175.content-hash.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "content_hash is not the hash of the receipt",
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a1812d-e0df-73ef-84fa-c886bbe38175.signature.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a1812d-e0df-73ef-84fa-c886bbe38175.check-verdict.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "check: record.verdict is failed, but the territory was held and every result passed",
+   "check: content_hash is not the hash of the record",
+   "the receipt accepts a check whose verdict is failed",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812f-593e-7178-ba8d-abc8986ce295.delivery-agent.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "delivery: content_hash is not the hash of the delivery",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812f-593e-7178-ba8d-abc8986ce295.order-what.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "order: content_hash is not the hash of the order",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812f-593e-7178-ba8d-abc8986ce295.content-hash.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "content_hash is not the hash of the receipt",
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a1812f-593e-7178-ba8d-abc8986ce295.signature.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a1812f-593e-7178-ba8d-abc8986ce295.check-verdict.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "check: record.verdict is failed, but the territory was held and every result passed",
+   "check: content_hash is not the hash of the record",
+   "the receipt accepts a check whose verdict is failed",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812f-8c5d-757f-936a-54093776d23a.delivery-agent.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "delivery: content_hash is not the hash of the delivery",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812f-8c5d-757f-936a-54093776d23a.order-what.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "order: content_hash is not the hash of the order",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1812f-8c5d-757f-936a-54093776d23a.content-hash.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "content_hash is not the hash of the receipt",
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a1812f-8c5d-757f-936a-54093776d23a.signature.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a1812f-8c5d-757f-936a-54093776d23a.check-verdict.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "check: record.verdict is failed, but the territory was held and every result passed",
+   "check: content_hash is not the hash of the record",
+   "the receipt accepts a check whose verdict is failed",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a181a6-88d9-73b8-b60a-bb34e6b9113f.delivery-agent.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "delivery: content_hash is not the hash of the delivery",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a181a6-88d9-73b8-b60a-bb34e6b9113f.order-what.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "order: content_hash is not the hash of the order",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a181a6-88d9-73b8-b60a-bb34e6b9113f.content-hash.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "content_hash is not the hash of the receipt",
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a181a6-88d9-73b8-b60a-bb34e6b9113f.signature.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "the signature is not the carried key’s over this receipt"
+  ]
+ },
+ "mutants/01a181a6-88d9-73b8-b60a-bb34e6b9113f.check-verdict.json": {
+  "kind": "receipt",
+  "valid": false,
+  "reasons": [
+   "check: record.verdict is failed, but the territory was held and every result passed",
+   "check: content_hash is not the hash of the record",
+   "the receipt accepts a check whose verdict is failed",
+   "content_hash is not the hash of the receipt"
+  ]
+ },
+ "mutants/01a1818b-f189-75ea-ae6e-53fb9475aceb.key-id.json": {
+  "kind": "release-receipt",
+  "valid": false,
+  "reasons": [
+   "key_id is not the carried key’s"
+  ]
+ },
+ "mutants/01a1818b-f189-75ea-ae6e-53fb9475aceb.signature.json": {
+  "kind": "release-receipt",
+  "valid": false,
+  "reasons": [
+   "the signature is not the carried key’s over this release receipt"
+  ]
+ },
+ "mutants/01a18296-269d-733d-aa74-0f449a11b457.key-id.json": {
+  "kind": "release-receipt",
+  "valid": false,
+  "reasons": [
+   "key_id is not the carried key’s"
+  ]
+ },
+ "mutants/01a18296-269d-733d-aa74-0f449a11b457.signature.json": {
+  "kind": "release-receipt",
+  "valid": false,
+  "reasons": [
+   "the signature is not the carried key’s over this release receipt"
+  ]
+ }
+}

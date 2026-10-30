@@ -1,0 +1,151 @@
+{
+  "alg": "ed25519",
+  "content_hash": "4735789c4b3dfd7a05b1ec5bbb3fc4ee48c1ff039eb5b4113401e047b6f2032c",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:20.276Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T16:16:26.570Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "bee58c89ad06547d5a7ba9b841f3d50656e8cdfc872ef80aff128c876d310068",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:20.276Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "f30f0a74d9087b246acd5ed63c65c36922402106",
+        "contained": "none",
+        "order_hash": "ed568019bc6631dc69051dd34a0bd207e6919ef06662cc13b108019d1364fe86",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "88cea6c8be57ee5a70c2dbbb14d7730058c44149",
+        "verdict": "passed"
+      },
+      "record_id": "01a1831c-efb9-722f-b2f1-20fecf37a58b",
+      "schema": "tick.check-record.v1",
+      "signature": "0QlIey8BOds1k7jWxJBDl8OjZKS5ItcTDK1N2SNoHU89kiPbbT+bPFJjEC6b8tl6K46IpwAqG00CPBQ5FWDJDw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "f79b1d2b81427509b88ca002e101e356cd142c6b37b0cd6cd4adc74e15c7bdf6",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "commit": "f30f0a74d9087b246acd5ed63c65c36922402106",
+        "order_hash": "ed568019bc6631dc69051dd34a0bd207e6919ef06662cc13b108019d1364fe86",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "88cea6c8be57ee5a70c2dbbb14d7730058c44149",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 53,
+            "cost": "reported",
+            "minutes": 26.521716666666666,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1831c-efb9-722f-b2f1-20fecf37a58b",
+      "issued_at": "2026-10-28T19:41:20.276Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "mChs3a3SFd5E+NPcOX+IxCz3PSG0ac+dPObVxYaneKCabv3VlUB4euy4wwqjGvdcd4dpfB1Sn0T+dmK+XRBXAw=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "ed568019bc6631dc69051dd34a0bd207e6919ef06662cc13b108019d1364fe86",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T15:49:14.976Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a1831c-efb9-722f-b2f1-20fecf37a58b"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/runner/src/landing-provider.ts",
+          "packages/runner/src/landing-promoted-ref.test.ts"
+        ],
+        "what": "WHY (GD-89). The task \"A landing asks for receipts only of the work it puts in place, so a no-change report lands\" (01a1830e-bcf0-7353-bc38-9b0dd3ff3ba3) changed implementsCarried in packages/runner/src/landing-provider.ts so that a landing carries only the implement tasks whose work an integration promoted, read from each promoted entry's attempt_ref with parseAttemptRef(...)?.task_id. An entry whose attempt_ref does not parse then names no task and is silently left out, so its work would land without its receipt being asked for. packages/runner/src/ticked-gate.ts's own rule is \"a doubt never lets work through\". This task starts after that one has landed: read implementsCarried on the main you are cut from; if it does not read promoted attempt refs, say so and stop.\n\nWHAT TO BUILD.\n1. Where a promoted entry's attempt_ref names no task (parseAttemptRef answers null or no task_id), the land step refuses the landing with LAND_UNTICKED and words naming the entry, before the gate is asked and before anything lands; every entry that parses is carried as now.\n2. Tests in a new file, packages/runner/src/landing-promoted-ref.test.ts: a promoted entry with an attempt ref that does not parse refuses the landing with LAND_UNTICKED and lands nothing; promoted entries that all parse carry exactly their tasks; a no-change task is still not carried. landing-provider.test.ts is 536 lines, exactly its baseline: add no line. Grep the whole tree's *.test.ts for implementsCarried and LAND_UNTICKED before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1831c-efb9-722f-b2f1-20fecf37a58b",
+      "schema": "tick.work-order.v1",
+      "signature": "OiWB4XpZbP6vsqIObOR9BjYbbrlJuXdbsNOifKzJEiZtllvDTvRyWKyrv/QD+OdvBOcTKioeLs/jzt7QDu0TBw=="
+    }
+  },
+  "receipt_id": "01a1831c-efb9-722f-b2f1-20fecf37a58b",
+  "schema": "tick.receipt.v2",
+  "signature": "lBW5i3u34TqRfYqV8Gs2TL6B15AANPoesPzzkmXMMarfa9RLhqjCnSB85KAh8gr0hwmpnoNMDAxGT3OOSXhXAA=="
+}

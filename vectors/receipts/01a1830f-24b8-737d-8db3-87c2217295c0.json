@@ -1,0 +1,153 @@
+{
+  "alg": "ed25519",
+  "content_hash": "75bafa4589d7aa75aea534db06dfcf56d1f148bd81cd7bfaae11856a9d07b402",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:20.694Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:46:28.554Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "c33b63a53871a39da349d417260a9ac5f978a1c0af6763e039c51fc96d6456c8",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:20.694Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "4aa87940288e74999acb68f1d6935ce28d357af2",
+        "contained": "none",
+        "order_hash": "ce6491cec598ba68ef67d6af621a335334b3eae81812a38b76c16bd3eccebe4c",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "8904d86e6c63be1635d017f29d210e1d88c72758",
+        "verdict": "passed"
+      },
+      "record_id": "01a1830f-24b8-737d-8db3-87c2217295c0",
+      "schema": "tick.check-record.v1",
+      "signature": "/sLBDbM6BljWgnamCYZPjVlES111Sr3agkrIiMlBxbw8o+4S98dF2V5b64b+aIgo8ifO8UH+2iNb1ymQui0hCg=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "44c7eadf092b9b086e188f28c999e4f29331381b7e45f6941d43e7d850799eef",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "commit": "4aa87940288e74999acb68f1d6935ce28d357af2",
+        "order_hash": "ce6491cec598ba68ef67d6af621a335334b3eae81812a38b76c16bd3eccebe4c",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "8904d86e6c63be1635d017f29d210e1d88c72758",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 63,
+            "cost": "reported",
+            "minutes": 21.7995,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1830f-24b8-737d-8db3-87c2217295c0",
+      "issued_at": "2026-10-28T19:41:20.694Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "ghz1lErJ6oiyNnAwWUSEUkI9BCXWVROK/jJCvkzQWx1YaudxIhkVB1RB/lHkV58kxupbWfEGFaN3wvb0UPw1Dg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "ce6491cec598ba68ef67d6af621a335334b3eae81812a38b76c16bd3eccebe4c",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T15:23:51.240Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "8f24bbd1950e122313d8ae9d082685221f5d2a0b",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a1830f-24b8-737d-8db3-87c2217295c0"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/api/src/run-task-list.ts",
+          "packages/views/src/task-list.ts",
+          "packages/cli/src/project-line.ts",
+          "packages/cli/src/project-line-held.test.ts"
+        ],
+        "what": "WHAT HAPPENED, AND WHAT THE LAST TASK FOUND (2026-10-28, run 01a182f7-072d-77e8-9b3f-d798a3172c1b). tick_status said 'Task \"Put it in place, once accepted\" is running but no lease holds it, so nobody works it' about a landing step whose one attempt was alive and landed. Task 01a182fa-f147-7772-becb-a90987aab683 read the code and reported no_change_required with this evidence: a plain tick_work stop keeps renewing a held attempt's lease (runner/src/daemon.ts awaits its in-flight attempts before cancelling renewal; the machine's batched renewal, runner/src/machine-connection.ts, runs until the connection closes), so nothing lapsed. The line was wrong because `stranded` (packages/cli/src/project-line.ts, about line 187) tests `task.lease === null`, and the task list's `lease` is never filled (RuntimeNode.lease is set to null in dag/src/materialize.ts and amend.ts and never set otherwise), so it is always null; the only live signal is `working`, from workingOn (packages/api/src/run-task-list.ts, about lines 26-37), which is set only when the coordinator holds the run and has a lease for the task in memory (views/src/task-list.ts documents it absent \"when the coordinator does not hold the run\"). While the coordinator was waiting to start again on a newer release, a live step showed `running` with no `working`. This task replaces that one's failed land step, 01a182fa-f147-7772-becb-b1f235468b86.\n\nWHAT TO BUILD.\n1. The run's task list says whether the coordinator holds the run as it answers (a field beside the tasks, e.g. `held: true|false`, set in run-task-list.ts where workingOn is computed, typed and documented in packages/views/src/task-list.ts). An older coordinator that sends no such field is read as not saying.\n2. `stranded` names a task only when the list says the coordinator holds the run and the task is `running` with no `working`; where the list says it does not hold the run, or does not say, no task is called stranded (the line says nothing rather than something false). Stop relying on `lease`, which is never filled: leave the field where it is, and say in a one-line comment where it is read that it is not filled.\n3. Tests in a new file, packages/cli/src/project-line-held.test.ts: a running task with no working in a list the coordinator holds is stranded; the same in a list it does not hold, or one without the field, is not; a running task with working is never stranded. packages/cli/src/project-line.test.ts is 495 lines: its case at about line 101 expects a single read to name a stranded task; make its fixture say the coordinator holds the run, by changing values in place, and add no line. Read packages/api's tests of handleListRunTasks and run-task-list, and grep the whole tree's *.test.ts for `stranded`, workingOn and ListRunTasksBody fixtures before you finish; every existing assertion keeps passing. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1830f-24b8-737d-8db3-87c2217295c0",
+      "schema": "tick.work-order.v1",
+      "signature": "H+q/Lip7yqYseJJdXhH+MD5lGn0tCwLVwVSvRMluaoiYe2BNwMBn+1AKi2yG69+iFqu9XFD3nqOXllwQbC9VAQ=="
+    }
+  },
+  "receipt_id": "01a1830f-24b8-737d-8db3-87c2217295c0",
+  "schema": "tick.receipt.v2",
+  "signature": "FaWjmPD12N6ZPMJOrebkdfIRvdimVWkIwCaaCJFU2hvoJ52qwwHlBE2F3nDo1HCYs4eQZr9JUE1ctpxT/TcTBA=="
+}

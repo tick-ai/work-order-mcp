@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "3921bf55450594d44d56f481bcaf4a4b66f2d75112141c1cae508ef1fae38df5",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:17.722Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T18:46:10.266Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "5a79836cdd85c43d30a1f1e7f6c358f741125d5c36a828457df8dac9832c9b9a",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:17.722Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "014e6160e631adcbcebac7b0cc2b32b432a83779",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "19419f02a7f4324369031f3c75a3b2f6c6d92649",
+        "contained": "none",
+        "order_hash": "629931a4164585de31ab735fa37a528cbf9980a636677897f58fde1b61b9d75a",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "b924c140f2e259cbacb9543ae40298012cc04379",
+        "verdict": "passed"
+      },
+      "record_id": "01a1837d-635e-717f-9a05-ac099c8dff82",
+      "schema": "tick.check-record.v1",
+      "signature": "AB8w4hCbCaPSsJATNcnIyRCCoGqcqm3Zod+c9ZAJr/lYXRBYSin4cubEBpefFIMnTDFtNNE83FtJ1tItFvY/Ag=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "bd20aba4d312d5af1ba3a55b3e912cdf04ff9f5277ed89e290a3b18bfaa19c5d",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "014e6160e631adcbcebac7b0cc2b32b432a83779",
+        "commit": "19419f02a7f4324369031f3c75a3b2f6c6d92649",
+        "order_hash": "629931a4164585de31ab735fa37a528cbf9980a636677897f58fde1b61b9d75a",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "b924c140f2e259cbacb9543ae40298012cc04379",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 134,
+            "cost": "reported",
+            "minutes": 31.550833333333333,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1837d-635e-717f-9a05-ac099c8dff82",
+      "issued_at": "2026-10-28T19:41:17.722Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "FOm55h/6ZtGRbm1BJQ70S9N2oC/5fG2b4iW/4tMyoQhySBjdtaS3VZCLJ6sTNr587+tI43m+GPZOXZ6JWsvJCg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "629931a4164585de31ab735fa37a528cbf9980a636677897f58fde1b61b9d75a",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T17:18:48.100Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "014e6160e631adcbcebac7b0cc2b32b432a83779",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a1837d-635e-717f-9a05-ac099c8dff82"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/talk-mcp.ts",
+          "packages/cli/src/tool-arguments.ts",
+          "packages/cli/src/talk-own-tool-arguments.test.ts"
+        ],
+        "what": "WHY (GD-89, PARSA 2026-10-28: \"Fix ALL defects happened this session.\"). On 2026-10-28 at about 17:07Z, lead window 0d455c meant to stop one idle taker. It called tick_work with {\"action\":\"stop\",\"args\":[\"t7\"]}. tick_work's schema has no `args`; the stop's field is `taker`. Tick ignored the unknown field and stopped every taker of the conversation, t3 to t7, two of them in the middle of agent work. That made the window start new takers and left integrate and land steps without a claimant for a while. A call that names a field the tool does not have is a mistake Tick can PROVE. packages/cli/src/tool-arguments.ts already proves such mistakes, but only for resource tools: talk-resources.ts calls checkArguments before sending. Tick's own tools (tick_work, tick_stop, tick_amendments_reject, ...) are dispatched by packages/cli/src/talk-mcp.ts `call` -> `#answer` with no such check.\n\nWHAT TO DO. Before one of Tick's own tools runs, check its arguments against that tool's published inputSchema, treating the schema as closed: a top-level field it does not name is refused. Answer in tool-arguments' own form, one sentence per problem, naming the field and the fields the tool has, so the caller can correct the call at once. Nothing runs when a call is refused. Use checkArguments rather than writing a second checker. If closing every own schema needs a small option in tool-arguments.ts, add it there. Keep talk-mcp.ts within its cap (file-size-baseline.json gives 1850, and it is 1837 now). If a tool of Tick's own is called today with a field its schema lacks on purpose, find it in the code and its tests and name it in your result. Do not open the check up to let it through.\n\nDONE WHEN. A test in the new file packages/cli/src/talk-own-tool-arguments.test.ts goes through the real `call` path. tick_work with {\"action\":\"stop\",\"args\":[\"t7\"]} is refused, its answer names `args` and the field `taker`, and no taker is stopped. A call with only known fields runs as before. Every existing talk-mcp and tool-arguments test passes, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1837d-635e-717f-9a05-ac099c8dff82",
+      "schema": "tick.work-order.v1",
+      "signature": "oC+JJjzRjK2gjs+rR13i33ovLnOAr6dNyAhDiISk+Lzh2xDmZaZRdZJbkIivbLOj9/2PC/achECOIrIC+VgRAg=="
+    }
+  },
+  "receipt_id": "01a1837d-635e-717f-9a05-ac099c8dff82",
+  "schema": "tick.receipt.v2",
+  "signature": "pm1RMnqzohdCdFyaUiu3RjGkCvVzzd5b60KJqbBey99xGd0ATTCU2exiyiU/UIkui5mWOLIe3cjMGNyByelfAw=="
+}

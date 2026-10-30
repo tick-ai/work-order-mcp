@@ -1,0 +1,153 @@
+{
+  "alg": "ed25519",
+  "content_hash": "a494827513b2e2bf09ec0774dd1438c878af69b7025d49f0584661bec8f95192",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:18.948Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T17:07:25.469Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "6302b7fac8e6bc2a5014522bb9c9e3da10a61d3d5c9aaebd514268f316ba3833",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:18.948Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "d727833c0b0c2cd74fb9c8a8fdc268dad008e7bc",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "4cfea1bc25b89bfdaec83a22a549d6eda815e06f",
+        "contained": "none",
+        "order_hash": "b677159c88c056106bb409324b51b1542feb770ac13b60c23bda8c466b18b7c4",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "54332d01d2a60e6490d6cfb90a616d24ac1e9f35",
+        "verdict": "passed"
+      },
+      "record_id": "01a18303-917f-7539-9bbe-61b4b0b47c3e",
+      "schema": "tick.check-record.v1",
+      "signature": "LVxeI5YG5srVlrD8d3ib2VKWgfdk/IlDttYoDcIt+GIUu/y9Ugp1aIfxnclZ5wngc6FOXuhk9EzQDbIoGSOdDg=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "0660e02a38ba26dcc3820b6d59683125d1e3ab702528d572ef7b9c33b867ca0a",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "d727833c0b0c2cd74fb9c8a8fdc268dad008e7bc",
+        "commit": "4cfea1bc25b89bfdaec83a22a549d6eda815e06f",
+        "order_hash": "b677159c88c056106bb409324b51b1542feb770ac13b60c23bda8c466b18b7c4",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "54332d01d2a60e6490d6cfb90a616d24ac1e9f35",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 140,
+            "cost": "reported",
+            "minutes": 16.22765,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18303-917f-7539-9bbe-61b4b0b47c3e",
+      "issued_at": "2026-10-28T19:41:18.948Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "ONv0okYjbdlDKGyQ3eHva29B2/0Umcgy0tHGXs1EL7YQDJprotPxg+FWu7D14dFc9qqHTUofCucSxK+BDLQfCg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "b677159c88c056106bb409324b51b1542feb770ac13b60c23bda8c466b18b7c4",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T16:50:36.737Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "d727833c0b0c2cd74fb9c8a8fdc268dad008e7bc",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a18303-917f-7539-9bbe-61b4b0b47c3e"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/board-replay.ts",
+          "packages/cli/src/board-page.ts",
+          "packages/cli/src/board-feed-today.ts",
+          "packages/cli/src/board-replay.test.ts"
+        ],
+        "what": "WHY (CD2, unit CD5; NOTE-mvs8f5kn, GD-89). The Tick Board's artboard 03, \"Replay — yesterday in 60 seconds\", and the design system's rule that \"a replay always says that it is a replay, at what speed, and that it comes from the record\" were never built. The CD design of 2026-10-20 (P8): \"Replay plays the last 24 hours from what the coordinator keeps for the board, labelled with its speed and its source. A replay never reads the record's history.\" The coordinator keeps 48 hours of ticks and spend in its day book (packages/api/src/day-book.ts, served as GET /v1/today with a since), which the board already reads (packages/cli/src/board-feed-today.ts). This task starts after the Show view has landed: read packages/cli/src/board-show.ts on the main you are cut from; if it is not there, the dependency did not land: say so and stop.\n\nWHAT TO BUILD.\n1. \"Replay the day\" (the top bar, beside Show) asks the day book once, through the relay, for what was ticked and spent since 24 hours ago, and plays it in the browser at 60 times (24 minutes) or 1440 times (one minute), chosen on screen: the Tick Line draws the day's ticks as they came, the caption names each as it comes, the count and the spend grow. It makes no other request while it plays, and never reads the record's history.\n2. Always on screen while it plays, in words: \"Replay of the last 24 hours, at 60 times\" (or 1440), \"from Tick's record\"; Show's \"Live from Tick's record. Nothing staged.\" is never shown during a replay. Stop returns to the live board. Under prefers-reduced-motion it shows the day at once, still labelled a replay.\n3. A tick the day book does not carry a fact for (its agent, its title) shows a dash with its reason, never a guess; spend is \"as reported\", as the board says it.\n4. New code in packages/cli/src/board-replay.ts (script text, placed like board-show.ts), with a module doc comment of 25 lines or fewer; board-page.ts gains only the entry and frame and stays under 500; board-feed-today.ts gains the 24-hour read only if the board's current read cannot ask for a since (read it first).\n5. Tests in a new file, packages/cli/src/board-replay.test.ts: one read per replay, of since 24 hours ago; the label names the speed and the record at both speeds; ticks are drawn in their order at the chosen speed (drive the clock, as board-line.test.ts does); no \"Nothing staged\" during a replay; reduced motion shows the day at once, labelled. Every existing board test keeps passing: grep the whole tree's *.test.ts for BOARD_PAGE, board-feed-today and \"/v1/today\" before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18303-917f-7539-9bbe-61b4b0b47c3e",
+      "schema": "tick.work-order.v1",
+      "signature": "oR6I6SbDEMEFNKzeJY/d+zqsSMDEqWFzZXkdQo39hgQ/aXTk2zOAHmEtawmqynyTcvkEbVb/YMOnjrF4/ZYbBA=="
+    }
+  },
+  "receipt_id": "01a18303-917f-7539-9bbe-61b4b0b47c3e",
+  "schema": "tick.receipt.v2",
+  "signature": "y7OF8i2d638V4ezaF5go2Gf88RT3dKcFMWkd3tEwIoYcKBREeFuax8ba0Oo92lYUGSOaN5ysRkeDjjt8Hu9+Ag=="
+}

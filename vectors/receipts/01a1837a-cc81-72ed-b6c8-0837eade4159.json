@@ -1,0 +1,153 @@
+{
+  "alg": "ed25519",
+  "content_hash": "01eb728e3152d4c1678222f247fd0b8573164334217cae358d586e4f126f52e8",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:18.133Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T18:28:28.604Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "67c213b00049ee2aa47d60b7323a8bb3261a16613aa2665e0b52307b4153660f",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:18.133Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "ab713eb679451c1379250619789ae9677650c607",
+        "contained": "none",
+        "order_hash": "daaaa4b4d2775b2587334c53690c1d3e3544f87fcd37f217b3b26f080682cba0",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "76ac28b1ff7d80b7c08cf5e5c4b62ce4cc643bc8",
+        "verdict": "passed"
+      },
+      "record_id": "01a1837a-cc81-72ed-b6c8-0837eade4159",
+      "schema": "tick.check-record.v1",
+      "signature": "IWcgp5W46dAs+GrL1kTOcJZUX5X3xEHGY3sNeGSBO5uPhhRlOqFbSCBYI6jMcpEDbFtijaefPPoFF1dYGER9Cg=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "aa3a414d217dede71e2910ac9b3cf02cf9b792adc96169946ea0200e3f123578",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "commit": "ab713eb679451c1379250619789ae9677650c607",
+        "order_hash": "daaaa4b4d2775b2587334c53690c1d3e3544f87fcd37f217b3b26f080682cba0",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "76ac28b1ff7d80b7c08cf5e5c4b62ce4cc643bc8",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 144,
+            "cost": "reported",
+            "minutes": 57.51565,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1837a-cc81-72ed-b6c8-0837eade4159",
+      "issued_at": "2026-10-28T19:41:18.133Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "0/c4BXImxyzKgYeGpqvVBBsa9BbDC0doFODsv69219SN3loN1Ou2DikjIS3r1T7f7GMH0/ndEUK5pJuep/ZnBQ=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "daaaa4b4d2775b2587334c53690c1d3e3544f87fcd37f217b3b26f080682cba0",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T17:08:39.123Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "0be1a513cb0a6701cffae2a73f73086db1c8bbef",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a1837a-cc81-72ed-b6c8-0837eade4159"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "scripts/vitest-outcomes.mjs",
+          "scripts/land-check-verdict.mjs",
+          "scripts/land-check.mjs",
+          "packages/runner/src/land-check-unhandled-script.test.ts"
+        ],
+        "what": "WHY (GD-89, PARSA 2026-10-28: \"Fix ALL defects happened this session.\"). In release 0.5.264's gate (2026-10-28 ~16:58Z), vitest reported one unhandled rejection in packages/cli and no failing test, and named the file it came from: \"This error originated in src/talk-http-questions.test.ts\" (a port fetch refuses, now fixed in that file by a sibling task). scripts/land-check-verdict.mjs judged it as `packages/cli` failing \"with no file to name\". ~/.tick/gate-summary.json holds {\"file\":\"packages/cli\",\"key\":null,\"confirmed\":true}, so the failure counted as confirmed at once and the release stopped. A confirm run of the file alone is what tells a loaded machine, or a port fetch refuses, from a real break; scripts/land-check.mjs's own header names both. Any of the ~188 files that listen on port 0 directly can do this again.\n\nWHAT TO DO. scripts/vitest-outcomes.mjs records each unhandled error of the run together with the test file vitest attributes it to. Vitest hands unhandled errors to the reporter at the end of the run; read vitest 4.1.10's own reporter API and its error fields in node_modules rather than assuming them. land-check-verdict.mjs then treats an attributed unhandled error as a failure of that file, confirmed or not exactly as a failing test of that file would be. A failure stays `packages/<name>` with nothing to confirm only where vitest attributes it to no file. Touch land-check.mjs only if the confirm run needs it.\n\nDONE WHEN. A test of the scripts, in the new file packages/runner/src/land-check-unhandled-script.test.ts (land-check-verdict-script.test.ts is at its 940-line cap), shows three things. (1) A bulk run whose only error is an unhandled rejection attributed to a file names that file in `failing`, unconfirmed. When that file passes alone in the confirm run, the verdict is the one a test that fails in bulk and passes alone gets. (2) When the file raises it again alone, the failure is confirmed. (3) An unattributed one stays `packages/<name>`, confirmed. Every existing script test still passes, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1837a-cc81-72ed-b6c8-0837eade4159",
+      "schema": "tick.work-order.v1",
+      "signature": "0pI+UUkPycr1LrBSRK6F2k32rcWk8aQnhzGfe5Z4J7ZqBLIWGLsu3tBi1wrTW2nlljT1qYTsBjKL54AhhcA1DQ=="
+    }
+  },
+  "receipt_id": "01a1837a-cc81-72ed-b6c8-0837eade4159",
+  "schema": "tick.receipt.v2",
+  "signature": "w1Hog9CyPssg5WDJ9RxMTgai56ZnR0ffxBD3AJx5Or3WKh3Z8sUcF2AEWqY5Fg3AkpqJLqltRsSfBG3l3QVlCw=="
+}

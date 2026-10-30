@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "746c279d1eaf753d09c1955a326aabf784500c52c53a1b06508aa22bea5a09ae",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:22.263Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:08:13.909Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "81029720a0ed3587164fbb941ac5d6cb60a5567028a0947a14cf28a78f023b2c",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:22.263Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "2361349031299cbf57749fd73917321dac7917ce",
+        "contained": "none",
+        "order_hash": "c55d63ad84d7efb5397a6474b6d971781a39c00a4fb06b3d960cf9898b3d0336",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "1d4d1e4aa6f7f52561cf8fd9a553eba6b6f71dd9",
+        "verdict": "passed"
+      },
+      "record_id": "01a182f8-a017-721a-8a7a-daf612773c4c",
+      "schema": "tick.check-record.v1",
+      "signature": "u69DJhEFTVhfGaGfEqZHMkG+O8whX7rIXQ+ZXVCi0+bc5CcxUs+v9qsJBcmVBw/6q5Gm/2IljN9LLJ3twYvmCw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "81d2431a3e1601d83d79f24c8b6cf28b9f8ca486cca9ccb079aa4bdedecdd282",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "commit": "2361349031299cbf57749fd73917321dac7917ce",
+        "order_hash": "c55d63ad84d7efb5397a6474b6d971781a39c00a4fb06b3d960cf9898b3d0336",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "1d4d1e4aa6f7f52561cf8fd9a553eba6b6f71dd9",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 86,
+            "cost": "reported",
+            "minutes": 19.28,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a182f8-a017-721a-8a7a-daf612773c4c",
+      "issued_at": "2026-10-28T19:41:22.263Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "L4P6DnDenBbCItXgm9r03iOaBXBwjr5rCGRs4o33if1p2El82X935O6qimwzmq6X6iA66OS5k5w1FTSW+0ysDA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "c55d63ad84d7efb5397a6474b6d971781a39c00a4fb06b3d960cf9898b3d0336",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:48:22.059Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "bc627cdf94ba4d6cbf84ddf2a75d52b29c73e033",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a182f8-a017-721a-8a7a-daf612773c4c"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/amendment-commands.ts",
+          "packages/cli/src/talk-waiting.ts",
+          "packages/cli/src/waiting-adds.test.ts"
+        ],
+        "what": "WHAT HAPPENED (2026-10-28, run 01a1828d-2b1d-76c8-8d2a-5f4869cadcfd, auto tick on in the window that started it). Tick's own check proposed amendment 01a182a2-fbef-753d-8dee-304a61a10b14 from task 01a1828f-9168-7349-9b43-046f315203af: \"make packages/runner/src/land-check-script.test.ts hold on a busy machine\", adding 3 tasks. Nothing told the window, auto tick never approved it, tick_status said \"DONE Ticked ... Nothing — the run is over\", and the project could not finish (packages/api run-rest counts an undecided proposal as live work), until a lead listed tick_amendments by hand. The cause: what waits on a person is gates, access requests (packages/views/src/waiting.ts accessRequests, about line 182, keeps only proposals with `nodes.length === 0` and grants or egress) and widenings (packages/cli/src/amendment-commands.ts waitingIn, line 54). A proposal that adds work is none of them, so talk-mcp's approveWaiting (packages/cli/src/talk-mcp.ts, about line 789, which approves every waiting item with a proposalId through tick_amendments_approve), the window's news (talk-waiting.ts) and status (run-commands.ts prints waitingState for each waiting item ahead of the run's posture) never see it. PARSA's rule is that auto tick approves everything (UTT-d5fa2724fecf45d0); the one carve-out, work that failed Tick's check, is about gates and stays.\n\nWHAT TO BUILD.\n1. packages/cli/src/amendment-commands.ts waitingIn also returns, for each proposal that is undecided, adds work (nodes.length > 0) and names the task it came from, a waiting item with its runId, taskId (proposed_from_task), proposalId, `grants: []`, the work it adds (`adds`: each new task's title, in order), and its reason, beside the widenings. Read ProposalFacts for the fields; a proposal with no proposed_from_task (an operator's own) is not one.\n2. packages/cli/src/talk-waiting.ts askedFor words it: \"to add 3 tasks: <title>, <title> and <title>\" (one task: \"to add a task: <title>\"), so the window's line, status's ACT line (waitingState) and tick_status read it in plain words. talk-waiting.ts is 493 lines: stay under 500.\n3. Nothing else needs to change for auto tick: approveWaiting approves every waiting item with a proposalId. Confirm it by reading, and say in your result whether the coordinator's glance (packages/views waitingIn) should count these too; do not change views in this task.\n4. Tests in a new file, packages/cli/src/waiting-adds.test.ts: an undecided proposal adding work is a waiting item with its titles and reason; a decided one, or one with no task it came from, is not; askedFor's words for one task and for three; a run whose tasks are all settled but which holds such a proposal is shown by its waiting line, not \"the run is over\" (build it the way run-commands.test.ts builds a status answer). Tests that read waitingIn or what waits, and may hold an undecided proposal with nodes in a fixture: packages/cli/src/amendment-widening.test.ts, talk-waiting.test.ts (600 lines, exactly its baseline: change values in place and add no line), run-commands.test.ts, follow-lines-brief.test.ts, acceptance.test.ts, run-state.test.ts and run-state-receipt*.test.ts. Read each, and grep the whole tree's *.test.ts for waitingIn and proposal_id fixtures before you finish; every existing assertion keeps passing. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a182f8-a017-721a-8a7a-daf612773c4c",
+      "schema": "tick.work-order.v1",
+      "signature": "ZcP9tHElNkLKXBtOFhcWOZsnQ2o+SKgWTactkUJqzNwt+MVSNdFZxw9LdjLmk0NIhoTffWCenuvRkhPralVsAw=="
+    }
+  },
+  "receipt_id": "01a182f8-a017-721a-8a7a-daf612773c4c",
+  "schema": "tick.receipt.v2",
+  "signature": "e06jzDqxazsHHXdjivZVDBQEh1Sdb/RN5H9DvTzAEHFYPnxby4JHmSC4nnkeDoGd2oEm4E8eDHBQzAFEciABCQ=="
+}

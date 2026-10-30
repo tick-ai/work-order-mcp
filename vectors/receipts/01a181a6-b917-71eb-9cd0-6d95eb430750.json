@@ -1,0 +1,150 @@
+{
+  "alg": "ed25519",
+  "content_hash": "d4c06d8533e0ab26d39b663fb3d1ce61ff4cce6a0726ebe0a7e3794a21b7ebe3",
+  "coordinator": "https://0.0.0.0:4200",
+  "issued_at": "2026-10-28T08:51:46.217Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T08:50:13.549Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "42cc123472b3732bd0f448dfa5e6eb5507bd863dc43d30130508f5bcc886a40a",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T08:51:46.217Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "3179e233b1583d968fdc953e28eb92f4dc7cf625",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "b800e06c26a4c46620ac2536bbae98ca4588073d",
+        "contained": "none",
+        "order_hash": "97ea784a1017b1a23d81653811a4580ce061e0d641dde385f74c746efcb2660e",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "1cc01d8803965bf673fa7d43f29d36a93117287c",
+        "verdict": "passed"
+      },
+      "record_id": "01a181a6-b917-71eb-9cd0-6d95eb430750",
+      "schema": "tick.check-record.v1",
+      "signature": "DgcdFWCxXbIZzNsXA1YLXgyRq+J7phQ/4rHixbMiL89UwaFQ7840JJRyP04wdhllI5bsXq+EbBr3UI9pHIFeCw=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "ef6bab2c910755aeea6126581196bb5b89154afed3f46012ee9805a297ba3c99",
+      "coordinator": "https://0.0.0.0:4200",
+      "delivery": {
+        "base": "3179e233b1583d968fdc953e28eb92f4dc7cf625",
+        "commit": "b800e06c26a4c46620ac2536bbae98ca4588073d",
+        "order_hash": "97ea784a1017b1a23d81653811a4580ce061e0d641dde385f74c746efcb2660e",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "1cc01d8803965bf673fa7d43f29d36a93117287c",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 7,
+            "cost": "reported",
+            "minutes": 7.226083333333333,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a181a6-b917-71eb-9cd0-6d95eb430750",
+      "issued_at": "2026-10-28T08:51:46.217Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "tnxGhRMZqDpy6y3OmM3iM9/x5FtQgLioxT9t77Cu19TJpTiyuob8ECZjeyB3ieG9Yv31dWNBdDlnb+fuG7CMBQ=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "97ea784a1017b1a23d81653811a4580ce061e0d641dde385f74c746efcb2660e",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T08:42:28.397Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "3179e233b1583d968fdc953e28eb92f4dc7cf625",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a181a6-52d7-7639-9454-64aec82c9040",
+          "task_id": "01a181a6-b917-71eb-9cd0-6d95eb430750"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/core/src/ticked-line.ts"
+        ],
+        "what": "A wrong claim in a comment, found in review on 2026-10-27 and not yet fixed. The module comment of packages/core/src/ticked-line.ts says \"The land step (L5) and `tick landings` (L8) both need that one rule\". The land step is in packages/runner (L8, \"runner.*\" in the layer table of CLAUDE.md), not L5.\n\nTHE CHANGE. In that module comment only, \"(L5)\" becomes \"(L8)\" and the sentence is reflowed only as far as that needs. The module comment must not grow (CLAUDE.md, \"Module-level doc comment cap\"), and no other line of the file changes. Touch no other file.\n\nNOTE FOR WHOEVER REVIEWS. This is deliberately a small change: it is the first landing in this repository under ticked-line.json and the mended land gate (0.5.262: the gate asks whether the work is ready for a receipt, not for the receipt), so if the landing is refused the refusal is the news; report it in your result and do not work around it."
+      },
+      "order_id": "01a181a6-b917-71eb-9cd0-6d95eb430750",
+      "schema": "tick.work-order.v1",
+      "signature": "02+5ZiFNoVgRnHrfBF/mlSE9XSP/SxqYh0/czT35v6WMi8wwwL0VEHaZ5D103h+dpMopXQTj+y4TJHG/9VVJBg=="
+    }
+  },
+  "receipt_id": "01a181a6-b917-71eb-9cd0-6d95eb430750",
+  "schema": "tick.receipt.v2",
+  "signature": "3jUyiUB37FHKPKctenN9sJItsAuvPWyFfUVYjQoO0T7sT2Lhb5muQCRd/mZr+PMHYECtpOV4lIoQcsHFil98Dw=="
+}

@@ -1,0 +1,150 @@
+{
+  "alg": "ed25519",
+  "content_hash": "07cfdb5daf844955014fa76cea863ad5d79584aba55210d15db1610ec6da09fd",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:17.300Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T19:07:32.197Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "6cfe8cef692283114350186b10c6c945c3a53a69ff4bac1b4bdafba9fba30e20",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:17.300Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "02ae5404a91d0db2836286ad984bbda6a57a77d6",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "d725edb06c5bfe184c54bc0e404e386c1b966232",
+        "contained": "none",
+        "order_hash": "97cb438fbc97860f46d3a2ae40893bc2279abce01116cbcdc74e87495c1f67d4",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "53ab426dc6f5ad56a3ea30f96a0b024aa039b398",
+        "verdict": "passed"
+      },
+      "record_id": "01a183b0-fbdb-721f-8572-6f970dd235a8",
+      "schema": "tick.check-record.v1",
+      "signature": "H6yCM+xHcLoyJvx5zd6pjCnneyu/ThQ+txP2znjXKdkDNR3HBUbD6aI4TvF2kW8YflUXUIDo5CEhVolU/s0ZAA=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "2798660143cc9b3ae4c4ec1354ff0bdc21a5bd4c4b14799689aeb462036cfac3",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "02ae5404a91d0db2836286ad984bbda6a57a77d6",
+        "commit": "d725edb06c5bfe184c54bc0e404e386c1b966232",
+        "order_hash": "97cb438fbc97860f46d3a2ae40893bc2279abce01116cbcdc74e87495c1f67d4",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "53ab426dc6f5ad56a3ea30f96a0b024aa039b398",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 37,
+            "cost": "reported",
+            "minutes": 8.6964,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a183b0-fbdb-721f-8572-6f970dd235a8",
+      "issued_at": "2026-10-28T19:41:17.300Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "Oj/mReNvUE1xjP+HPQfcp3MJAy1V4PdYfScXW/azHqwjMDVX0Pq6TYts4GQ1PcEuNJNUgjoi12Xf3H22FO95CA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "97cb438fbc97860f46d3a2ae40893bc2279abce01116cbcdc74e87495c1f67d4",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T18:58:11.432Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "02ae5404a91d0db2836286ad984bbda6a57a77d6",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a182f7-072d-77e8-9b3f-d798a3172c1b",
+          "task_id": "01a183b0-fbdb-721f-8572-6f970dd235a8"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/runner/src/git-workspace.test.ts"
+        ],
+        "what": "make packages/runner/src/git-workspace.test.ts hold on a busy machine\n\npackages/runner/src/git-workspace.test.ts was recorded flaky 2 times, under 2 different keys (its content or what it reaches had changed between them): each time it failed in a check's bulk run and passed when run alone.\n- 2026-10-19T18:45:19.158Z: 137437.47802734375 ms alone, 279783.43896484375 ms in the run that failed\n- 2026-10-28T18:05:26.610Z: 133703.89794921875 ms alone, 246503.68603515625 ms in the run that failed\n\nFind what makes this file depend on the machine being idle: a timer or a timeout, a port, a shared folder, an ordering with another file, or a real race. Fix it in packages/runner/src/git-workspace.test.ts. Where the cause lies elsewhere, or the file is not at fault, report no_change_required with the evidence. Do not weaken or delete a test to quiet it."
+      },
+      "order_id": "01a183b0-fbdb-721f-8572-6f970dd235a8",
+      "schema": "tick.work-order.v1",
+      "signature": "pw+hT9pIFL/t0sGLM2V8ZRsfKC3oqg8tG2lHcBpRtyvvkVlUPsaYdAy/0iKn0+/wDxybXQ6NHMHXQyMwVu+WDA=="
+    }
+  },
+  "receipt_id": "01a183b0-fbdb-721f-8572-6f970dd235a8",
+  "schema": "tick.receipt.v2",
+  "signature": "4gLUgEUJczjihBIQxcy+5n2wUh1ZO1bDgXrwtYLzqXM3RA4UMZbF3+ehSWKx+0khVZKi7okRJHArctZjdaVGBQ=="
+}

@@ -1,0 +1,154 @@
+{
+  "alg": "ed25519",
+  "content_hash": "ec0b79126e92907c1834fe865e4a0d931f2aabe27eb914c5add3e11be1cf2e6e",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:19.619Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T16:36:04.151Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "bf0b459523f5875e55ee0c1cad444a58e7eadbfbd7b425728df84ccf1a912756",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:19.619Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "3f08c635665e02b8c6892ab696099f43fd523010",
+        "contained": "none",
+        "order_hash": "7c2bcc4da6a8ed6b0b78070a1920e86b8d4bdb492148cafbb9c41fd50037047e",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "b4cc8011a46d99557b1f668cc78eb527dd3234c2",
+        "verdict": "passed"
+      },
+      "record_id": "01a18302-456b-7538-89ec-37937d3a5ca4",
+      "schema": "tick.check-record.v1",
+      "signature": "6sLkSAA5KqqBM26Wi5hamRORMlus3iHdgNQyyTnRAu6RAQjKAVr5KiiigyeGE7qZaOLiPs0OzF06OTyv5LTxDQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "4e0d5ed4760da28a89e03285b58f6c80f7c2110a49ee04347f24097e886250d3",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "commit": "3f08c635665e02b8c6892ab696099f43fd523010",
+        "order_hash": "7c2bcc4da6a8ed6b0b78070a1920e86b8d4bdb492148cafbb9c41fd50037047e",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "b4cc8011a46d99557b1f668cc78eb527dd3234c2",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 278,
+            "cost": "reported",
+            "minutes": 46.176633333333335,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18302-456b-7538-89ec-37937d3a5ca4",
+      "issued_at": "2026-10-28T19:41:19.619Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "89Qu3BFpUmFq/kHa7mlZqs77QwVMvpGeIwxlz+nnD3smbiJtjwZP+sevAJH5ChyV0q0xymY8kKcZe1loLAGvBg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "7c2bcc4da6a8ed6b0b78070a1920e86b8d4bdb492148cafbb9c41fd50037047e",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T15:49:15.576Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "46225f10697beb34b4ed73e91d025fb286ca252b",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a18302-456b-7538-89ec-37937d3a5ca4"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/board-show.ts",
+          "packages/cli/src/board-show-style.ts",
+          "packages/cli/src/board-page.ts",
+          "packages/cli/src/board-work.ts",
+          "packages/cli/src/board-show.test.ts"
+        ],
+        "what": "WHY (CD2, unit CD5; NOTE-mvs8f5kn, GD-89). The design system's Show mode and the Tick Board's artboard 02 (\"Show mode — live, for a room\") were never built; the CD design of 2026-10-20 made CD5 \"done when the five-minute investor demo runs on Parsa-TUF's real record\". Since then \"Tick's Straight Line\" (Downloads/Tick/Branding, in the memory as doc:branding/ticks-straight-line, GD-87's criterion) names the demo that closes: \"Let them check a receipt themselves: change one character and watch the check fail.\" So Show is the board for a room, and it carries that demo.\n\nWHAT TO BUILD.\n1. A Show view of the board (opened from the board's top bar, \"Show\"; the design system puts Show beside the Beat), the same live data the board already has from its feed (glance, today, working, asks), no new read of the coordinator: a tick-deep band; the stations of the flow with live counts, Asked, Working, Checked, Your OK, Ticked. Count Checked only from something the board already reads that says a task's check passed and it waits for acceptance; if nothing does without the engine knowing what a step is for, show four stations (no Checked) and say so in your result. The Tick Line large; one caption line in the design system's `show` type saying what just happened, newest first (\"Ticked: <title>, <agent> on <machine>, <took>\"); and always the words \"Live from Tick's record. Nothing staged.\" Green only for ticked work, words beside every state, nothing moving except the beat (prefers-reduced-motion stops it).\n2. The demo that closes, on Show and on any ticked row's work card: \"Change one character\" takes the receipt text the card just verified, changes one character inside its signed part (a digit of a recorded number, or a letter of the task's title: never whitespace or a character outside the signed body), checks that copy with the same verify, and shows its FAILED verdict with every reason beside the original's VERIFIED. The original is never changed, and the card says plainly that the copy was changed on purpose.\n3. New code in new files: packages/cli/src/board-show.ts (script text, placed in the page's one function body like board-line.ts and board-work.ts) and packages/cli/src/board-show-style.ts (its CSS, from the design system's tokens already in brand-theme.ts); board-page.ts (332 lines) gains the top-bar entry and the view's frame, board-work.ts (275) the card's button: both stay under 500. Module doc comments of 25 lines or fewer. The page still makes no request beside its own origin (its CSP).\n4. Tests in a new file, packages/cli/src/board-show.test.ts, following how board-page.test.ts and board-work.test.ts run the script text: the stations' counts follow the feed's facts (and a missing fact is a dash with its reason, never a zero); the caption names the newest tick; \"Live from Tick's record. Nothing staged.\" is always on; the changed copy of a verified receipt fails with reasons while the original stays VERIFIED; the change is inside the signed body. Every existing board test keeps passing: grep the whole tree's *.test.ts for BOARD_PAGE, BOARD_SCRIPT, BOARD_WORK and \"Show\" before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18302-456b-7538-89ec-37937d3a5ca4",
+      "schema": "tick.work-order.v1",
+      "signature": "3V5VdpV6lbByDONRf+kksC0zpOWsixtqaJdCiS5122GIwOXW3ZEQgiztJr8Bw860Wx7ROoU41ktFM19dktnLBg=="
+    }
+  },
+  "receipt_id": "01a18302-456b-7538-89ec-37937d3a5ca4",
+  "schema": "tick.receipt.v2",
+  "signature": "yDkISJI5APmgK9p2SN0VDKptY44p+LsUBhIXIRuvGu94i2C3+qc6PTPFsik2myqkQfdifUZpMHtcto2xQGJiCA=="
+}

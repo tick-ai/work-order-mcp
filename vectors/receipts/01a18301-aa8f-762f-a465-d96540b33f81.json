@@ -1,0 +1,157 @@
+{
+  "alg": "ed25519",
+  "content_hash": "911afbe544dbe065e3b22fe6e84554f1179ab2f7213b636b638130847f5acb3e",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T19:41:22.001Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T15:12:34.390Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "89aa2dd9e6a842d4f5a514f36efea87f0edaa185ab5350e00e6520f504198965",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T19:41:22.001Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "ffe4d7d0c74853f666513df3b74f6a59473ea961",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "030abb4471d9b5cd2192274d385212a482882d88",
+        "contained": "none",
+        "order_hash": "5cec35812b499895dd832d3b8c6d086749fa6a371a8149a300c3a692e850978b",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "e1d8dff8481e299c0fe2547dd4456b43b2ae1ba8",
+        "verdict": "passed"
+      },
+      "record_id": "01a18301-aa8f-762f-a465-d96540b33f81",
+      "schema": "tick.check-record.v1",
+      "signature": "rBq/pGYQtIwPlbUlEwCYl0LniBsZdgcMMXwRUvzhiigBY/qvzERvHbN1aUHOTD6DC3VqbYt28ejDNkd/IwsRBQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "541234aedc03fb5abecf795b02adf7c0e6fe041bca0a64140c328294286e7ac4",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "ffe4d7d0c74853f666513df3b74f6a59473ea961",
+        "commit": "030abb4471d9b5cd2192274d385212a482882d88",
+        "order_hash": "5cec35812b499895dd832d3b8c6d086749fa6a371a8149a300c3a692e850978b",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "e1d8dff8481e299c0fe2547dd4456b43b2ae1ba8",
+        "tries": [
+          {
+            "agent": "unknown",
+            "cents": null,
+            "cost": "unknown",
+            "minutes": null,
+            "model": null
+          },
+          {
+            "agent": "claude",
+            "cents": 10,
+            "cost": "reported",
+            "minutes": 7.378316666666667,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18301-aa8f-762f-a465-d96540b33f81",
+      "issued_at": "2026-10-28T19:41:22.001Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "naA7HmgzdAC7e/S878vk0XUucX+AZAY09j9FF+6geDZgQIJ3RDwl1w0qdx2z4n14v/Nd6TrWHW0s88Ke7G32Cg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "5cec35812b499895dd832d3b8c6d086749fa6a371a8149a300c3a692e850978b",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T15:04:30.074Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "ffe4d7d0c74853f666513df3b74f6a59473ea961",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18300-e331-7688-bb92-986fc27d45ba",
+          "task_id": "01a18301-aa8f-762f-a465-d96540b33f81"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "scripts/build-npm-package.mjs"
+        ],
+        "what": "WHY (CD2, unit CD-X; NOTE-mvs8f5kn, GD-89). The board replaced the old dashboard: the CD design of 2026-10-20 (P11) said \"tick-dashboard leaves the package once the board shows its first screen and a piece of work. Its code is deleted only on your word\", and both landed on 23 October (CD3d, CD6b). The published @tick-group/tick still installs a `tick-dashboard` command (dist-npm/package.json \"bin\", from BINS in scripts/build-npm-package.mjs, line 56), a page with its own join-token sign-up whose words the design system bans on any screen a person reads (DAG, gate, runner, lease).\n\nWHAT TO BUILD.\n1. Remove the 'tick-dashboard' entry from BINS in scripts/build-npm-package.mjs, and nothing else of the dashboard: the build stages every workspace package whatever BINS says (the \"Stage\" loop over byName), and packages/cli/src/baseline-command.ts imports @tick-executor/dashboard at run time, so the package itself must still ship; only the command goes. Its code is deleted only on PARSA's word, which is not this task.\n2. Keep the comment beside the shebang check that names tick-dashboard as the bin that once shipped without one: it says why that check exists.\n3. Check what reads the bins: grep the whole tree's *.test.ts, *.test.mjs, *.mjs and the README for 'tick-dashboard' and for BINS, and read the tests that run this script (packages/runner/src/eslint-vitest-boundary-script.test.ts names it; look for any test that stages the package or lists its bins) and keep every assertion passing. If a test or a file outside this area must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy), and the package the script stages has no tick-dashboard bin while `tick baseline` still finds @tick-executor/dashboard."
+      },
+      "order_id": "01a18301-aa8f-762f-a465-d96540b33f81",
+      "schema": "tick.work-order.v1",
+      "signature": "Pr6KkZchD6JO7vRcZpr0wFM88+IPGuAQxpQYAx0h4tU+DkhdFv1zAwYhE+KeskDAj6LiDYQfBhmFX7i5E/afDA=="
+    }
+  },
+  "receipt_id": "01a18301-aa8f-762f-a465-d96540b33f81",
+  "schema": "tick.receipt.v2",
+  "signature": "M+KRrv01yGhXyctoZaR9B1Fr0UY8HYxBy1sYL68u06NuN+fLSvQcrlLeqUWb8YtEYZwcKQGzPQsf+XC3/NRJCw=="
+}

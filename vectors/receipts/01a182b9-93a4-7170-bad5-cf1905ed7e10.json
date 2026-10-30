@@ -1,0 +1,153 @@
+{
+  "alg": "ed25519",
+  "content_hash": "61edeabcaa341e591a1651d18eb01b9499502bbe826e589139c3133e23d09932",
+  "coordinator": "https://0.0.0.0:4200",
+  "issued_at": "2026-10-28T14:35:44.859Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T14:14:12.917Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "8c63929abb7ba9f7579dd1209a72a43105a28966cae8b993d3b760745e26465f",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:35:44.859Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "1ffa61364084376458cb6256d261894a28ac4d2a",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "c7c79646153ce5c05005281eee85082c0282b4c0",
+        "contained": "none",
+        "order_hash": "4830a4a82649d6bf41aeba6f6a5ef693f519ebb52da06326338988643648c92c",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "bbc5869c8c1dc9ea32f1f950a781df30162e26c5",
+        "verdict": "passed"
+      },
+      "record_id": "01a182b9-93a4-7170-bad5-cf1905ed7e10",
+      "schema": "tick.check-record.v1",
+      "signature": "3A4Fbmx4wMsg6dec3f4jalaKE/23xcFbwxYZKG9VwAZTWwF7aoX1Lldx0sBCQ8kSu2K+PF4Lf7QvXYVcs/GCDQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "588cacdb538367c4049f44514064ed98970343d40b51721103f8826fe7d99ef7",
+      "coordinator": "https://0.0.0.0:4200",
+      "delivery": {
+        "base": "1ffa61364084376458cb6256d261894a28ac4d2a",
+        "commit": "c7c79646153ce5c05005281eee85082c0282b4c0",
+        "order_hash": "4830a4a82649d6bf41aeba6f6a5ef693f519ebb52da06326338988643648c92c",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "bbc5869c8c1dc9ea32f1f950a781df30162e26c5",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 358,
+            "cost": "reported",
+            "minutes": 32.0564,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a182b9-93a4-7170-bad5-cf1905ed7e10",
+      "issued_at": "2026-10-28T14:35:44.859Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "2mD/+Z76SMlJimu5ar4cLZCaoIqR0mnXt3kZ0RfmY/WB2oHoRBBtyRLlCY9NJZCMpc5oE5fQTqt2WabtNik8AA=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "4830a4a82649d6bf41aeba6f6a5ef693f519ebb52da06326338988643648c92c",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T13:41:38.356Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "1ffa61364084376458cb6256d261894a28ac4d2a",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18282-f901-7216-9f16-7c9278fbf8d2",
+          "task_id": "01a182b9-93a4-7170-bad5-cf1905ed7e10"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "scripts/channel-install.mjs",
+          "scripts/channel-build.mjs",
+          "packages/cli/src/channel-install-script.test.ts",
+          "packages/cli/src/channel-build-script.test.ts"
+        ],
+        "what": "GD-87 call 3 (PARSA, 2026-10-28: Tick's straight line decides). `tick update` and `tick update install` (packages/cli/src/update-command.ts, update-install.ts) read a channel that nothing writes yet, and a person without Tick has no checked way to install it. Add two scripts at the repository root, Node built-ins only, no dependency, each under 400 lines.\n\n1. scripts/channel-install.mjs, THE FIRST INSTALL. It is served from the channel as install.mjs and run in one line: `curl -fsSL https://tick.company/channel/install.mjs | node --input-type=module` (PowerShell: `irm https://tick.company/channel/install.mjs | node --input-type=module`), or saved and run as `node install.mjs [--check]`. In order, each step refusing in plain words with exit 1 before the next:\n a. Node is 22 or newer (the package's engines).\n b. It reads <channel>index.json with a 15 s timeout. The channel is the environment variable TICK_CHANNEL (the same name as the `channel` setting's), else https://tick.company/channel/. It must be a `tick-channel/1` index.\n c. It chooses the newest record that verifies under the release keys the script carries itself, verified exactly as `verifyRecord` in packages/cli/src/release-channel.ts does: the record minus its signature in the same canonical form, Ed25519, the key id as the first 16 hex of the sha256 of the key's SPKI DER, schemas tick-release/1 and tick-release/2, and the gate. Embed the same public keys as RELEASE_KEYS in packages/cli/src/release-key.ts. It prints the version, the first 12 characters of the commit, the key id, and the gate in the words `describeGate` uses.\n d. If <home>/.tick/npm already holds @tick-group/tick at that version (node_modules on Windows, lib/node_modules elsewhere), it says so and exits 0 without downloading.\n e. It downloads the tarball the record names (120 s timeout) into a new folder under <home>/.tick and checks its sha256 and sha512 integrity against the record. A mismatch is refused and npm never runs.\n f. It installs exactly as Tick's own installs do: `npm install -g --prefix <home>/.tick/npm <tarball> --cache <a folder under the download folder>`, with a 10 minute timeout. On Windows npm runs through node and npm's own npm-cli.js, as `npmCommand` in update-install.ts does. <home>/.tick/npm is the only prefix: the machine keeper expects the shim there (packages/cli/src/machine-keeper-task.ts, `keeperShim`), and `tick update install` derives its prefix from it.\n g. It removes the download folder whatever happened.\n h. If <home>/.tick/npm (bin under it, off Windows) is not on PATH, it prints the one line that adds it: a PowerShell line on Windows, an export line elsewhere. It edits NO file, registry value or environment itself.\n i. It says Tick is installed, that typing tick in a folder starts it, and that Tick shows its user terms the first time.\n With --check it does a to c and installs nothing. It never asks a question: whoever ran it asked for the install, and its source may be on stdin, where nothing can be answered. The npm it runs may be replaced by the environment variable TICK_INSTALL_NPM, a JavaScript file run with node in npm-cli.js's place; document it in the file as for tests and for a machine whose npm is elsewhere. It exports its checks (the record check, the choice of release, the version check, the npm argv) and runs its main only when it is the program: when `process.argv[1]` is undefined (stdin) or resolves to this file, never when another module imports it.\n\n2. scripts/channel-build.mjs, THE FOLDER PARSA UPLOADS to tick.company/channel/: `node scripts/channel-build.mjs --out <folder> --tarballs <dir> <version>...`. For each version it reads releases/<version>.json, checks it with the checks it imports from ./channel-install.mjs (import them; do not copy them), finds in --tarballs the tarball the record names and checks its sha256 and integrity. Then it writes <folder>/index.json, `{\"schema\":\"tick-channel/1\",\"releases\":[...]}` with each record exactly as releases/<version>.json holds it, newest first. It copies each tarball, and copies scripts/channel-install.mjs as install.mjs. It writes nothing and exits 1 if any record or tarball does not check, if --out exists and is not empty, or if a path is empty or not strictly inside its parent (GD-49). Withdrawing a release is building again without it; say so in the file's comment and in --help.\n\nTESTS, new files, each under 500 lines: packages/cli/src/channel-install-script.test.ts and packages/cli/src/channel-build-script.test.ts. Reach the scripts' exports by a dynamic import of their path cast to a type, as order-exchange.test.ts reaches packages/api's sources (`apiSource`), and run them end to end as child processes. Build keys, signed records, tarballs and indexes as release-channel.test.ts and update-install.test.ts do (read their helpers). Serve them from a node:http server on 127.0.0.1 with an ephemeral port. Point HOME and USERPROFILE at a temporary folder, and npm at a stand-in through TICK_INSTALL_NPM: never the real home, never the real npm. Cover:\n- a good release installs, and npm is given exactly the argv above;\n- the newest verified record is chosen, and one that does not verify is skipped;\n- a tarball with one changed byte is refused and npm never runs;\n- the channel down, answering 404, answering something that is not an index, and answering too slowly;\n- Node older than 22, through the exported check;\n- --check installs nothing;\n- already installed;\n- the download folder is removed in every case;\n- the script run from stdin with --input-type=module behaves as when run as a file;\n- PARITY: for the same records, the script's verdict equals `verifyRecord`'s, and its embedded keys equal RELEASE_KEYS;\n- the builder writes index.json, the tarballs and install.mjs; refuses a bad record, a bad tarball and a non-empty --out; and what it writes is read back by `fetchChannel` and `offered` (release-channel.ts) as the newest release;\n- one REAL case: releases/0.5.262.json verifies through the script's check with the embedded key. A lead checked on 2026-10-28 that it does, sbom field included, under release-channel.ts's own algorithm.\n\nDo NOT touch release-channel.ts, update-install.ts, update-command.ts or release-key.ts; if a check there is wrong, say so in your report. No README change in this task: the install line goes on tick.company when PARSA publishes, and into the README with TN0.23's landing. Every call across a boundary carries an explicit timeout.\n\nRULES: no npm, npx, build or test run in your copy; commit and call tick_check. Do not edit file-size-baseline.json. Ask for an unlisted file with tick_widen; never weaken or delete a test. In your report name the files, the two lines a person types, and what the first trust is: the TLS of tick.company, for install.mjs itself."
+      },
+      "order_id": "01a182b9-93a4-7170-bad5-cf1905ed7e10",
+      "schema": "tick.work-order.v1",
+      "signature": "Vxc08x9kzDRjfaHNROtFw4bEVXoepwyz8RSGGJZ+qpLXzKYgGsqQ+PGnhlTmgRlr7m8S3ExPEZE3MmUuN96iCw=="
+    }
+  },
+  "receipt_id": "01a182b9-93a4-7170-bad5-cf1905ed7e10",
+  "schema": "tick.receipt.v2",
+  "signature": "PI6mIDuoXm1K7kCAuQW/p9vdBCAl+zsxecyRxnw/ZmzRxWcsWhKevhgGzh/sL1Dqsts0TAbwZrv1NhwaIJvOAQ=="
+}

@@ -1,0 +1,152 @@
+{
+  "alg": "ed25519",
+  "content_hash": "c01ec5e28970d44353968727e3492b91fde67d69da0ab762a812d286f3a2a3eb",
+  "coordinator": "https://0.0.0.0:4200",
+  "issued_at": "2026-10-28T14:35:45.461Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T13:51:35.806Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "417a46665d7f29a9242712bb0307f9cece53ff253611776a524b595509d6bf23",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T14:35:45.461Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "1ffa61364084376458cb6256d261894a28ac4d2a",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "9cf28b526a6c9a6919003eebd87d01c8c799d3fa",
+        "contained": "none",
+        "order_hash": "7bb3543387ef42aca4cfd26939e4b8af01abb58478749132d8ffcbf125f50021",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "7213ab886384fe8d748bb448c83f1cf73c6fce5b",
+        "verdict": "passed"
+      },
+      "record_id": "01a1828e-ed32-72f7-b810-78fd7c303db3",
+      "schema": "tick.check-record.v1",
+      "signature": "A1aly4wzFqROvnrfv4sxT9sXTTzgIk6SWh35HES/BTe08OA9q0m480Nb/YVZpfJs8oeGkMZkDnOWn7LYLTTjBQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "d2504c48a85f34b2b668222665a54ea29fafcfed56390a52a26445d2a5f787e3",
+      "coordinator": "https://0.0.0.0:4200",
+      "delivery": {
+        "base": "1ffa61364084376458cb6256d261894a28ac4d2a",
+        "commit": "9cf28b526a6c9a6919003eebd87d01c8c799d3fa",
+        "order_hash": "7bb3543387ef42aca4cfd26939e4b8af01abb58478749132d8ffcbf125f50021",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "7213ab886384fe8d748bb448c83f1cf73c6fce5b",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 82,
+            "cost": "reported",
+            "minutes": 9.37055,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a1828e-ed32-72f7-b810-78fd7c303db3",
+      "issued_at": "2026-10-28T14:35:45.461Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "3xYVT7yxvKc2VjKuEvWLCSquBK4WiGd04z7b4Ncmae+fcZDvT+UpboOTGyN+1rF7FhhNB5Myrvvy28/PiulaCg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "7bb3543387ef42aca4cfd26939e4b8af01abb58478749132d8ffcbf125f50021",
+      "coordinator": "https://0.0.0.0:4200",
+      "issued_at": "2026-10-28T13:41:37.612Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "1ffa61364084376458cb6256d261894a28ac4d2a",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a1828d-2b1d-76c8-8d2a-5f4869cadcfd",
+          "task_id": "01a1828e-ed32-72f7-b810-78fd7c303db3"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/board-work.ts",
+          "packages/cli/src/board-page.ts",
+          "packages/cli/src/board-work-v2.test.ts"
+        ],
+        "what": "WHY. The board's work card (packages/cli/src/board-work.ts, CD6b) opens a ticked row and checks its receipt in the browser, but it fetches only `.../runs/<run>/tasks/<task>/receipt` (board-work.ts:138), the receipt of version one. The receipt TN0 is about is version two, served at `GET /v1/runs/:id/tasks/:taskId/receipt-v2` (packages/api/src/task-receipt-v2-route.ts), which binds the work order, the delivery, the check record and the acceptance. Decision GD-86 in the company's memory (TN0.38). This task starts after the task that taught the browser checker receipt v2 has landed: read packages/cli/src/receipt-verify-core.ts, receipt-verify-v2-core.ts and receipt-verify-documents-core.ts on the main you are cut from. If they are not there, the dependency did not land: say so in your result and stop.\n\nWHAT TO BUILD.\n1. When a person opens a card, it asks for the task's receipt v2 first, through the same relay prefix and cookie the card uses today (the relay passes any read under /board/api/v1/, packages/cli/src/board-relay.ts:369). Where the coordinator answers 404 or 409 (409 says the run did not record a fact a receipt v2 needs, such as a signed work order, or the check did not pass), it asks for the receipt of version one exactly as today. Still one read per opened card for a v2 receipt, at most two otherwise, never on a timer and never for a row nobody opened. If the board's read-only pass is refused for receipt-v2 (401 or 403), the card falls back to version one and says nothing new; report it in your result instead of widening the pass.\n2. The card checks what it received with the one checker (`verify` from VERIFY_CORE) and shows a receipt v2's facts as that core reports them: what was asked, each try's agent, model, minutes and cents marked metered or reported, each check's result, who accepted and how, and the key behind each role, saying plainly when two roles share one key. A receipt of version one shows exactly as it does today. The card says which it shows: \"Receipt, version two: order, delivery, check and acceptance, each signed\" or, for the fallback, that this work carries no receipt of version two. Everything the receipt says reaches the card as text, never as markup (as today). Green only for a verified receipt (the design system's first rule).\n3. board-work.ts is 201 lines and board-page.ts 327: keep both under 500, and put the card frame's new elements, if any, in board-page.ts. Tests in a new file, packages/cli/src/board-work-v2.test.ts, following packages/cli/src/board-work.test.ts (496 lines: do not add to it): a v2 receipt fetched and verified with its facts; 409 then the v1 receipt shown as today; 404 likewise; a v2 receipt with one byte changed shows FAILED with its reasons; markup inside a v2 receipt reaches the card as text; exactly one read for a v2 card. Every existing board test keeps passing; grep the whole tree's *.test.ts for BOARD_WORK and '/receipt' before you finish. If another file must change, ask for it with tick_widen; never weaken or delete a test.\n\nDONE WHEN. Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a1828e-ed32-72f7-b810-78fd7c303db3",
+      "schema": "tick.work-order.v1",
+      "signature": "X84jV9IoHapgCN482axCvsHq0TvAJJFvW3rF0ZNrCdNjsvlQFf25WTSno0GvG+bC7gREMEZBOKxYG8gvgdzdDg=="
+    }
+  },
+  "receipt_id": "01a1828e-ed32-72f7-b810-78fd7c303db3",
+  "schema": "tick.receipt.v2",
+  "signature": "XENRHrIVDKt7EOxRYANijUBi12aGr8rZnQCrT0NsU7JHEmuyoSRhLFYO8pDm6qNy/K8cQtrOoylic6/6SQa3AQ=="
+}

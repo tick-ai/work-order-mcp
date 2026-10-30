@@ -1,0 +1,153 @@
+{
+  "alg": "ed25519",
+  "content_hash": "3f3c260f8b3919d25bc90c5fad157337132405d5ad7c9c5d928fb59de4977e94",
+  "coordinator": "https://Parsa-TUF:4200",
+  "issued_at": "2026-10-28T21:55:25.248Z",
+  "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+  "key_id": "948e338b6761da68",
+  "limits": [
+    "A valid receipt says each party’s key signed its own part and the parts chain. It does not say any party told the truth.",
+    "The carried keys are the parties’ only if the verifier already holds those key_ids from somewhere else. A receipt cannot vouch for its own keys. When two roles are signed by one key, one holder signed both.",
+    "The acceptance names who accepted. The signature proves the acceptor’s key signed the receipt, not that the person named did.",
+    "money none means no money is held or paid by this receipt.",
+    "limits is not covered by the signature: someone who removes it leaves a receipt that still verifies."
+  ],
+  "receipt": {
+    "acceptance": {
+      "at": "2026-10-28T21:10:45.455Z",
+      "by": "auto-tick",
+      "who": "github:98408989"
+    },
+    "check": {
+      "alg": "ed25519",
+      "content_hash": "02f71c17d4dd2c1b28bcbb1436bfef4727c613a52d38d60b09f3e31b0ffe634f",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T21:55:25.248Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "The checks prove only what they test. A passed record says the pinned commands exited 0 on that tree, not that the work is good.",
+        "A test that cannot fail is not detected by this record.",
+        "The checker ran them as recorded only as far as the verifier trusts the checker’s key. The signature proves the holder of the carried key issued the record, and content_hash that it was not edited since; the carried key is the checker’s only if the verifier already holds that key_id from somewhere else.",
+        "limits is not covered by the signature: someone who removes it leaves a record that still verifies."
+      ],
+      "record": {
+        "base": "1b7c25a1edd075d2bfa5cb9b621a70244dffb2a0",
+        "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+        "commit": "429ec54bf9e539f97ebd57f89da8bda340bd40a6",
+        "contained": "none",
+        "order_hash": "a9479c55af801688ad221bca537935a0609d26c4c39cfd32cb034ce1e53db3c9",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "results": [
+          {
+            "duration_ms": null,
+            "exit_code": null,
+            "name": "tick-check",
+            "outcome": "passed"
+          }
+        ],
+        "territory_held": true,
+        "tree": "2b6675fd20f444ce54b61ff74c86073d7dfc0a87",
+        "verdict": "passed"
+      },
+      "record_id": "01a18448-573a-7405-a552-d6e27b3c6cfd",
+      "schema": "tick.check-record.v1",
+      "signature": "eLf+Vqvtnzf1EqxO+8qWHUeAVhBeDJhUj1Lth+p6iqh3eqvIVZ7Em4gRzbNdkHDlENwHKh8DbQ+VFDGsnnxrBQ=="
+    },
+    "delivery": {
+      "alg": "ed25519",
+      "content_hash": "290de399c1c2aa5656f171a29cf8f585b42fa9d890ac5b8d3b61b492d650b676",
+      "coordinator": "https://Parsa-TUF:4200",
+      "delivery": {
+        "base": "1b7c25a1edd075d2bfa5cb9b621a70244dffb2a0",
+        "commit": "429ec54bf9e539f97ebd57f89da8bda340bd40a6",
+        "order_hash": "a9479c55af801688ad221bca537935a0609d26c4c39cfd32cb034ce1e53db3c9",
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "tree": "2b6675fd20f444ce54b61ff74c86073d7dfc0a87",
+        "tries": [
+          {
+            "agent": "claude",
+            "cents": 145,
+            "cost": "reported",
+            "minutes": 18.2918,
+            "model": "claude-sonnet-5-5"
+          }
+        ]
+      },
+      "delivery_id": "01a18448-573a-7405-a552-d6e27b3c6cfd",
+      "issued_at": "2026-10-28T21:55:25.248Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A delivery says what the doer’s Tick recorded handing in, not that the work is right. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "cents marked reported came from the agent’s platform and were not measured.",
+        "It does not prove the order exists or that this delivery answers it; that is checked where a receipt binds the two.",
+        "The carried key is the doer’s only if the verifier already holds that key_id from somewhere else. A delivery cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a delivery that still verifies."
+      ],
+      "schema": "tick.delivery.v1",
+      "signature": "lbIxY8XntSaG4lD3l4etG26oU1rXET6pe857xfAXB/7yttzzwlvw0+JBoUFpwSIORyW+48bKKgBbk9zJNtWfCg=="
+    },
+    "money": {
+      "kind": "none"
+    },
+    "order": {
+      "alg": "ed25519",
+      "checks_hash": "08c59b5eefa6889fe93cb608dc1b3d97ba5af7779a250cc7c31464f62ea87ea6",
+      "content_hash": "a9479c55af801688ad221bca537935a0609d26c4c39cfd32cb034ce1e53db3c9",
+      "coordinator": "https://Parsa-TUF:4200",
+      "issued_at": "2026-10-28T20:51:52.919Z",
+      "key": "MCowBQYDK2VwAyEAjQ9NPBogdtOAohI41uOUv7RUZuZiWpPXXjnbwroAOG8=",
+      "key_id": "948e338b6761da68",
+      "limits": [
+        "A work order says what was asked, not that anything was done. The signature proves the holder of the carried key issued it, and content_hash that it was not edited since.",
+        "The carried key is the buyer’s only if the verifier already holds that key_id from somewhere else. A work order cannot vouch for its own key.",
+        "limits is not covered by the signature: someone who removes it leaves a work order that still verifies.",
+        "payment none means no money is held for this order."
+      ],
+      "order": {
+        "acceptor": {
+          "kind": "person",
+          "name": "github:98408989"
+        },
+        "base": "1b7c25a1edd075d2bfa5cb9b621a70244dffb2a0",
+        "budget": {
+          "cap_usd": null
+        },
+        "checks": {
+          "commands": [
+            {
+              "argv": [
+                "node",
+                "scripts/land-check.mjs"
+              ],
+              "name": "tick-check"
+            }
+          ]
+        },
+        "deadline": null,
+        "from_task": {
+          "run_id": "01a18448-567b-7508-a69d-93fcb18f13fa",
+          "task_id": "01a18448-573a-7405-a552-d6e27b3c6cfd"
+        },
+        "payment": {
+          "kind": "none"
+        },
+        "repository": "gitlab.com/tick-group4/tick-executor",
+        "territory": [
+          "packages/cli/src/board-relay.ts",
+          "packages/cli/src/board-register.ts",
+          "packages/cli/src/board-register.test.ts",
+          "packages/cli/src/talk-waiting.ts"
+        ],
+        "what": "WHY (CD2, unit CD-T; GD-89; the design is NOTE-mvs8f5kn). CD-T proves the touch on a page browsers trust. Both of its checks are done: NOTE-mvs8uxx6, and NOTE-mvsl7scx at 20:48Z. In the second, the live https://tick.company/touch/ registered a passkey (relying party tick.company) and signed an approval, and handed each answer back by top-level navigation to a board on http://127.0.0.1/board/ (clientData origin https://tick.company). The coordinator accepts that origin where touchPage names the page (packages/api/src/presence-relying-party.ts), and touchPage is set on Parsa-TUF to https://tick.company/touch/. What is missing is the last hop. Nothing takes the answer from the board to the coordinator. The window still sends the person to register on the coordinator's own page (packages/cli/src/talk-waiting.ts presenceUnregistered: <coordinator>/v1/presence/register?ticket=...), and browsers refuse that page's certificate (the first check).\n\nWHAT TO DO. Where touchPage is set, registering the first authenticator goes through the board:\n(1) The window's link is a board link for registering, and carries the ticket the pairing got. Where touchPage is empty, the link stays as it is today.\n(2) The board asks the coordinator for the ticket's registration options (packages/api/src/presence.ts registrationOptions: who and the challenge). It opens touchPage with #t={kind:'register', ticket, challenge, user_id, user_name, return:<this board's /board/ address>}, the request the touch page reads (packages/cli/src/touch-page.ts).\n(3) Opened again at /board/#answer=<…>, the board posts that answer to the coordinator's /v1/presence/register, and says in words whether it was recorded.\nSafety, which the relay's own doc states (\"Nothing but GET reaches the coordinator\"): the relay forwards only this registration call. It is a POST to /v1/presence/register whose body is the ticket and the credential, the one-use ticket and the authenticator's signature being its only authority. It carries no session or credential of the machine. Every other write stays refused, and the doc says exactly this one exception. Put the board's new step in the new file packages/cli/src/board-register.ts. Keep board-relay.ts under 500 lines. If the board page's script or another file must change, ask tick_widen for it BY ITS FULL PATH.\n\nDONE WHEN. Tests in the new file packages/cli/src/board-register.test.ts show five things, against a coordinator stood in at the HTTP level. With touchPage set, the window's register notice names the board's register link, and without it the coordinator's page as today. The board's register step answers the touch page address with a #t request holding the ticket's challenge and a return to this board. The answer handed back is posted to /v1/presence/register with nothing of the machine's own credentials, and the coordinator's word is shown. Any other POST through the relay is still refused. A malformed or foreign answer is refused without a request to the coordinator. Every existing board-relay and talk-waiting test passes, and Tick's check passes on your commit (call tick_check; do not install, build or run suites in your copy)."
+      },
+      "order_id": "01a18448-573a-7405-a552-d6e27b3c6cfd",
+      "schema": "tick.work-order.v1",
+      "signature": "yY1zCZSa8XPNjkI3tnLPJwKroXbKIlURTSVU+bKwRoXtOLuUoyHhayLpp09leaxipmmIl8NwRgR6E91cXaBlCA=="
+    }
+  },
+  "receipt_id": "01a18448-573a-7405-a552-d6e27b3c6cfd",
+  "schema": "tick.receipt.v2",
+  "signature": "3mIBUP6pufJ81YMqxADGSymKQKPVeRdP7/6Y6taGC4T4+SFOB9JouP3yaIgR8ymbIKAjOkQm5YPbw3qRvAJyDg=="
+}
