@@ -1,0 +1,80 @@
+# Design
+
+What this server is for: an agent on any platform takes a Tick work order and
+hands in work against it. Tick's own agents learn the order from Tick; an agent
+elsewhere learns it from the order itself, a signed document
+([spec/SPEC.md](../spec/SPEC.md), `tick.work-order.v1`). This server reads that
+document for the agent, checks it was not changed after its key signed it, and
+lets the agent rehearse the order's checks on its own commit before it hands the
+work in. The work order and the receipt are the shared language; MCP carries
+them to whatever agent the doer runs.
+
+## Tools
+
+The surface is `src/tools.mjs`: each tool's name, description, input schema and
+output schema, which the server lists as they are and holds every call and
+answer to.
+
+1. `read_order` takes `order` (the order's JSON text) or `order_path`, and
+   answers `genuine`, every reason it is not, and the fields read: `key_id`,
+   `order_id`, `what`, `repository`, `base`, `territory`, `checks`,
+   `budget_usd`, `deadline`, `acceptor`, `from_task`, and the order's `limits`.
+   An order that is not genuine still has its fields read, so an agent can say
+   what it refuses.
+2. `check_delivery` takes the order as above, `repository` (a local clone) and
+   `commit`. It copies the repository at the commit into a temporary folder,
+   never the checkout it was given, and checks that folder's path is not empty
+   before any command takes it. The files the commit changes from the order's
+   `base` that lie outside `territory` are named in `outside`. Each of the
+   order's checks runs there with a time limit, and `verdict` is `passed` only
+   when the territory held and every check passed. It signs nothing: Tick's own
+   check of the delivery decides.
+3. `explain_receipt` takes `receipt` or `receipt_path` and answers the verdict
+   on a receipt of version two: `valid`, every reason, the `key_id` behind each
+   role (buyer, doer, checker, acceptor), the groups of roles that share a key,
+   and the receipt's `limits`.
+
+## Protocol
+
+MCP's current revision is 2026-07-28, and it is stateless: every request names
+its revision in `params._meta["io.modelcontextprotocol/protocolVersion"]`, a
+server must answer `server/discover`, and a revision it does not support is the
+error -32022, "Unsupported protocol version", with `data` naming the supported
+and the requested ones. Revisions up to 2025-11-25 are legacy: a client opens
+with `initialize`. A client probes a stdio server with `server/discover` and
+falls back to `initialize` on any other answer. Claude Code runs either era,
+depending on its version and its settings, and Codex's documentation names no
+revision. So this server answers both:
+
+- modern: `server/discover`, `tools/list` and `tools/call`, each result with
+  `resultType: "complete"`;
+- legacy: `initialize` (answering 2025-11-25), then `tools/list`, `tools/call`
+  and `ping`.
+
+A tool's answer is `structuredContent` that conforms to its output schema, and
+the same JSON as a text block for older clients. A bad argument, such as a
+missing order, a file that cannot be read, or a commit the clone does not hold,
+is a tool execution error (`isError: true`) whose words say what to fix; an
+unknown tool is the protocol error -32602.
+
+Over stdio, one message per line with no newline inside it, nothing on standard
+output that is not a message, logs on standard error, and the server exits when
+its input ends.
+
+## Choices
+
+- No dependency at all. Tick checks this repository on a machine with nothing
+  installed, and a tool that tells an agent whether an order is genuine should
+  carry no code the reader has to trust besides its own.
+- Its verifier is the one TickHub's page runs in the browser, copied at a named
+  commit of that repository, so the same checks answer in the page and here.
+- The specification is the authority on every document and every reason.
+  Where this server and spec/SPEC.md disagree, the server is wrong.
+
+## Checks
+
+`node --test`: every order in `vectors/` reads back genuine with its fields;
+every mutant that changes an order reads back not genuine with the
+specification's reason; `check_delivery` runs over a fixture repository with a
+bare origin, both made in a temporary folder; and the stdio exchange is driven
+in both eras by a test that starts the server as a client would.
