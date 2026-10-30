@@ -77,13 +77,13 @@ test('modern: discover, then list, then call', async () => {
   assert.deepEqual(listed._meta[INFO_KEY], info);
   assert.deepEqual(listed.tools, JSON.parse(JSON.stringify(TOOLS)));
 
-  // A well-formed call to a tool not built yet is a tool execution error,
+  // A well-formed call that cannot be carried out is a tool execution error,
   // never a made-up verdict.
   const called = (await server.ask('tools/call', call('check_delivery', { order: '{}', repository: '.', commit: 'HEAD' }))).result;
   assert.equal(called.resultType, 'complete');
   assert.deepEqual(called._meta[INFO_KEY], info);
   assert.equal(called.isError, true);
-  assert.match(called.content[0].text, /not built yet/);
+  assert.match(called.content[0].text, /the order names no base commit/);
   assert.equal(called.structuredContent, undefined);
 
   assert.equal(await server.finish(), 0);
@@ -110,7 +110,7 @@ test('legacy: initialize, then list, then call, then ping', async () => {
 
   const called = (await server.ask('tools/call', { name: 'check_delivery', arguments: { order: '{}', repository: '.', commit: 'HEAD' } })).result;
   assert.equal(called.isError, true);
-  assert.match(called.content[0].text, /not built yet/);
+  assert.match(called.content[0].text, /the order names no base commit/);
 
   assert.deepEqual((await server.ask('ping')).result, {});
 
