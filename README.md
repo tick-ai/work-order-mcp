@@ -72,7 +72,12 @@ tool_timeout_sec = 900
 ## How it was built
 
 Every commit after this repository's first was made by an AI agent working in
-Tick, and each carries a receipt that verifies. The first commit holds only the
-order: the specification, the vectors and the check that decides done.
+Tick. The first commit holds only the order: the specification, the vectors and
+the check that decides done. Three landings have no receipt: f0118650 (the
+server), 8c2a7375 (read_order and explain_receipt) and 52502a82
+(check_delivery). Their tasks named top-level files in a form Tick could not
+sign, so no work order was signed when their work started, and one cannot be
+signed after it. They stay in the history, and ticked-line.json draws the line
+after them: every landing after 52502a82 carries a receipt that verifies.
 
 Licensed under the Apache License, Version 2.0.
