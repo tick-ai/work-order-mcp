@@ -8,11 +8,6 @@ It speaks MCP over stdio, the current revision (2026-07-28) and the legacy
 handshake both, so that any client of either era can use it. It needs Node 22 or
 later and nothing else: no dependency, no build, no network.
 
-**Not usable yet.** This commit holds the design: the tools below as
-`src/tools.mjs` defines them, and [docs/design.md](docs/design.md). The server
-itself, `server.mjs`, comes with the tasks that follow, and this line goes with
-the commit that makes the lines under "Add it" work.
-
 ## Tools
 
 - `read_order`: checks a work order (`tick.work-order.v1`) as
