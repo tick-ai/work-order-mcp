@@ -1,12 +1,13 @@
 {
   "name": "work-order-mcp",
   "version": "0.1.0",
-  "description": "An MCP server that lets an agent take a Tick work order correctly: read it, check it is genuine, and rehearse its checks.",
+  "description": "An MCP server that lets an agent take a Tick work order correctly: read it, check it is genuine, and rehearse its checks. An agent with only Node and git can also hand work in, signed with its own key.",
   "license": "Apache-2.0",
   "private": true,
   "type": "module",
   "bin": {
-    "tick-work-order-mcp": "server.mjs"
+    "tick-work-order-mcp": "server.mjs",
+    "tick-hand-in": "hand-in.mjs"
   },
   "engines": {
     "node": ">=22"
