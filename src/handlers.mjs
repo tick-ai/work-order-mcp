@@ -9,6 +9,7 @@ import { mkdtemp, readFile, rm, stat } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { isAbsolute, join, relative, resolve } from 'node:path';
 
+import { handIn } from './hand-in.mjs';
 import { verifyDocument } from './verify.js';
 
 const KEY_LIMIT =
@@ -19,7 +20,7 @@ const isObject = (value) => typeof value === 'object' && value !== null && !Arra
 const text = (value) => (typeof value === 'string' && value !== '' ? value : null);
 
 /** A document's text: given as it is, or read from the file at its path. */
-async function documentText(args, name) {
+export async function documentText(args, name) {
   if (typeof args[name] === 'string') return args[name];
   const path = args[`${name}_path`];
   try {
@@ -65,7 +66,7 @@ const fieldsOf = (order) => ({
   from_task: isObject(order.from_task) ? order.from_task : null,
 });
 
-async function readOrder(args) {
+export async function readOrder(args) {
   const source = await documentText(args, 'order');
   const verdict = await verifyDocument(source);
   const reasons = [...verdict.reasons];
@@ -111,10 +112,14 @@ async function explainReceipt(args) {
 const CHECK_TIMEOUT_MS = 600_000;
 const TAIL_LINES = 20;
 const TAIL_BYTES = 4096;
+/** A check is sealed when its name gives the hash of a suite the doer does not hold. */
+const SEALED = /\bsuite sha256 [0-9a-f]{64}\b/;
+const SEALED_WORDS = 'sealed: the referee runs this after you hand in';
+
 const GIT_BUFFER = 64 * 1024 * 1024;
 
 /** Runs git with the given arguments, no shell; resolves with its stdout or throws its words. */
-function git(args, cwd) {
+export function git(args, cwd) {
   return new Promise((done, fail) => {
     execFile(
       'git',
@@ -129,7 +134,7 @@ function git(args, cwd) {
 }
 
 /** A path built at run time must be a non-empty string before a command takes it. */
-function nonEmpty(path, what) {
+export function nonEmpty(path, what) {
   if (typeof path !== 'string' || path.trim() === '') throw new Error(`${what} came out empty; nothing was run`);
   return path;
 }
@@ -138,7 +143,7 @@ function nonEmpty(path, what) {
 const territoryPath = (entry) => entry.replaceAll('\\', '/').replace(/^(\.\/)+/, '').replace(/\/+$/, '');
 
 /** Whether a changed path lies in the territory: a listed file, or anything under a listed folder. */
-const inTerritory = (path, territory) =>
+export const inTerritory = (path, territory) =>
   territory.map(territoryPath).some((entry) => entry !== '' && (path === entry || path.startsWith(`${entry}/`)));
 
 /** The last lines of some output, bounded in lines and in bytes. */
@@ -251,13 +256,37 @@ export async function checkDelivery(args, { timeoutMs = CHECK_TIMEOUT_MS } = {})
     const outside = changed.filter((path) => !inTerritory(path, order.territory));
 
     const results = [];
-    for (const check of order.checks) results.push(await runCheck(check, folder, timeoutMs));
+    const sealedResults = new Set();
+    for (const check of order.checks) {
+      if (SEALED.test(check.name)) {
+        // The suite's files are not in the doer's tree: it is not run, and the verdict leaves it out.
+        const result = {
+          name: check.name,
+          outcome: 'not-run',
+          exit_code: null,
+          duration_ms: 0,
+          output_tail: SEALED_WORDS,
+        };
+        sealedResults.add(result);
+        results.push(result);
+      } else {
+        results.push(await runCheck(check, folder, timeoutMs));
+      }
+    }
+    const ran = results.filter((result) => !sealedResults.has(result));
+    const sealed = sealedResults.size;
 
     const territoryHeld = outside.length === 0;
     const limits = [
       'A rehearsal: it signs nothing, and Tick\'s own check of the delivery decides.',
       `Each check ran here on this machine, not in a container, with a time limit of ${timeoutMs} ms; Tick's check may differ in machine, tools and time.`,
     ];
+    if (sealed > 0) {
+      const [is, it] = sealed === 1 ? ['is', 'it'] : ['are', 'them'];
+      limits.push(
+        `${sealed} of the order's checks ${is} sealed: the referee runs ${it} after you hand in, so passing here says nothing about ${it}.`,
+      );
+    }
     if (!order.genuine) {
       limits.push(`The order is not genuine, though it was read as given: ${order.reasons.join('; ')}.`);
     }
@@ -266,7 +295,7 @@ export async function checkDelivery(args, { timeoutMs = CHECK_TIMEOUT_MS } = {})
       territory_held: territoryHeld,
       outside,
       results,
-      verdict: territoryHeld && results.every((result) => result.outcome === 'passed') ? 'passed' : 'failed',
+      verdict: territoryHeld && ran.every((result) => result.outcome === 'passed') ? 'passed' : 'failed',
       limits,
     };
   } finally {
@@ -282,4 +311,5 @@ export const HANDLERS = {
   read_order: readOrder,
   check_delivery: (args) => checkDelivery(args),
   explain_receipt: explainReceipt,
+  hand_in: (args) => handIn(args),
 };
