@@ -154,4 +154,48 @@ export const EXPLAIN_RECEIPT = {
   },
 };
 
-export const TOOLS = [READ_ORDER, CHECK_DELIVERY, EXPLAIN_RECEIPT];
+export const HAND_IN = {
+  name: 'hand_in',
+  title: 'Hand work in against a work order',
+  description:
+    'Hands a commit in against a Tick work order, with nothing installed but Node and git. It refuses ' +
+    'an order that is not genuine, a commit that does not descend from the order\'s base, and a commit ' +
+    'that changes a file outside the order\'s territory, each in plain words and writing nothing. ' +
+    'Otherwise it writes delivery.json (tick.delivery.v1, signed with the doer\'s own key, made once in ' +
+    '$TICK_ID_HOME or ~/.tick-id and never sent anywhere) and work.bundle (the commits since the base) ' +
+    'into out. The signature proves who handed the work in, not that it is right.',
+  inputSchema: {
+    ...orderInput,
+    properties: {
+      ...orderInput.properties,
+      repository: { type: 'string', description: 'The path of a local clone that holds the commit.' },
+      commit: {
+        type: 'string',
+        description: 'The commit to hand in: its 40-character sha, or a name git resolves in the clone.',
+      },
+      out: { type: 'string', description: 'The folder to write delivery.json and work.bundle into; made if missing.' },
+      agent: { type: 'string', description: 'Who is handing in: a non-empty name, the doer\'s own word.' },
+      model: { type: 'string', description: 'The model behind the agent, if any.' },
+      minutes: { type: 'number', minimum: 0, description: 'The minutes the work took, the doer\'s own word.' },
+    },
+    required: ['repository', 'commit', 'out', 'agent'],
+    additionalProperties: false,
+  },
+  outputSchema: {
+    type: 'object',
+    required: ['handed_in', 'delivery_id', 'key_id', 'commit', 'tree', 'folder', 'files', 'limits'],
+    additionalProperties: false,
+    properties: {
+      handed_in: { enum: [true] },
+      delivery_id: { type: 'string' },
+      key_id: { type: 'string', pattern: '^[0-9a-f]{16}$' },
+      commit: hex40,
+      tree: hex40,
+      folder: { type: 'string' },
+      files: strings,
+      limits: strings,
+    },
+  },
+};
+
+export const TOOLS = [READ_ORDER, CHECK_DELIVERY, EXPLAIN_RECEIPT, HAND_IN];

@@ -28,11 +28,24 @@ answer to.
    `base` that lie outside `territory` are named in `outside`. Each of the
    order's checks runs there with a time limit, and `verdict` is `passed` only
    when the territory held and every check passed. It signs nothing: Tick's own
-   check of the delivery decides.
+   check of the delivery decides. A check whose name carries
+   `suite sha256 <64 hex>` is sealed: the suite's files are not in the doer's
+   tree, so it is not run but reported `not-run`, the verdict leaves it out, and
+   `limits` says how many are sealed and that passing here says nothing about them.
 3. `explain_receipt` takes `receipt` or `receipt_path` and answers the verdict
    on a receipt of version two: `valid`, every reason, the `key_id` behind each
    role (buyer, doer, checker, acceptor), the groups of roles that share a key,
    and the receipt's `limits`.
+4. `hand_in` takes the order as above, `repository`, `commit`, `out`, `agent` and
+   optionally `model` and `minutes`, for an agent with nothing installed but Node
+   and git (`hand-in.mjs` is the same for a shell). It refuses, writing nothing,
+   an order that is not genuine, a commit the order's `base` is not an ancestor
+   of, and a changed file outside `territory`. Otherwise it writes, into `out`,
+   `delivery.json` (`tick.delivery.v1`, signed with the doer's own Ed25519 key,
+   made once in `$TICK_ID_HOME` or `~/.tick-id` and never printed, returned or
+   written to `out`) and `work.bundle` (the commits since the base), and checks
+   the delivery with the verifier before it answers. The signature proves who
+   handed the work in, not that it is right.
 
 ## Protocol
 

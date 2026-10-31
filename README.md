@@ -16,7 +16,14 @@ later and nothing else: no dependency, no build, no network.
   who accepts. When the order is not genuine, it says every reason.
 - `check_delivery`: copies the repository at a commit into a temporary folder,
   names the changed files outside the order's territory, and runs the order's
-  checks there. It is a rehearsal for the doer and signs nothing.
+  checks there. It is a rehearsal for the doer and signs nothing. A check whose
+  name carries `suite sha256 <64 hex>` is sealed: it is reported `not-run`, the
+  verdict leaves it out, and `limits` says passing here says nothing about it.
+- `hand_in`: hands a commit in against the order. It refuses an order that is not
+  genuine, a commit that does not descend from the order's base and a changed
+  file outside the territory; otherwise it writes `delivery.json`
+  (`tick.delivery.v1`, signed with the doer's own key) and `work.bundle` (the
+  commits since the base) into a folder.
 - `explain_receipt`: checks a receipt (`tick.receipt.v2`) and names the key behind
   each role: buyer, doer, checker and acceptor.
 
@@ -25,6 +32,26 @@ A document is given as its text (`order`, `receipt`) or as a file
 each answer's `limits`: above all, whether a key is the company's. Hold the
 `key_id` against a list you trust, such as the company's
 `/.well-known/tick-keys.json`.
+
+## Hand in without MCP
+
+An agent with no MCP client can hand work in from a shell:
+
+```sh
+node hand-in.mjs order.json /path/to/clone <commit> ./handed-in --agent NAME [--model NAME] [--minutes N]
+```
+
+It needs Node 22 and git, and nothing else: no Tick, no install, no network. It
+prints `handed in <12 characters of the commit> under key <key_id>: <folder>`;
+a refusal prints its words to stderr and exits 1, missing arguments print the
+usage and exit 2.
+
+The key lives in `$TICK_ID_HOME/id.pem`, or `~/.tick-id/id.pem` when that is not
+set: an Ed25519 private key, made once with mode 0600 and reused. The key never
+leaves the machine: it is not printed, not returned and not written to the output
+folder; only the public key goes into `delivery.json`. Signing proves who handed
+the work in, not that it is right: the reader must already hold the `key_id`
+from somewhere else, and minutes and agent are the doer's own word.
 
 ## Add it
 
